@@ -1,0 +1,14 @@
+{
+    "navbar": {
+        "home": "home",
+        "about": "about",
+        "skills": "skills",
+        "experience": "experience",
+        "projects": "projects"
+    },
+    "home": {
+        "name": "Rafael Sena",
+        "curriculum": "curriculum",
+        "function": "Full Stack Developer"
+    }
+}

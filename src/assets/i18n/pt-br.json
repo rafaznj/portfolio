@@ -1,0 +1,14 @@
+{
+    "navbar": {
+        "home": "home",
+        "about": "sobre",
+        "skills": "habilidades",
+        "experience": "experiência",
+        "projects": "projetos"
+    },
+    "home": {
+        "name": "Rafael Sena",
+        "curriculum": "currículo",
+        "function": "Desenvolvedor Full Stack"
+    }
+}

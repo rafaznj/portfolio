@@ -1,0 +1,116 @@
+@import "/global.css";
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 8vw;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+}
+
+.home-name {
+  font-family: var(--fontTitle);
+  font-size: clamp(2.8rem, 8vw, 6rem);
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.05;
+  white-space: nowrap;
+}
+
+.home-role {
+  font-family: var(--font);
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  font-weight: normal;
+  color: var(--text);
+}
+
+.home-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.home-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.2rem;
+  font-family: var(--font);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--bg);
+  background: var(--text);
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid var(--text);
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.home-download:hover {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.home-download span {
+  font-size: 1rem;
+}
+
+.download-icon {
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.home-download:hover .download-icon {
+  color: #22c55e !important;
+}
+
+.home-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: 1.1rem;
+  color: var(--muted);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: color 0.2s ease;
+}
+
+.social-link:hover {
+  color: var(--text);
+}
+
+.social-icon {
+  width: 25px;
+  height: 25px;
+  filter: grayscale(100%) brightness(0.5);
+  transition: filter 0.2s ease;
+}
+
+.social-link:hover .social-icon {
+  filter: grayscale(0%) brightness(1);
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: 0 1.5rem;
+    padding-bottom: 80px;
+  }
+}
