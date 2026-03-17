@@ -4,10 +4,10 @@
 :root {
   --bg: #000;
   --surface: #000;
-  --text: #fff;
-  --muted: #555;
-  --font: "JetBrains Mono", monospace;
-  --fontTitle: "Poppins", sans-serif;
+  --color-text-default: #fff;
+  --color-text-muted: #938f8f;
+  --font-body: "JetBrains Mono", monospace;
+  --font-title: "Syne", sans-serif;
 }
 
 * {
@@ -18,7 +18,7 @@
 
 body {
   background: var(--bg);
-  font-family: var(--font);
+  font-family: var(--font-body);
 }
 
 @media (max-width: 768px) {

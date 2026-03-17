@@ -10,9 +10,8 @@ export default function NavBar() {
                 <ul className="navbar-links">
                     <li><Link to="home" smooth duration={500} className="nav-link">{t('navbar.home')}</Link></li>
                     <li><Link to="about" smooth duration={500} className="nav-link">{t('navbar.about')}</Link></li>
-                    <li><Link to="skills" smooth duration={500} className="nav-link">{t('navbar.skills')}</Link></li>
-                    <li><Link to="experience" smooth duration={500} className="nav-link">{t('navbar.experience')}</Link></li>
                     <li><Link to="projects" smooth duration={500} className="nav-link">{t('navbar.projects')}</Link></li>
+                    <li><Link to="experience" smooth duration={500} className="nav-link">{t('navbar.experience')}</Link></li>
                 </ul>
             </nav>
         </header>

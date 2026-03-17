@@ -2,13 +2,14 @@
     "navbar": {
         "home": "home",
         "about": "about",
-        "skills": "skills",
         "experience": "experience",
         "projects": "projects"
     },
     "home": {
+        "hello": "Hello! i'm",
         "name": "Rafael Sena",
         "curriculum": "curriculum",
-        "function": "Full Stack Developer"
+        "function": "Full Stack Developer",
+        "description": "focused on building efficient, scalable, and well-structured applications, transforming complex needs into reliable digital solutions."
     }
 }
