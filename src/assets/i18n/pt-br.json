@@ -2,7 +2,7 @@
   "components": {
     "navbar": {
       "home": "home",
-      "skills": "habilidades",
+      "about": "sobre",
       "experience": "experiência",
       "projects": "projetos"
     }
@@ -15,8 +15,9 @@
       "function": "Desenvolvedor Full Stack",
       "description": "focado na construção de aplicações eficientes, escaláveis e bem estruturadas, transformando necessidades complexas em soluções digitais confiáveis."
     },
-    "skills": {
-      "title": "Principais Habilidades"
+    "about": {
+      "title": "Sobre",
+      "skills": "Principais Habilidades"
     },
     "experience": {},
     "projects": {}

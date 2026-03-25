@@ -2,7 +2,7 @@
   "components": {
     "navbar": {
       "home": "home",
-      "skills": "skills",
+      "about": "about",
       "experience": "experience",
       "projects": "projects"
     }
@@ -15,8 +15,9 @@
       "curriculum": "curriculum",
       "function": "Full Stack Developer"
     },
-    "skills": {
-      "title": "Main Skills"
+    "about": {
+      "title": "About",
+      "skills": "Main Skills"
     },
     "experience": {},
     "projects": {}

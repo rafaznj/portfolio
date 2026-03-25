@@ -11,6 +11,4 @@ export const stacks = [
   { name: "MySQL", file: "mysql.svg" },
   { name: "Drizzle ORM", file: "drizzle-orm.svg" },
   { name: "Git", file: "git.svg" },
-  { name: "GitHub", file: "github.svg" },
-  { name: "Azure DevOps", file: "azure-devops.svg" },
 ];

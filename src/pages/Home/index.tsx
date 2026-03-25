@@ -14,7 +14,7 @@ export default function Home() {
             <span>{t("pages.home.curriculum")}</span>
             <FaFileDownload className="download-icon" />
           </a>
-          <div className="home-socials">
+          {/* <div className="home-socials">
             <a
               href="https://github.com/rafaznj"
               target="_blank"
@@ -52,7 +52,7 @@ export default function Home() {
                 className="social-icon"
               />
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

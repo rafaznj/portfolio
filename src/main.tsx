@@ -6,13 +6,13 @@ import Home from "./pages/Home";
 import Experience from "./pages/Experience";
 import Education from "./pages/Education";
 import Projects from "./pages/Projects";
-import Skills from "./pages/Skills";
+import About from "./pages/About";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <NavBar />
     <Home />
-    <Skills />
+    <About />
     <Education />
     <Experience />
     <Projects />

@@ -9,22 +9,22 @@ export default function NavBar() {
       <nav className="navbar">
         <ul className="navbar-links">
           <li>
-            <Link to="home" smooth duration={500} className="nav-link">
+            <Link to="home" smooth duration={500} className="nav-link" offset={-64}>
               {t("components.navbar.home")}
             </Link>
           </li>
           <li>
-            <Link to="skills" smooth duration={500} className="nav-link">
-              {t("components.navbar.skills")}
+            <Link to="about" smooth duration={500} className="nav-link" offset={-64}>
+              {t("components.navbar.about")}
             </Link>
           </li>
           <li>
-            <Link to="projects" smooth duration={500} className="nav-link">
+            <Link to="projects" smooth duration={500} className="nav-link" offset={-64}>
               {t("components.navbar.projects")}
             </Link>
           </li>
           <li>
-            <Link to="experience" smooth duration={500} className="nav-link">
+            <Link to="experience" smooth duration={500} className="nav-link" offset={-64}>
               {t("components.navbar.experience")}
             </Link>
           </li>
