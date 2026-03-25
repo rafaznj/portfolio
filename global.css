@@ -20,9 +20,3 @@ body {
   background: var(--bg);
   font-family: var(--font-body);
 }
-
-@media (max-width: 768px) {
-  body {
-    padding-bottom: 56px;
-  }
-}

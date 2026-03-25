@@ -1,0 +1,186 @@
+@import "/global.css";
+
+.skills {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 8vw;
+}
+
+.skills-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+.skills-title {
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--color-text-default);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  margin-top: -1rem;
+  white-space: nowrap;
+}
+
+.stacks-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.6rem, 3vw, 2.6rem);
+  margin-top: 1rem;
+}
+
+.stack-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: default;
+  padding: clamp(0.9rem, 1.6vw, 1.3rem);
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.stack-item:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+.stack-icon {
+  width: clamp(40px, 5.5vw, 60px);
+  height: clamp(40px, 5.5vw, 60px);
+  object-fit: contain;
+  filter: grayscale(1) brightness(0.45);
+  transition:
+    filter 0.25s ease,
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.stack-item:hover .stack-icon {
+  filter: grayscale(0) brightness(1);
+  transform: scale(1.08);
+}
+
+.stack-name {
+  position: absolute;
+  bottom: -1.9rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  font-family: var(--font-body);
+  font-size: clamp(0.55rem, 0.9vw, 0.7rem);
+  color: var(--color-text-default);
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  opacity: 0;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+  pointer-events: none;
+}
+
+.stack-item:hover .stack-name {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+@media (min-width: 2560px) {
+  .skills-content {
+    max-width: 1600px;
+    gap: 3rem;
+  }
+
+  .skills-title {
+    font-size: clamp(5rem, 5vw, 7rem);
+  }
+
+  .stack-icon {
+    width: 96px;
+    height: 96px;
+  }
+
+  .stack-name {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 2559px) {
+  .skills-content {
+    max-width: 1100px;
+  }
+
+  .skills-title {
+    font-size: clamp(3rem, 4vw, 5rem);
+  }
+
+  .stack-icon {
+    width: 76px;
+    height: 76px;
+  }
+
+  .stack-name {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills {
+    min-height: calc(100vh - 56px);
+    align-items: flex-start;
+    padding: 0 1.5rem;
+    padding-top: 4rem;
+  }
+
+  .stacks-icons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stack-name {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    font-size: 0.55rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-content {
+    gap: 1.5rem;
+  }
+
+  .skills-title {
+    font-size: 1.8rem;
+  }
+
+  .stacks-icons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stack-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .stack-name {
+    font-size: 0.48rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .skills-title {
+    font-size: 1.5rem;
+  }
+
+  .stack-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .stack-name {
+    font-size: 0.44rem;
+  }
+}

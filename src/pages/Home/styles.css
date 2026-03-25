@@ -56,14 +56,6 @@
   flex-shrink: 0;
 }
 
-.home-description {
-  font-family: var(--font-body);
-  font-size: clamp(0.9rem, 1.8vw, 1.2rem);
-  font-weight: 400;
-  color: var(--color-text-default);
-  line-height: 1.7;
-}
-
 @media (min-width: 2560px) {
   .home-content {
     max-width: 1600px;
@@ -84,10 +76,6 @@
   .home-role::before {
     width: 2.5rem;
   }
-
-  .home-description {
-    font-size: 1.7rem;
-  }
 }
 
 @media (min-width: 1440px) and (max-width: 2559px) {
@@ -107,9 +95,6 @@
     font-size: 1.1rem;
   }
 
-  .home-description {
-    font-size: 1.3rem;
-  }
 }
 
 @media (max-width: 768px) {
@@ -134,10 +119,6 @@
   .home-role {
     font-size: 0.78rem;
   }
-
-  .home-description {
-    font-size: 0.85rem;
-  }
 }
 
 @media (max-width: 360px) {
@@ -158,9 +139,61 @@
   .home-role {
     font-size: 0.72rem;
   }
+}
 
-  .home-description {
-    font-size: 0.8rem;
-    line-height: 1.6;
-  }
+.home-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.home-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.2rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--bg);
+  background: var(--color-text-default);
+  text-decoration: none;
+  border-radius: 8px;
+  border: 2px solid var(--color-text-default);
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.home-download:hover {
+  background: var(--bg);
+  color: var(--color-text-default);
+}
+
+.home-download span {
+  font-size: 1.1rem;
+}
+
+
+.download-icon {
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.home-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  filter: grayscale(100%) brightness(0.5);
+  transition: filter 0.2s ease;
+}
+
+.social-link:hover .social-icon {
+  filter: grayscale(0%) brightness(1);
 }

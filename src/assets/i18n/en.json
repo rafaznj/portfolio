@@ -1,15 +1,24 @@
 {
+  "components": {
     "navbar": {
-        "home": "home",
-        "about": "about",
-        "experience": "experience",
-        "projects": "projects"
-    },
-    "home": {
-        "hello": "Hello! i'm",
-        "name": "Rafael Sena",
-        "curriculum": "curriculum",
-        "function": "Full Stack Developer",
-        "description": "focused on building efficient, scalable, and well-structured applications, transforming complex needs into reliable digital solutions."
+      "home": "home",
+      "skills": "skills",
+      "experience": "experience",
+      "projects": "projects"
     }
+  },
+  "pages": {
+    "home": {
+      "title": "title",
+      "hello": "Hello! i'm",
+      "name": "Rafael Sena",
+      "curriculum": "curriculum",
+      "function": "Full Stack Developer"
+    },
+    "skills": {
+      "title": "Main Skills"
+    },
+    "experience": {},
+    "projects": {}
+  }
 }
