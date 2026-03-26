@@ -2,15 +2,11 @@ import { t } from "i18next";
 import "./styles.css";
 import { stacks } from "./data";
 
-export default function About() {
+export default function Skills() {
   return (
-    <section id="about" className="about">
-      <div className="about-content">
-        
-      </div>
-
+    <section id="skills" className="skills">
       <div className="skills-content">
-        <h2 className="skills-title">{t("pages.about.skills")}</h2>
+        <h2 className="skills-title">{t("pages.skills.title")}</h2>
         <div className="stacks-icons">
           {stacks.map((item) => (
             <div key={item.file} className="stack-item">

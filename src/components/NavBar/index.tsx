@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 
 export default function NavBar() {
   const { t } = useTranslation();
+  
   return (
     <header>
       <nav className="navbar">
@@ -14,8 +15,8 @@ export default function NavBar() {
             </Link>
           </li>
           <li>
-            <Link to="about" smooth duration={500} className="nav-link" offset={-64}>
-              {t("components.navbar.about")}
+            <Link to="skills" smooth duration={500} className="nav-link" offset={-64}>
+              {t("components.navbar.skills")}
             </Link>
           </li>
           <li>

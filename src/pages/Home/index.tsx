@@ -1,6 +1,8 @@
 import { t } from "i18next";
 import "./styles.css";
-import { FaFileDownload } from "react-icons/fa";
+import { LuDownload } from "react-icons/lu";
+import { TiMessages } from "react-icons/ti";
+import { Link } from "react-scroll";
 
 export default function Home() {
   return (
@@ -12,8 +14,19 @@ export default function Home() {
         <div className="home-actions">
           <a href="/src/assets/cv.pdf" download className="home-download">
             <span>{t("pages.home.curriculum")}</span>
-            <FaFileDownload className="download-icon" />
+            <LuDownload className="download-icon" />
           </a>
+
+          <Link
+            to="contact"
+            smooth
+            duration={500}
+            className="home-contact"
+            offset={-64}
+          >
+            {t("pages.contact.touch")}
+            <TiMessages className="contact-icon"/>
+          </Link>
           {/* <div className="home-socials">
             <a
               href="https://github.com/rafaznj"

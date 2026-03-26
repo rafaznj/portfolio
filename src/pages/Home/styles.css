@@ -56,6 +56,90 @@
   flex-shrink: 0;
 }
 
+.home-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.home-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.2rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--bg);
+  background: var(--color-text-default);
+  text-decoration: none;
+  border-radius: 8px;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.home-download:hover {
+  transform: translateY(-4px);
+}
+
+.home-download span {
+  font-size: 1.1rem;
+}
+
+.download-icon {
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.home-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.2rem;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.home-contact:hover {
+  color: var(--color-text-default);
+}
+
+.contact-icon {
+  font-size: 1.4rem;
+  transition: color 0.2s ease;
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-12deg);
+  }
+  40% {
+    transform: rotate(12deg);
+  }
+  60% {
+    transform: rotate(-6deg);
+  }
+  80% {
+    transform: rotate(6deg);
+  }
+}
+
+.home-contact:hover .contact-icon {
+  animation: wiggle 1s ease-in-out;
+}
+
 @media (min-width: 2560px) {
   .home-content {
     max-width: 1600px;
@@ -94,7 +178,6 @@
   .home-role {
     font-size: 1.1rem;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -139,61 +222,4 @@
   .home-role {
     font-size: 0.72rem;
   }
-}
-
-.home-actions {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
-}
-
-.home-download {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.55rem 1.2rem;
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--bg);
-  background: var(--color-text-default);
-  text-decoration: none;
-  border-radius: 8px;
-  border: 2px solid var(--color-text-default);
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
-}
-
-.home-download:hover {
-  background: var(--bg);
-  color: var(--color-text-default);
-}
-
-.home-download span {
-  font-size: 1.1rem;
-}
-
-
-.download-icon {
-  font-size: 1rem;
-  transition: color 0.2s ease;
-}
-
-.home-socials {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.social-icon {
-  width: 40px;
-  height: 40px;
-  filter: grayscale(100%) brightness(0.5);
-  transition: filter 0.2s ease;
-}
-
-.social-link:hover .social-icon {
-  filter: grayscale(0%) brightness(1);
 }

@@ -2,7 +2,7 @@
   "components": {
     "navbar": {
       "home": "home",
-      "about": "sobre",
+      "skills": "habilidades",
       "experience": "experiência",
       "projects": "projetos"
     }
@@ -11,15 +11,23 @@
     "home": {
       "hello": "Olá! eu sou o",
       "name": "Rafael Sena",
-      "curriculum": "currículo",
+      "curriculum": "Currículo",
       "function": "Desenvolvedor Full Stack",
       "description": "focado na construção de aplicações eficientes, escaláveis e bem estruturadas, transformando necessidades complexas em soluções digitais confiáveis."
     },
-    "about": {
-      "title": "Sobre",
-      "skills": "Principais Habilidades"
+    "skills": {
+      "title": "minhas habilidades"
     },
-    "experience": {},
-    "projects": {}
+    "projects": {
+      "title": "meus projetos",
+      "names": {
+      }
+    },
+    "experience": {
+      "title": "Minhas experiências"
+    },
+    "contact": {
+      "touch": "Entre em contato comigo"
+    }
   }
 }
