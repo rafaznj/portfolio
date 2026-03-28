@@ -1,25 +1,33 @@
-import { t } from "i18next";
-import "./styles.css";
 import { stacks } from "./data";
+import { useTranslation } from "react-i18next";
+import {
+  StyledIcon,
+  StyledIconItem,
+  StyledIconName,
+  StyledIconsContainer,
+  StyledSkillsContainer,
+  StyledSkillsContext,
+  StyledTitle,
+} from "./styles";
 
 export default function Skills() {
+  const { t } = useTranslation();
   return (
-    <section id="skills" className="skills">
-      <div className="skills-content">
-        <h2 className="skills-title">{t("pages.skills.title")}</h2>
-        <div className="stacks-icons">
+    <StyledSkillsContainer id="skills">
+      <StyledSkillsContext>
+        <StyledTitle>{t("pages.skills.title")}</StyledTitle>
+        <StyledIconsContainer>
           {stacks.map((item) => (
-            <div key={item.file} className="stack-item">
-              <img
+            <StyledIconItem key={item.file}>
+              <StyledIcon
                 src={`/src/assets/images/${item.file}`}
                 alt={item.name}
-                className="stack-icon"
               />
-              <span className="stack-name">{item.name}</span>
-            </div>
+              <StyledIconName>{item.name}</StyledIconName>
+            </StyledIconItem>
           ))}
-        </div>
-      </div>
-    </section>
+        </StyledIconsContainer>
+      </StyledSkillsContext>
+    </StyledSkillsContainer>
   );
 }

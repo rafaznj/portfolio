@@ -1,37 +1,36 @@
-import { t } from "i18next";
-import "./styles.css";
 import { projects } from "./data";
-import { LuExternalLink } from "react-icons/lu";
+import { useTranslation } from "react-i18next";
+import { StyledLinkIcon, StyledProjectCard, StyledProjectCardHeader, StyledProjectDescription, StyledProjectName, StyledProjectsContainer, StyledProjectsContent, StyledProjectsGrid, StyledProjectStacks, StyledProjectStackTag, StyledTitle } from "./styles";
 
 export default function Projects() {
+  const { t } = useTranslation();
   return (
-    <section id="projects" className="projects">
-      <div className="projects-content">
-        <h2 className="projects-title">{t("pages.projects.title")}</h2>
-        <div className="projects-grid">
+    <StyledProjectsContainer id="projects">
+      <StyledProjectsContent>
+        <StyledTitle>{t("pages.projects.title")}</StyledTitle>
+        <StyledProjectsGrid>
           {projects.map((project) => (
-            <a
+            <StyledProjectCard
               key={project.name}
               href={project.link}
               target="_blank"
-              className="project-card"
             >
-              <div className="project-card-header">
-                <span className="project-name">{project.name}</span>
-                <LuExternalLink className="project-link-icon" />
-              </div>
-              <p className="project-description">{project.description}</p>
-              <div className="project-stacks">
+              <StyledProjectCardHeader>
+                <StyledProjectName>{project.name}</StyledProjectName>
+                <StyledLinkIcon/>
+              </StyledProjectCardHeader>
+              <StyledProjectDescription>{project.description}</StyledProjectDescription>
+              <StyledProjectStacks>
                 {project.stacks.map((stack) => (
-                  <span key={stack} className="project-stack-tag">
+                  <StyledProjectStackTag key={stack}>
                     {stack}
-                  </span>
+                  </StyledProjectStackTag>
                 ))}
-              </div>
-            </a>
+              </StyledProjectStacks>
+            </StyledProjectCard>
           ))}
-        </div>
-      </div>
-    </section>
+        </StyledProjectsGrid>
+      </StyledProjectsContent>
+    </StyledProjectsContainer>
   );
 }

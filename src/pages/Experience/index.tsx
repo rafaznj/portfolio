@@ -1,11 +1,14 @@
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
+import { StyledExperienceContainer, StyledExperienceContent, StyledTitle } from "./styles";
 
 export default function Experience() {
+  const { t } = useTranslation();
+  
   return (
-    <section id="experience" className="experience">
-      <div className="experience-content">
-        <h2 className="experience-title">{t("pages.experience.title")}</h2>
-      </div>
-    </section>
+    <StyledExperienceContainer id="experience">
+      <StyledExperienceContent>
+        <StyledTitle>{t("pages.experience.title")}</StyledTitle>
+      </StyledExperienceContent>
+    </StyledExperienceContainer>
   );
 }

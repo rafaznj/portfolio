@@ -1,36 +1,37 @@
 import { useTranslation } from "react-i18next";
-import "./styles.css";
-import { Link } from "react-scroll";
+import { StyledLink, StyledNavbarContainer, StyledToggleWrapper, StyledUl } from "./styles";
+import LanguageDropdown from "../LanguageDropdown";
 
 export default function NavBar() {
   const { t } = useTranslation();
-  
+
   return (
-    <header>
-      <nav className="navbar">
-        <ul className="navbar-links">
-          <li>
-            <Link to="home" smooth duration={500} className="nav-link" offset={-64}>
-              {t("components.navbar.home")}
-            </Link>
-          </li>
-          <li>
-            <Link to="skills" smooth duration={500} className="nav-link" offset={-64}>
-              {t("components.navbar.skills")}
-            </Link>
-          </li>
-          <li>
-            <Link to="projects" smooth duration={500} className="nav-link" offset={-64}>
-              {t("components.navbar.projects")}
-            </Link>
-          </li>
-          <li>
-            <Link to="experience" smooth duration={500} className="nav-link" offset={-64}>
-              {t("components.navbar.experience")}
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <StyledNavbarContainer>
+      <StyledUl>
+        <li>
+          <StyledLink to="home" smooth duration={500} offset={-64}>
+            {t("components.navbar.home")}
+          </StyledLink>
+        </li>
+        <li>
+          <StyledLink to="skills" smooth duration={500} offset={-64}>
+            {t("components.navbar.skills")}
+          </StyledLink>
+        </li>
+        <li>
+          <StyledLink to="projects" smooth duration={500} offset={-64}>
+            {t("components.navbar.projects")}
+          </StyledLink>
+        </li>
+        <li>
+          <StyledLink to="experience" smooth duration={500} offset={-64}>
+            {t("components.navbar.experience")}
+          </StyledLink>
+        </li>
+      </StyledUl>
+      <StyledToggleWrapper>
+        <LanguageDropdown/>
+      </StyledToggleWrapper>
+    </StyledNavbarContainer>
   );
 }

@@ -1,11 +1,11 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import translationPTBR from './pt-br.json';
+import translationPT from './pt.json'
 import translationEN from './en.json';
 
 i18n.use(initReactI18next).init({
   resources: {
-    pt: { translation: translationPTBR },
+    pt: { translation: translationPT },
     en: { translation: translationEN },
   },
   lng: 'pt',

@@ -1,32 +1,31 @@
-import { t } from "i18next";
-import "./styles.css";
-import { LuDownload } from "react-icons/lu";
-import { TiMessages } from "react-icons/ti";
-import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
+import { StyledActionsContainer, StyledContactIcon, StyledDownloadCv, StyledDownloadCvText, StyledDownloadIcon, StyledHello, StyledHomeContainer, StyledHomeContent, StyledLinkContact, StyledName, StyledRole } from "./styles";
 
 export default function Home() {
+  const { t } = useTranslation();
   return (
-    <section id="home" className="home">
-      <div className="home-content">
-        <h1 className="home-hello">{t("pages.home.hello")}</h1>
-        <h1 className="home-name">{t("pages.home.name")}</h1>
-        <h2 className="home-role">{t("pages.home.function")}</h2>
-        <div className="home-actions">
-          <a href="/src/assets/cv.pdf" download className="home-download">
-            <span>{t("pages.home.curriculum")}</span>
-            <LuDownload className="download-icon" />
-          </a>
+    <StyledHomeContainer id="home">
+      <StyledHomeContent>
+        <StyledHello>{t("pages.home.hello")}</StyledHello>
+        <StyledName>{t("pages.home.name")}</StyledName>
+        <StyledRole>{t("pages.home.function")}</StyledRole>
+        <StyledActionsContainer>
+          <StyledDownloadCv href="/src/assets/cv.pdf" download>
+            <StyledDownloadCvText>{t("pages.home.curriculum")}</StyledDownloadCvText>
+            <StyledDownloadIcon/>
+          </StyledDownloadCv>
 
-          <Link
+          <StyledLinkContact
             to="contact"
             smooth
             duration={500}
-            className="home-contact"
             offset={-64}
           >
             {t("pages.contact.touch")}
-            <TiMessages className="contact-icon"/>
-          </Link>
+            <StyledContactIcon>
+              
+            </StyledContactIcon>
+          </StyledLinkContact>
           {/* <div className="home-socials">
             <a
               href="https://github.com/rafaznj"
@@ -66,8 +65,8 @@ export default function Home() {
               />
             </a>
           </div> */}
-        </div>
-      </div>
-    </section>
+        </StyledActionsContainer>
+      </StyledHomeContent>
+    </StyledHomeContainer>
   );
 }
