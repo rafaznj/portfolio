@@ -6,15 +6,15 @@ import {
   StyledIconName,
   StyledIconsContainer,
   StyledSkillsContainer,
-  StyledSkillsContext,
+  StyledSkillsContent,
   StyledTitle,
 } from "./styles";
 
 export default function Skills() {
   const { t } = useTranslation();
   return (
-    <StyledSkillsContainer id="skills">
-      <StyledSkillsContext>
+    <StyledSkillsContainer>
+      <StyledSkillsContent>
         <StyledTitle>{t("pages.skills.title")}</StyledTitle>
         <StyledIconsContainer>
           {stacks.map((item) => (
@@ -27,7 +27,7 @@ export default function Skills() {
             </StyledIconItem>
           ))}
         </StyledIconsContainer>
-      </StyledSkillsContext>
+      </StyledSkillsContent>
     </StyledSkillsContainer>
   );
 }

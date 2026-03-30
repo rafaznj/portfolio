@@ -1,132 +1,129 @@
 import { LuDownload } from "react-icons/lu";
-import { TiMessages } from "react-icons/ti";
-import { Link } from "react-scroll";
 import styled from "styled-components";
 import "/global.css";
 
 export const StyledHomeContainer = styled.div`
-  min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0 8vw;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 8vh 8vw 4rem;
 `;
 
 export const StyledHomeContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.8rem;
-  max-width: 800px;
+  gap: 0.35rem;
+  max-width: 680px;
   width: 100%;
-`;
-
-export const StyledHello = styled.h1`
-  font-family: var(--font-body);
-  font-size: clamp(0.85rem, 1.8vw, 1.1rem);
-  font-weight: 600;
-  color: var(--color-gray);
-  letter-spacing: 0.08em;
 `;
 
 export const StyledName = styled.h1`
   font-family: var(--font-title);
-  font-size: clamp(3.5rem, 10vw, 8rem);
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
   font-weight: 800;
   color: var(--color-white);
-  line-height: 0.95;
-  margin-top: -1.8rem;
-  letter-spacing: 0.06em;
-  word-break: break-word;
-  white-space: normal;
-  background-clip: text;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  margin: 0;
 `;
 
-export const StyledRole = styled.h2`
+export const StyledRole = styled.p`
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.6rem;
   font-family: var(--font-body);
-  font-size: clamp(0.8rem, 1.8vw, 1rem);
-  font-weight: 400;
-  color: var(--color-gray);
+  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+  font-weight: normal;
+  color: var(--color-white);
+  margin: 0;
 
-  &::before {
+  &:before {
     content: "";
-    display: block;
     width: 1.25rem;
     height: 1px;
-    background: var(--color-gray);
+    background: var(--color-white);
     flex-shrink: 0;
   }
+`;
+
+export const StyledLocation = styled.p`
+  font-family: var(--font-body);
+  font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+  font-weight: 400;
+  color: var(--color-gray);
+  margin: 0;
 `;
 
 export const StyledActionsContainer = styled.div`
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
+  gap: 0.85rem;
+  margin-top: 1.1rem;
 `;
 
-export const StyledDownloadCv = styled.a`
+export const StyledDownloadIcon = styled(LuDownload)`
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  transition:
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+`;
+
+export const StyledDownloadCurriculum = styled.a`
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.55rem 1.2rem;
+  padding: 0.5rem 1.1rem;
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 500;
-  color: var(--bg);
-  background: var(--color-white);
+  color: var(--color-white);
+  background: transparent;
   text-decoration: none;
   border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   transition:
-    background 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease;
+    border-color 0.2s ease,
+    opacity 0.2s ease;
 
   &:hover {
-    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.7);
+    opacity: 0.85;
+  }
+  &:hover ${StyledDownloadIcon} {
+      transform: translateY(-3px) scale(1.08);
+      color: var(--color-white)
+
   }
 `;
 
 export const StyledDownloadCvText = styled.span`
-  font-size: 1.1rem;
+  font-size: 0.85rem;
 `;
 
-export const StyledDownloadIcon = styled(LuDownload)`
-  font-size: 1rem;
-  transition: color 0.2s ease;
-`;
-
-export const StyledContactIcon = styled(TiMessages)`
-  font-size: 1.4rem;
-  transition: color 0.2s ease;
-
-  @keyframes wiggle {
-    0%, 100% { transform: rotate(0deg); }
-    20%       { transform: rotate(-12deg); }
-    40%       { transform: rotate(12deg); }
-    60%       { transform: rotate(-6deg); }
-    80%       { transform: rotate(6deg); }
-  }
-`;
-
-export const StyledLinkContact = styled(Link)`
-  display: inline-flex;
+export const StyledSocialsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.55rem 1.2rem;
-  cursor: pointer;
-  color: var(--color-gray);
+  gap: 0.25rem;
+`;
+
+export const StyledIconLink = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
   text-decoration: none;
-  transition: background 0.2s ease, color 0.2s ease;
-  animation: bounce 2s ease-in-out infinite;
+  border-radius: 4px;
 
-  &:hover {
-    color: var(--color-white);
+  &:hover img {
+    filter: grayscale(0%) brightness(1);
   }
+`;
 
-  &:hover ${StyledContactIcon} {
-    animation: wiggle 1s ease-in-out;
-  }
+export const StyledSocialIcon = styled.img`
+  width: 28px;
+  height: 28px;
+  filter: grayscale(100%) brightness(0.5);
+  transition: filter 0.2s ease;
 `;

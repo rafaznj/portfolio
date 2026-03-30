@@ -3,29 +3,29 @@ import styled from "styled-components";
 import "/global.css";
 
 export const StyledProjectsContainer = styled.div`
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: calc(64px + 2rem) 8vw 4rem;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 8vh 8vw 4rem;
 `;
 
 export const StyledProjectsContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
+  max-width: 680px;
   width: 100%;
 `;
 
 export const StyledTitle = styled.h2`
-  font-family: var(--font-title);
-  font-size: clamp(1.5rem, 3.5vw, 2.8rem);
+  font-family: var(--font-body);
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
   font-weight: 800;
   color: var(--color-white);
-  line-height: 1;
-  letter-spacing: 0.04em;
-  white-space: nowrap;
-  text-align: center;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  margin: 0;
+  text-align: left;
 `;
 
 export const StyledProjectsGrid = styled.div`

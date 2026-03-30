@@ -5,7 +5,7 @@ import { StyledLinkIcon, StyledProjectCard, StyledProjectCardHeader, StyledProje
 export default function Projects() {
   const { t } = useTranslation();
   return (
-    <StyledProjectsContainer id="projects">
+    <StyledProjectsContainer>
       <StyledProjectsContent>
         <StyledTitle>{t("pages.projects.title")}</StyledTitle>
         <StyledProjectsGrid>

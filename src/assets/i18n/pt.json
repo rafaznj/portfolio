@@ -12,6 +12,7 @@
       "hello": "Olá! eu sou o",
       "name": "Rafael Sena",
       "curriculum": "Currículo",
+      "location": "Bahia, Brasil",
       "function": "Desenvolvedor Full Stack",
       "description": "focado na construção de aplicações eficientes, escaláveis e bem estruturadas, transformando necessidades complexas em soluções digitais confiáveis."
     },
@@ -24,10 +25,7 @@
       }
     },
     "experience": {
-      "title": "Minhas experiências"
-    },
-    "contact": {
-      "touch": "Entre em contato comigo"
+      "title": "minhas experiências"
     }
   }
 }

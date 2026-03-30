@@ -1,70 +1,69 @@
 import { useTranslation } from "react-i18next";
-import { StyledActionsContainer, StyledContactIcon, StyledDownloadCv, StyledDownloadCvText, StyledDownloadIcon, StyledHello, StyledHomeContainer, StyledHomeContent, StyledLinkContact, StyledName, StyledRole } from "./styles";
+import {
+  StyledActionsContainer,
+  StyledDownloadCurriculum,
+  StyledDownloadCvText,
+  StyledDownloadIcon,
+  StyledHomeContainer,
+  StyledHomeContent,
+  StyledIconLink,
+  StyledLocation,
+  StyledName,
+  StyledRole,
+  StyledSocialIcon,
+  StyledSocialsContainer,
+} from "./styles";
 
 export default function Home() {
   const { t } = useTranslation();
   return (
-    <StyledHomeContainer id="home">
+    <StyledHomeContainer>
       <StyledHomeContent>
-        <StyledHello>{t("pages.home.hello")}</StyledHello>
         <StyledName>{t("pages.home.name")}</StyledName>
         <StyledRole>{t("pages.home.function")}</StyledRole>
+        <StyledLocation>{t("pages.home.location")}</StyledLocation>
         <StyledActionsContainer>
-          <StyledDownloadCv href="/src/assets/cv.pdf" download>
-            <StyledDownloadCvText>{t("pages.home.curriculum")}</StyledDownloadCvText>
-            <StyledDownloadIcon/>
-          </StyledDownloadCv>
-
-          <StyledLinkContact
-            to="contact"
-            smooth
-            duration={500}
-            offset={-64}
+          <StyledDownloadCurriculum
+            href="/src/assets/rafaelsena-curriculum.pdf"
+            download
           >
-            {t("pages.contact.touch")}
-            <StyledContactIcon>
-              
-            </StyledContactIcon>
-          </StyledLinkContact>
-          {/* <div className="home-socials">
-            <a
+            <StyledDownloadCvText>
+              {t("pages.home.curriculum")}
+            </StyledDownloadCvText>
+            <StyledDownloadIcon />
+          </StyledDownloadCurriculum>
+          <StyledSocialsContainer>
+            <StyledIconLink
               href="https://github.com/rafaznj"
               target="_blank"
-              rel="noreferrer"
-              className="social-link"
               aria-label="GitHub"
             >
-              <img
+              <StyledSocialIcon
                 src="/src/assets/images/github.svg"
                 alt="GitHub"
-                className="social-icon"
               />
-            </a>
-            <a
+            </StyledIconLink>
+            <StyledIconLink
               href="https://linkedin.com/in/rafaznje"
               target="_blank"
               rel="noreferrer"
-              className="social-link"
               aria-label="LinkedIn"
             >
-              <img
+              <StyledSocialIcon
                 src="/src/assets/images/linkedin.svg"
                 alt="LinkedIn"
-                className="social-icon"
               />
-            </a>
-            <a
+            </StyledIconLink>
+            <StyledIconLink
               href="mailto:rafaelsena.contact@gmail.com"
-              className="social-link"
               aria-label="Gmail"
             >
-              <img
+              <StyledSocialIcon
                 src="/src/assets/images/gmail.svg"
                 alt="Gmail"
-                className="social-icon"
               />
-            </a>
-          </div> */}
+            </StyledIconLink>
+          </StyledSocialsContainer>
         </StyledActionsContainer>
       </StyledHomeContent>
     </StyledHomeContainer>

@@ -13,6 +13,7 @@
       "hello": "Hello! i'm",
       "name": "Rafael Sena",
       "curriculum": "Curriculum",
+      "location": "Bahia, Brazil",
       "function": "Full Stack Developer",
       "description": "Focused on building efficient, scalable, and well-structured applications, transforming complex needs into reliable digital solutions."
     },
@@ -23,13 +24,7 @@
       "title": "my experiences"
     },
     "projects": {
-      "title": "my projects",
-      "names": {
-        "portfolio": "My Portfolio"
-      }
-    },
-    "contact": {
-      "touch": "Contact me"
+      "title": "my projects"
     }
   }
 }
