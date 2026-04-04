@@ -1,12 +1,11 @@
 import { LuDownload } from "react-icons/lu";
 import styled from "styled-components";
-import "/global.css";
 
 export const StyledHomeContainer = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: 8vh 8vw 4rem;
+  padding: calc(60px + 4vh) 8vw 4vh;
 `;
 
 export const StyledHomeContent = styled.div`
@@ -18,11 +17,11 @@ export const StyledHomeContent = styled.div`
 `;
 
 export const StyledName = styled.h1`
-  font-family: var(--font-title);
-  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
-  font-weight: 800;
-  color: var(--color-white);
-  line-height: 1.1;
+  font-family: ${(props) => props.theme.fonts.family.title};
+  font-size: ${(props) => props.theme.fonts.size.xxxl};
+  font-weight: ${(props) => props.theme.fonts.weight.black};
+  color: ${(props) => props.theme.colors.text};
+  line-height: ${(props) => props.theme.fonts.lineHeight.tight};
   letter-spacing: 0.01em;
   margin: 0;
 `;
@@ -31,27 +30,28 @@ export const StyledRole = styled.p`
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-family: var(--font-body);
-  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
-  font-weight: normal;
-  color: var(--color-white);
+  font-family: ${(props)=> props.theme.fonts.family.body};
+  font-size: ${(props) => props.theme.fonts.size.lg};
+  font-weight: ${(props) => props.theme.fonts.weight.regular};
+  color: ${(props) => props.theme.colors.text};
   margin: 0;
 
   &:before {
     content: "";
     width: 1.25rem;
     height: 1px;
-    background: var(--color-white);
+    background: ${(props) => props.theme.colors.text};
     flex-shrink: 0;
   }
 `;
 
 export const StyledLocation = styled.p`
-  font-family: var(--font-body);
-  font-size: clamp(0.8rem, 1.2vw, 0.9rem);
-  font-weight: 400;
-  color: var(--color-gray);
+  font-family: ${(props) => props.theme.fonts.family.body};
+  font-size: ${(props) => props.theme.fonts.size.base};
+  font-weight: ${(props) => props.theme.fonts.weight.regular};
+  color: ${(props) => props.theme.colors.textGray};
   margin: 0;
+ margin-top: 0.5rem;
 `;
 
 export const StyledActionsContainer = styled.div`
@@ -62,8 +62,8 @@ export const StyledActionsContainer = styled.div`
 `;
 
 export const StyledDownloadIcon = styled(LuDownload)`
-  font-size: 0.9rem;
-  color: var(--color-gray);
+  font-size: ${(props) => props.theme.fonts.size.md};
+  color: ${(props) => props.theme.colors.textGray};
   transition:
     transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 `;
@@ -73,31 +73,29 @@ export const StyledDownloadCurriculum = styled.a`
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1.1rem;
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--color-white);
+  font-family: ${({ theme }) => theme.fonts.family.body};
+  font-size: ${({ theme }) => theme.fonts.size.base};
+  font-weight: ${({ theme }) => theme.fonts.weight.medium};
+  color: ${({ theme }) => theme.colors.text};
   background: transparent;
   text-decoration: none;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  transition:
-    border-color 0.2s ease,
-    opacity 0.2s ease;
+  border-radius: ${({ theme }) => theme.borders.radius.md};
+  border: ${({ theme }) => theme.borders.width.thin} solid ${({ theme }) => theme.borders.colors.gray};
+  transition: border-color 0.2s ease, opacity 0.2s ease;
 
   &:hover {
-    border-color: rgba(255, 255, 255, 0.7);
+    border-color: ${({ theme }) => theme.borders.colors.white};
     opacity: 0.85;
   }
-  &:hover ${StyledDownloadIcon} {
-      transform: translateY(-3px) scale(1.08);
-      color: var(--color-white)
 
+  &:hover ${StyledDownloadIcon} {
+    transform: translateY(-3px) scale(1.08);
+    color: ${({ theme }) => theme.colors.text};
   }
 `;
 
 export const StyledDownloadCvText = styled.span`
-  font-size: 0.85rem;
+  font-size: ${(props) => props.theme.fonts.size.sm};
 `;
 
 export const StyledSocialsContainer = styled.div`
@@ -111,19 +109,17 @@ export const StyledIconLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  text-decoration: none;
-  border-radius: 4px;
-
-  &:hover img {
-    filter: grayscale(0%) brightness(1);
-  }
-`;
-
-export const StyledSocialIcon = styled.img`
   width: 28px;
   height: 28px;
-  filter: grayscale(100%) brightness(0.5);
-  transition: filter 0.2s ease;
+
+  text-decoration: none;
+  border-radius: ${({ theme }) => theme.borders.radius.sm};
+  color: ${({ theme }) => theme.colors.textGray};
+  font-size: ${(props) => props.theme.fonts.size.xl};
+  transition: color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.text};
+    transform: scale(1.15);
+  }
 `;

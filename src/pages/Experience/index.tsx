@@ -1,25 +1,34 @@
 import { useTranslation } from "react-i18next";
 import {
-  StyledExperienceContainer,
-  StyledExperienceContent,
-  StyledTitle,
-  StyledTimeline,
-  StyledTimelineItem,
-  StyledDot,
-  StyledLine,
   StyledCard,
   StyledCardHeader,
-  StyledRole,
   StyledCompany,
-  StyledPeriod,
   StyledDescription,
+  StyledExperienceContainer,
+  StyledExperienceContent,
+  StyledPeriod,
+  StyledRole,
   StyledStacks,
   StyledStackTag,
+  StyledTimeline,
+  StyledTimelineItem,
+  StyledTitle,
 } from "./styles";
-import { experiences } from "./data";
+
+type Experiences = {
+  role: string;
+  company: string;
+  period: string;
+  description: string;
+  stacks: string[];
+};
 
 export default function Experience() {
   const { t } = useTranslation();
+
+  const experiences = t("pages.experience.data", {
+    returnObjects: true,
+  }) as Experiences[];
 
   return (
     <StyledExperienceContainer>
@@ -28,16 +37,14 @@ export default function Experience() {
         <StyledTimeline>
           {experiences.map((exp, index) => (
             <StyledTimelineItem key={index}>
-              <StyledDot $first={index === 0} />
-              {index < experiences.length - 1 && <StyledLine />}
               <StyledCard>
                 <StyledCardHeader>
                   <div>
                     <StyledRole>{exp.role}</StyledRole>
                     <StyledCompany>{exp.company}</StyledCompany>
                   </div>
-                  <StyledPeriod>{exp.period}</StyledPeriod>
                 </StyledCardHeader>
+                <StyledPeriod>{exp.period}</StyledPeriod>
                 <StyledDescription>{exp.description}</StyledDescription>
                 <StyledStacks>
                   {exp.stacks.map((stack) => (

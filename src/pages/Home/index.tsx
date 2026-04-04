@@ -10,9 +10,10 @@ import {
   StyledLocation,
   StyledName,
   StyledRole,
-  StyledSocialIcon,
   StyledSocialsContainer,
 } from "./styles";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { BiLogoGmail } from "react-icons/bi";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -34,34 +35,25 @@ export default function Home() {
           </StyledDownloadCurriculum>
           <StyledSocialsContainer>
             <StyledIconLink
+              href="https://linkedin.com/in/rafaznj"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin />
+            </StyledIconLink>
+            <StyledIconLink
               href="https://github.com/rafaznj"
               target="_blank"
               aria-label="GitHub"
             >
-              <StyledSocialIcon
-                src="/src/assets/images/github.svg"
-                alt="GitHub"
-              />
-            </StyledIconLink>
-            <StyledIconLink
-              href="https://linkedin.com/in/rafaznje"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-            >
-              <StyledSocialIcon
-                src="/src/assets/images/linkedin.svg"
-                alt="LinkedIn"
-              />
+              <FaGithub />
             </StyledIconLink>
             <StyledIconLink
               href="mailto:rafaelsena.contact@gmail.com"
+              target="_blank"
               aria-label="Gmail"
             >
-              <StyledSocialIcon
-                src="/src/assets/images/gmail.svg"
-                alt="Gmail"
-              />
+              <BiLogoGmail />
             </StyledIconLink>
           </StyledSocialsContainer>
         </StyledActionsContainer>

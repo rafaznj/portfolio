@@ -1,30 +1,65 @@
 {
   "components": {
     "navbar": {
-      "home": "home",
-      "skills": "skills",
       "experience": "experience",
-      "projects": "projects"
+      "home": "home",
+      "projects": "projects",
+      "skills": "skills",
+      "scrollIndicator": "scroll to explore more"
     }
   },
   "pages": {
-    "home": {
-      "title": "title",
-      "hello": "Hello! i'm",
-      "name": "Rafael Sena",
-      "curriculum": "Curriculum",
-      "location": "Bahia, Brazil",
-      "function": "Full Stack Developer",
-      "description": "Focused on building efficient, scalable, and well-structured applications, transforming complex needs into reliable digital solutions."
-    },
-    "skills": {
-      "title": "my Skills"
-    },
     "experience": {
+      "data": [
+        {
+          "company": "CEPEDI - Center for Research, Technological Development and Innovation",
+          "description": "I work in the development of web systems focused on optimizing internal company processes, contributing to greater operational efficiency.",
+          "period": "feb 2024 - at moment",
+          "role": "Full Stack Developer",
+          "stacks": [
+            "TypeScript",
+            "React",
+            "Node.js",
+            "NestJS",
+            "PostgreSQL"
+          ]
+        },
+        {
+          "company": "Federal Institute of Bahia - IFBA Ilhéus Campus",
+          "description": "I developed a web system focused on sustainability, connecting residences interested in selective collection with local cooperatives of recyclable materials.",
+          "period": "feb 2024 - at moment",
+          "role": "Academic Project Assistant",
+          "stacks": [
+            "PHP",
+            "JavaScript",
+            "MySQL",
+            "HTML",
+            "CSS"
+          ]
+        }
+      ],
       "title": "my experiences"
     },
+    "home": {
+      "curriculum": "Curriculum",
+      "function": "Full Stack Developer",
+      "hello": "Hello! i'm",
+      "location": "Brazil, Bahia",
+      "name": "Rafael Sena"
+    },
     "projects": {
+      "data": [
+        {
+          "description": "",
+          "link": "",
+          "name": "",
+          "stacks": [""]
+        }
+      ],
       "title": "my projects"
+    },
+    "skills": {
+      "title": "my skills"
     }
   }
 }

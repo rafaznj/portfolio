@@ -1,12 +1,11 @@
 import { LuExternalLink } from "react-icons/lu";
 import styled from "styled-components";
-import "/global.css";
 
 export const StyledProjectsContainer = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: 8vh 8vw 4rem;
+  padding: 4vh 8vw;
 `;
 
 export const StyledProjectsContent = styled.div`
@@ -17,41 +16,11 @@ export const StyledProjectsContent = styled.div`
   width: 100%;
 `;
 
-export const StyledTitle = styled.h2`
-  font-family: var(--font-body);
-  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-  font-weight: 800;
-  color: var(--color-white);
-  line-height: 1.1;
-  letter-spacing: 0.02em;
-  margin: 0;
-  text-align: left;
-`;
-
 export const StyledProjectsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
   width: 100%;
-`;
-
-export const StyledProjectCard = styled.a`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1.5rem;
-  border-radius: 8px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  text-decoration: none;
-  cursor: pointer;
-  transition:
-    border-color 0.25s ease,
-    transform 0.25s ease;
-
-  &:hover {
-    border-color: rgba(255, 255, 255, 0.3);
-    transform: translateY(-4px);
-  }
 `;
 
 export const StyledProjectCardHeader = styled.div`
@@ -62,32 +31,32 @@ export const StyledProjectCardHeader = styled.div`
 `;
 
 export const StyledProjectName = styled.span`
-  font-family: var(--font-title);
+  font-family: ${(props) => props.theme.fonts.family.title};
   font-size: clamp(1rem, 2vw, 1.3rem);
   font-weight: 700;
-  color: var(--color-gray);
+  color: ${(props) => props.theme.colors.textGray};
   letter-spacing: 0.02em;
 `;
 
 export const StyledLinkIcon = styled(LuExternalLink)`
   font-size: 1rem;
-  color: var(--color-gray);
+  color: ${(props) => props.theme.colors.textGray};
   flex-shrink: 0;
   transition:
     color 0.2s ease,
     transform 0.2s ease;
 
   &:hover {
-    color: var(--color-white);
+    color: ${(props) => props.theme.colors.text};
     transform: translate(2px, -2px);
   }
 `;
 
 export const StyledProjectDescription = styled.p`
-  font-family: var(--font-body);
+  font-family: ${(props) => props.theme.fonts.family.body};
   font-size: clamp(0.75rem, 1.2vw, 0.85rem);
   font-weight: 400;
-  color: var(--color-gray);
+  color: ${(props) => props.theme.colors.textGray};
   line-height: 1.7;
   flex: 1;
 `;
@@ -99,21 +68,47 @@ export const StyledProjectStacks = styled.div`
   margin-top: auto;
 `;
 
-export const StyledProjectStackTag = styled.span`
-  font-family: var(--font-body);
-  font-size: 0.65rem;
-  font-weight: 500;
-  color: var(--color-gray);
-  letter-spacing: 0.06em;
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  transition:
-    border-color 0.2s ease,
-    color 0.2s ease;
+export const StyledTitle = styled.h2`
+  font-family: ${({ theme }) => theme.fonts.family.body};
+  font-size: ${({ theme }) => theme.fonts.size.xxl};
+  font-weight: ${({ theme }) => theme.fonts.weight.black};
+  color: ${({ theme }) => theme.colors.text};
+  line-height: ${({ theme }) => theme.fonts.lineHeight.tight};
+  letter-spacing: 0.02rem;
+  margin: 0;
+  text-align: left;
+`;
+
+export const StyledProjectCard = styled.a`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: ${({ theme }) => theme.borders.radius.md};
+  border: ${({ theme }) => theme.borders.width.base} solid ${({ theme }) => theme.borders.colors.gray};
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.25s ease, transform 0.25s ease;
 
   &:hover {
-    border-color: rgba(255, 255, 255, 0.3);
-    color: var(--color-white);
+    border-color: ${({ theme }) => theme.borders.colors.white};
+    transform: translateY(-4px);
+  }
+`;
+
+export const StyledProjectStackTag = styled.span`
+  font-family: ${({ theme }) => theme.fonts.family.body};
+  font-size: ${({ theme }) => theme.fonts.size.xs};
+  font-weight: ${({ theme }) => theme.fonts.weight.medium};
+  color: ${({ theme }) => theme.colors.textGray};
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.6rem;
+  border-radius: ${({ theme }) => theme.borders.radius.sm};
+  border: ${({ theme }) => theme.borders.width.thin} solid ${({ theme }) => theme.borders.colors.gray};
+  transition: border-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    border-color: ${({ theme }) => theme.borders.colors.white};
+    color: ${({ theme }) => theme.colors.text};
   }
 `;

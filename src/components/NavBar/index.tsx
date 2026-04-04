@@ -1,37 +1,18 @@
-import { useTranslation } from "react-i18next";
-import { StyledLink, StyledNavbarContainer, StyledToggleWrapper, StyledUl } from "./styles";
-import LanguageDropdown from "../LanguageDropdown";
+import ToggleThemeButton from "../ThemeToggle";
+import LanguageToggleButton from "../LanguageToggle";
+import { StyledNav, StyledControls, StyledScrollWrapper } from "./styles";
+import ScrollIndicator from "../ScrollIndicator";
 
-export default function NavBar() {
-  const { t } = useTranslation();
-
+export function NavBar() {
   return (
-    <StyledNavbarContainer>
-      <StyledUl>
-        <li>
-          <StyledLink to="home" smooth duration={500} offset={-64}>
-            {t("components.navbar.home")}
-          </StyledLink>
-        </li>
-        <li>
-          <StyledLink to="skills" smooth duration={500} offset={-64}>
-            {t("components.navbar.skills")}
-          </StyledLink>
-        </li>
-        <li>
-          <StyledLink to="projects" smooth duration={500} offset={-64}>
-            {t("components.navbar.projects")}
-          </StyledLink>
-        </li>
-        <li>
-          <StyledLink to="experience" smooth duration={500} offset={-64}>
-            {t("components.navbar.experience")}
-          </StyledLink>
-        </li>
-      </StyledUl>
-      <StyledToggleWrapper>
-        <LanguageDropdown/>
-      </StyledToggleWrapper>
-    </StyledNavbarContainer>
+    <StyledNav>
+      <StyledControls>
+        <LanguageToggleButton />
+        <ToggleThemeButton />
+      </StyledControls>
+      <StyledScrollWrapper>
+        <ScrollIndicator />
+      </StyledScrollWrapper>
+    </StyledNav>
   );
 }

@@ -1,11 +1,10 @@
 import styled from "styled-components";
-import "/global.css";
 
 export const StyledSkillsContainer = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: 8vh 8vw 4rem;
+  padding: 4vh 8vw;
 `;
 
 export const StyledSkillsContent = styled.div`
@@ -17,12 +16,12 @@ export const StyledSkillsContent = styled.div`
 `;
 
 export const StyledTitle = styled.h2`
-  font-family: var(--font-body);
+  font-family: ${(props) => props.theme.fonts.family.body};
   font-size: clamp(1.4rem, 2.5vw, 1.8rem);
   font-weight: 800;
-  color: var(--color-white);
+  color: ${(props) => props.theme.colors.text};
   line-height: 1.1;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.02rem;
   margin: 0;
   text-align: left;
 `;
@@ -39,9 +38,9 @@ export const StyledIconName = styled.span`
   bottom: -0.4rem;
   left: 50%;
   transform: translateX(-50%) translateY(6px);
-  font-family: var(--font-body);
+  font-family: ${(props) => props.theme.fonts.family.body};
   font-size: clamp(0.65rem, 1vw, 0.8rem);
-  color: var(--color-white);
+  color: ${(props) => props.theme.colors.text};
   white-space: nowrap;
   opacity: 0;
   transition:

@@ -1,16 +1,15 @@
 import "./assets/i18n";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import Home from "./pages/Home";
-import Experience from "./pages/Experience";
-import Projects from "./pages/Projects";
-import Skills from "./pages/Skills";
+import Global from "./styles/global";
+import App from "./App";
+import { ThemeProvider } from "./styles/theme-provider";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Home />
-    <Skills />
-    <Projects />
-    <Experience />
+      <ThemeProvider>
+      <Global />
+      <App />
+    </ThemeProvider>
   </StrictMode>,
 );
