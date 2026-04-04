@@ -25,7 +25,7 @@ export default function Home() {
         <StyledLocation>{t("pages.home.location")}</StyledLocation>
         <StyledActionsContainer>
           <StyledDownloadCurriculum
-            href="/src/assets/rafaelsena-curriculum.pdf"
+            href="/rafaelsena-curriculum.pdf"
             download
           >
             <StyledDownloadCvText>
