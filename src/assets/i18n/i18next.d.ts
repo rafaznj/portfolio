@@ -1,4 +1,4 @@
-import ptBR from "./pt-br.json";
+import pt from "./pt.json"
 import en from "./en.json";
 
 declare module "i18next" {
@@ -6,7 +6,7 @@ declare module "i18next" {
     interface CustomTypeOptions {
         defaultNS: "translation";
         resources: {
-            ptBR: typeof ptBR;
+            pt: typeof pt;
             en: typeof en;
         }
     }

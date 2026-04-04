@@ -1,0 +1,41 @@
+import styled, { keyframes } from "styled-components";
+
+const scroll = keyframes`
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(10px); }
+`;
+
+export const StyledContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+`;
+
+export const StyledLabel = styled.p`
+  font-family: ${({ theme }) => theme.fonts.family.body};
+  font-size: ${({ theme }) => theme.fonts.size.xs};
+  color: ${({ theme }) => theme.colors.text};
+  margin: 0;
+  cursor: default;
+  letter-spacing: 0.1em;
+`;
+
+export const StyledMouse = styled.div`
+  width: 24px;
+  height: 38px;
+  border: ${(props) => props.theme.borders.width.base} solid ${(props) => props.theme.colors.text};
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+  cursor: pointer;
+`;
+
+export const StyledWheel = styled.div`
+  width: 3px;
+  height: 10px;
+  background: ${({ theme }) => theme.colors.text};
+  border-radius: 2px;
+  animation: ${scroll} 1.5s ease-in-out infinite;
+`;

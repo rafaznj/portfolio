@@ -1,19 +1,18 @@
-import { useTranslation } from 'react-i18next'
-import './styles.css'
-import { Link } from 'react-scroll'
+import ToggleThemeButton from "../ThemeToggle";
+import LanguageToggleButton from "../LanguageToggle";
+import { StyledNav, StyledControls, StyledScrollWrapper } from "./styles";
+import ScrollIndicator from "../ScrollIndicator";
 
-export default function NavBar() {
-    const { t } = useTranslation()
-    return (
-        <header>
-            <nav className="navbar">
-                <ul className="navbar-links">
-                    <li><Link to="home" smooth duration={500} className="nav-link">{t('navbar.home')}</Link></li>
-                    <li><Link to="about" smooth duration={500} className="nav-link">{t('navbar.about')}</Link></li>
-                    <li><Link to="projects" smooth duration={500} className="nav-link">{t('navbar.projects')}</Link></li>
-                    <li><Link to="experience" smooth duration={500} className="nav-link">{t('navbar.experience')}</Link></li>
-                </ul>
-            </nav>
-        </header>
-    )
+export function NavBar() {
+  return (
+    <StyledNav>
+      <StyledControls>
+        <LanguageToggleButton />
+        <ToggleThemeButton />
+      </StyledControls>
+      <StyledScrollWrapper>
+        <ScrollIndicator />
+      </StyledScrollWrapper>
+    </StyledNav>
+  );
 }

@@ -1,15 +1,63 @@
-import { t } from "i18next";
-import "./styles.css";
+import { useTranslation } from "react-i18next";
+import {
+  StyledActionsContainer,
+  StyledDownloadCurriculum,
+  StyledDownloadCvText,
+  StyledDownloadIcon,
+  StyledHomeContainer,
+  StyledHomeContent,
+  StyledIconLink,
+  StyledLocation,
+  StyledName,
+  StyledRole,
+  StyledSocialsContainer,
+} from "./styles";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { BiLogoGmail } from "react-icons/bi";
 
 export default function Home() {
+  const { t } = useTranslation();
   return (
-    <section id="home" className="home">
-      <div className="home-content">
-        <h1 className="home-hello">{t("home.hello")}</h1>
-        <h1 className="home-name">{t("home.name")}</h1>
-        <h2 className="home-role">{t("home.function")}</h2>
-        <p className="home-description">{t("home.description")}</p>
-      </div>
-    </section>
+    <StyledHomeContainer>
+      <StyledHomeContent>
+        <StyledName>{t("pages.home.name")}</StyledName>
+        <StyledRole>{t("pages.home.function")}</StyledRole>
+        <StyledLocation>{t("pages.home.location")}</StyledLocation>
+        <StyledActionsContainer>
+          <StyledDownloadCurriculum
+            href="/src/assets/rafaelsena-curriculum.pdf"
+            download
+          >
+            <StyledDownloadCvText>
+              {t("pages.home.curriculum")}
+            </StyledDownloadCvText>
+            <StyledDownloadIcon />
+          </StyledDownloadCurriculum>
+          <StyledSocialsContainer>
+            <StyledIconLink
+              href="https://linkedin.com/in/rafaznj"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin />
+            </StyledIconLink>
+            <StyledIconLink
+              href="https://github.com/rafaznj"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <FaGithub />
+            </StyledIconLink>
+            <StyledIconLink
+              href="mailto:rafaelsena.contact@gmail.com"
+              target="_blank"
+              aria-label="Gmail"
+            >
+              <BiLogoGmail />
+            </StyledIconLink>
+          </StyledSocialsContainer>
+        </StyledActionsContainer>
+      </StyledHomeContent>
+    </StyledHomeContainer>
   );
 }
