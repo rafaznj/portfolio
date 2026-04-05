@@ -10,6 +10,10 @@ export const StyledContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const StyledLabel = styled.p`
@@ -19,13 +23,17 @@ export const StyledLabel = styled.p`
   margin: 0;
   cursor: default;
   letter-spacing: 0.1em;
+  @media (max-width: 1024px) {
+    font-size: 0.5rem;
+  }
 `;
 
 export const StyledMouse = styled.div`
   width: 24px;
   height: 38px;
-  border: ${(props) => props.theme.borders.width.base} solid ${(props) => props.theme.colors.text};
-  border-radius: 12px;
+  border: ${(props) => props.theme.borders.width.base} solid
+    ${(props) => props.theme.colors.text};
+  border-radius: ${(props) => props.theme.borders.radius.md};
   display: flex;
   justify-content: center;
   padding-top: 6px;
@@ -36,6 +44,6 @@ export const StyledWheel = styled.div`
   width: 3px;
   height: 10px;
   background: ${({ theme }) => theme.colors.text};
-  border-radius: 2px;
+  border-radius: ${(props) => props.theme.borders.radius.sm};
   animation: ${scroll} 1.5s ease-in-out infinite;
 `;

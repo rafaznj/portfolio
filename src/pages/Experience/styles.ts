@@ -5,6 +5,14 @@ export const StyledExperienceContainer = styled.div`
   align-items: flex-start;
   justify-content: center;
   padding: 4vh 8vw;
+
+  @media (max-width: 768px) {
+    padding: 4vh 6vw;
+  }
+
+  @media (max-width: 480px) {
+    padding: 3vh 1.5rem;
+  }
 `;
 
 export const StyledExperienceContent = styled.div`
@@ -13,6 +21,10 @@ export const StyledExperienceContent = styled.div`
   gap: 2rem;
   max-width: 680px;
   width: 100%;
+
+  @media (max-width: 480px) {
+    gap: 1.5rem;
+  }
 `;
 
 export const StyledTitle = styled.h2`
@@ -24,6 +36,10 @@ export const StyledTitle = styled.h2`
   letter-spacing: 0.02rem;
   margin: 0;
   text-align: left;
+
+  @media (max-width: 480px) {
+    font-size: clamp(1.2rem, 6vw, 1.4rem);
+  }
 `;
 
 export const StyledTimeline = styled.div`
@@ -38,6 +54,10 @@ export const StyledTimelineItem = styled.div`
   flex-direction: row;
   gap: 2rem;
   position: relative;
+
+  @media (max-width: 480px) {
+    gap: 0;
+  }
 `;
 
 export const StyledCardHeader = styled.div`
@@ -46,6 +66,11 @@ export const StyledCardHeader = styled.div`
   justify-content: space-between;
   gap: 1rem;
   flex-wrap: nowrap;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
 `;
 
 export const StyledRole = styled.h3`
@@ -56,6 +81,10 @@ export const StyledRole = styled.h3`
   color: ${(props) => props.theme.colors.text};
   letter-spacing: 0.02em;
   line-height: 1.2;
+
+  @media (max-width: 480px) {
+    font-size: clamp(0.95rem, 4.5vw, 1.1rem);
+  }
 `;
 
 export const StyledCompany = styled.span`
@@ -66,6 +95,10 @@ export const StyledCompany = styled.span`
   color: ${(props) => props.theme.colors.text};
   margin-top: 0.25rem;
   display: block;
+
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
+  }
 `;
 
 export const StyledPeriod = styled.span`
@@ -77,6 +110,12 @@ export const StyledPeriod = styled.span`
   letter-spacing: 0.06em;
   white-space: nowrap;
   margin-top: 0.15rem;
+
+  @media (max-width: 480px) {
+    white-space: normal;
+    font-size: ${(props) => props.theme.fonts.size.xs};
+    letter-spacing: 0.04em;
+  }
 `;
 
 export const StyledDescription = styled.p`
@@ -88,6 +127,11 @@ export const StyledDescription = styled.p`
   color: ${(props) => props.theme.colors.text};
   line-height: 1.7;
   flex: 1;
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+    line-height: 1.65;
+  }
 `;
 
 export const StyledStacks = styled.div`
@@ -95,6 +139,10 @@ export const StyledStacks = styled.div`
   flex-wrap: nowrap;
   gap: 0.5rem;
   margin-top: auto;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const StyledCard = styled.div`
@@ -116,6 +164,21 @@ export const StyledCard = styled.div`
     border-color: ${(props) => props.theme.borders.colors.white};
     transform: translateY(-4px);
   }
+
+  @media (max-width: 768px) {
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+
+    &:hover {
+      transform: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+  }
 `;
 
 export const StyledStackTag = styled.span`
@@ -126,7 +189,7 @@ export const StyledStackTag = styled.span`
   letter-spacing: 0.06em;
   cursor: pointer;
   padding: 0.2rem 0.6rem;
-  border-radius: ${(props) => props.theme.borders.radius.sm};
+  border-radius: ${(props) => props.theme.borders.radius.xm};
   border: ${(props) => props.theme.borders.width.thin} solid
     ${(props) => props.theme.borders.colors.gray};
   transition:
@@ -136,5 +199,11 @@ export const StyledStackTag = styled.span`
   &:hover {
     border-color: ${(props) => props.theme.borders.colors.white};
     color: ${(props) => props.theme.colors.text};
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.6rem;
+    padding: 0.15rem 0.5rem;
+    letter-spacing: 0.04em;
   }
 `;

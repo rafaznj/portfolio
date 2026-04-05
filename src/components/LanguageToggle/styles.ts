@@ -17,11 +17,23 @@ export const StyledButton = styled.button`
   &:active {
     transform: scale(0.92);
   }
+
+  @media (max-width: 480px) {
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0.35rem;
+  }
 `;
 
 export const StyledIcon = styled.span`
   position: absolute;
   display: flex;
   font-size: ${(props) => props.theme.fonts.size.xxl};
-  transition: opacity 0.6s ease, transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition:
+    opacity 0.6s ease,
+    transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  @media (max-width: 480px) {
+    font-size: ${(props) => props.theme.fonts.size.xl};
+  }
 `;

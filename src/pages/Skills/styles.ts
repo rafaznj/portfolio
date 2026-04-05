@@ -5,6 +5,14 @@ export const StyledSkillsContainer = styled.div`
   align-items: flex-start;
   justify-content: center;
   padding: 4vh 8vw;
+
+  @media (max-width: 768px) {
+    padding: 4vh 6vw;
+  }
+
+  @media (max-width: 480px) {
+    padding: 3vh 1.5rem;
+  }
 `;
 
 export const StyledSkillsContent = styled.div`
@@ -13,6 +21,10 @@ export const StyledSkillsContent = styled.div`
   gap: 2rem;
   max-width: 680px;
   width: 100%;
+
+  @media (max-width: 480px) {
+    gap: 1.5rem;
+  }
 `;
 
 export const StyledTitle = styled.h2`
@@ -24,6 +36,10 @@ export const StyledTitle = styled.h2`
   letter-spacing: 0.02rem;
   margin: 0;
   text-align: left;
+
+  @media (max-width: 480px) {
+    font-size: clamp(1.2rem, 6vw, 1.4rem);
+  }
 `;
 
 export const StyledIconsContainer = styled.div`
@@ -31,6 +47,18 @@ export const StyledIconsContainer = styled.div`
   grid-template-columns: repeat(6, minmax(80px, 120px));
   justify-content: center;
   width: 100%;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(6, minmax(70px, 100px));
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(6, minmax(64px, 90px));
+  }
+
+  @media (max-width: 400px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 `;
 
 export const StyledIconName = styled.span`
@@ -39,7 +67,7 @@ export const StyledIconName = styled.span`
   left: 50%;
   transform: translateX(-50%) translateY(6px);
   font-family: ${(props) => props.theme.fonts.family.body};
-  font-size: clamp(0.65rem, 1vw, 0.8rem);
+  font-size: ${(props) => props.theme.fonts.size.xs};
   color: ${(props) => props.theme.colors.text};
   white-space: nowrap;
   opacity: 0;
@@ -47,6 +75,14 @@ export const StyledIconName = styled.span`
     opacity 0.2s ease,
     transform 0.2s ease;
   pointer-events: none;
+
+  @media (max-width: 480px) {
+    font-size: 0.6rem;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 0.5rem;
+  }
 `;
 
 export const StyledIconItem = styled.div`
@@ -55,6 +91,10 @@ export const StyledIconItem = styled.div`
   flex-direction: column;
   align-items: center;
   padding: clamp(0.9rem, 1.6vw, 1.3rem);
+
+  @media (max-width: 480px) {
+    padding: clamp(0.8rem, 3vw, 1.1rem);
+  }
 `;
 
 export const StyledIcon = styled.img`
@@ -74,5 +114,10 @@ export const StyledIcon = styled.img`
   &:hover + ${StyledIconName} {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
+  }
+
+  @media (max-width: 480px) {
+    width: clamp(32px, 8vw, 48px);
+    height: clamp(32px, 8vw, 48px);
   }
 `;

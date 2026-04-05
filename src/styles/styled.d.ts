@@ -40,6 +40,7 @@ declare module "styled-components" {
     borders: {
       radius: {
         sm: string;
+        xm: string;
         md: string;
         lg: string;
         full: string;

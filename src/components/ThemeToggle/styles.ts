@@ -18,13 +18,26 @@ export const StyledButton = styled.button`
   &:active {
     transform: scale(0.92);
   }
+
+  @media (max-width: 480px) {
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0.35rem;
+  }
 `;
 
 export const StyledIcon = styled.span<{ $visible: boolean }>`
   position: absolute;
   display: flex;
-  font-size:  ${(props) => props.theme.fonts.size.xl};
-  transition: opacity 0.6s ease, transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-size: ${(props) => props.theme.fonts.size.xl};
+  transition:
+    opacity 0.6s ease,
+    transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
   opacity: ${({ $visible }) => ($visible ? 1 : 0)};
-  transform: ${({ $visible }) => ($visible ? "rotate(0deg) scale(1)" : "rotate(90deg) scale(0.5)")};
+  transform: ${({ $visible }) =>
+    $visible ? "rotate(0deg) scale(1)" : "rotate(90deg) scale(0.5)"};
+
+  @media (max-width: 480px) {
+    font-size: ${(props) => props.theme.fonts.size.lg};
+  }
 `;

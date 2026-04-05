@@ -1,6 +1,7 @@
 export const borders = {
   radius: {
-    sm: "4px",
+    sm: "2px",
+    xm: "4px",
     md: "8px",
     lg: "12px",
     full: "9999px",
