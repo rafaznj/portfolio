@@ -37,7 +37,7 @@ export const StyledName = styled.h1`
   @media (max-width: 480px) {
     font-size: ${(props) => props.theme.fonts.size.xxl};
   }
-  
+
   @media (max-width: 420px) {
     font-size: ${(props) => props.theme.fonts.size.xl};
   }
@@ -120,6 +120,7 @@ export const StyledDownloadCurriculum = styled.a`
   transition:
     border-color 0.2s ease,
     opacity 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
 
   &:hover {
     border-color: ${({ theme }) => theme.borders.colors.white};
@@ -161,6 +162,7 @@ export const StyledIconLink = styled.a`
   transition:
     color 0.2s ease,
     transform 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
 
   &:hover {
     color: ${({ theme }) => theme.colors.text};

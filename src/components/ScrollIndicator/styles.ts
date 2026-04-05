@@ -38,6 +38,7 @@ export const StyledMouse = styled.div`
   justify-content: center;
   padding-top: 6px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 `;
 
 export const StyledWheel = styled.div`

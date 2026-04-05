@@ -14,11 +14,11 @@ import {
 } from "./styles";
 
 type Projects = {
-    name: string;
-    description: string;
-    link: string;
-    stacks: string[];
-  };
+  name: string;
+  description: string;
+  link: string;
+  stacks: string[];
+};
 
 export default function Projects() {
   const { t } = useTranslation();
@@ -33,11 +33,7 @@ export default function Projects() {
         <StyledTitle>{t("pages.projects.title")}</StyledTitle>
         <StyledProjectsGrid>
           {projects.map((project, index) => (
-            <StyledProjectCard
-              key={index}
-              href={project.link}
-              target="_blank"
-            >
+            <StyledProjectCard key={index} href={project.link} target="_blank">
               <StyledProjectCardHeader>
                 <StyledProjectName>{project.name}</StyledProjectName>
                 <StyledLinkIcon />

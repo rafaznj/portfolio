@@ -72,9 +72,27 @@ export const StyledLinkIcon = styled(LuExternalLink)`
     color 0.2s ease,
     transform 0.2s ease;
 
+  
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.text};
+    font-size: ${({ theme }) => theme.fonts.size.xs};
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }  
+
   &:hover {
     color: ${(props) => props.theme.colors.text};
-    transform: translate(2px, -2px);
+    transform: translate(2px, -2px) scale(1.2);
   }
 `;
 
@@ -131,6 +149,7 @@ export const StyledProjectCard = styled.a`
   transition:
     border-color 0.25s ease,
     transform 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
 
   &:hover {
     border-color: ${({ theme }) => theme.borders.colors.white};

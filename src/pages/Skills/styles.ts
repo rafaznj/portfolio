@@ -48,6 +48,7 @@ export const StyledIconsContainer = styled.div`
   justify-content: center;
   width: 100%;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(6, minmax(70px, 100px));

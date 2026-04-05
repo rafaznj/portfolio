@@ -14,6 +14,7 @@ export const StyledButton = styled.button`
   width: 2rem;
   height: 2rem;
   transition: opacity 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
 
   &:active {
     transform: scale(0.92);

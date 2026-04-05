@@ -159,6 +159,7 @@ export const StyledCard = styled.div`
   transition:
     border-color 0.25s ease,
     transform 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
 
   &:hover {
     border-color: ${(props) => props.theme.borders.colors.white};
@@ -195,6 +196,7 @@ export const StyledStackTag = styled.span`
   transition:
     border-color 0.2s ease,
     color 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
 
   &:hover {
     border-color: ${(props) => props.theme.borders.colors.white};
