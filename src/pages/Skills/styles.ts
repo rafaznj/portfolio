@@ -47,6 +47,7 @@ export const StyledIconsContainer = styled.div`
   grid-template-columns: repeat(6, minmax(80px, 120px));
   justify-content: center;
   width: 100%;
+  cursor: pointer;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(6, minmax(70px, 100px));

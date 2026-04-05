@@ -15,4 +15,9 @@ export default createGlobalStyle`
     background: ${(props) => props.theme.colors.background};
     color: ${(props) => props.theme.colors.text};
   }
+
+::selection {
+  background: ${({ theme }) => (theme.title === "dark" ? "#ffffff20" : "#00000025")};
+  color: ${({ theme }) => (theme.title === "dark" ? "#ffffff" : "#000000")};
+}
 `;
