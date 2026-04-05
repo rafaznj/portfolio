@@ -1,75 +1,32 @@
-# React + TypeScript + Vite
+## Sobre
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto desenvolvido para aprofundar os conhecimentos e centralizar meus melhores trabalhos pessoais em um único espaço.
 
-Currently, two official plugins are available:
+Desenvolvi com: <code>TypeScript · React · Styled Components</code>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Estrutura
 
-## React Compiler
-
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+src/
+├── assets/
+│   └── i18n/              # Traduções e configuração de idiomas
+├── components/
+│   ├── LanguageToggle/    # Botão para alternar o idioma
+│   ├── ThemeToggle/       # Botão para alternar o tema
+│   ├── ScrollIndicator/   # Indicador e botão para rolar a página
+│   └── Navbar/            # Barra de navegação
+├── hooks/
+│   └── usePersistedState  # Hook para estado persistido no localStorage
+├── pages/
+│   ├── Home/              # Seção inicial, com informações básicas e botões de redes sociais e download do currículo
+│   ├── Skills/            # Seção de habilidades
+│   ├── Experience/        # Seção de experiências
+│   └── Projects/          # Seção de projetos
+└── styles/
+    ├── borders/           # Tokens de borda
+    ├── colors/            # Paleta de cores
+    ├── themes/            # Definição dos temas
+    ├── globals.ts         # Estilos globais
+    ├── theme-provider.ts  # Provider de tema
+    └── fonts.ts           # Configuração de fontes
 ```
