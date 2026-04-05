@@ -2,7 +2,7 @@
 
 Projeto desenvolvido para aprofundar os conhecimentos e centralizar meus melhores projetos pessoais em um único espaço.
 
-Desenvolvi com: <code>TypeScript · React · Styled Components</code>
+Desenvolvi com: <code>React · TypeScript · Node.js · Styled Components</code>
 
 ## Estrutura
 
