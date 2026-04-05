@@ -1,6 +1,6 @@
 ## Sobre
 
-Projeto desenvolvido para aprofundar os conhecimentos e centralizar meus melhores trabalhos pessoais em um único espaço.
+Projeto desenvolvido para aprofundar os conhecimentos e centralizar meus melhores projetos pessoais em um único espaço.
 
 Desenvolvi com: <code>TypeScript · React · Styled Components</code>
 
