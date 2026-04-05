@@ -12,9 +12,9 @@ export default function ScrollIndicator() {
   const { handleScroll } = useScrollIndicator();
 
   return (
-    <StyledContainer onClick={handleScroll}>
+    <StyledContainer>
       <StyledLabel>{t("components.navbar.scrollIndicator")}</StyledLabel>
-      <StyledMouse>
+      <StyledMouse onClick={handleScroll}>
         <StyledWheel />
       </StyledMouse>
     </StyledContainer>
