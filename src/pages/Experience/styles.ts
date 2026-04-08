@@ -78,6 +78,7 @@ export const StyledRole = styled.h3`
   font-size: clamp(1rem, 2vw, 1.3rem);
   font-weight: ${(props) => props.theme.fonts.weight.bold};
   cursor: text;
+  padding-bottom: 1rem;
   color: ${(props) => props.theme.colors.text};
   letter-spacing: 0.02em;
   line-height: 1.2;
