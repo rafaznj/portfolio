@@ -4,10 +4,10 @@ type Response<T> = [T, Dispatch<SetStateAction<T>>];
 
 function usePersistedState<T>(key: string, initialState: T): Response<T> {
   const [state, setState] = useState(() => {
-    const storateValue = localStorage.getItem(key);
+    const storageValue = localStorage.getItem(key);
 
-    if (storateValue) {
-      return JSON.parse(storateValue);
+    if (storageValue) {
+      return JSON.parse(storageValue);
     } else {
       return initialState;
     }
