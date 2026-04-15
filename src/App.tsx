@@ -6,12 +6,12 @@ import Skills from "./pages/Skills";
 
 export default function App() {
   return (
-    <div className="App">
+    <>
       <NavBar/>
       <Home />
       <Skills />
       <Projects />
       <Experience />
-    </div>
+    </>
   );
 }
