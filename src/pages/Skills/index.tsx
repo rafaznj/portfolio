@@ -9,13 +9,17 @@ import {
   StyledSkillsContent,
   StyledTitle,
 } from "./styles";
+import { ToolCase } from "lucide-react";
 
 export default function Skills() {
   const { t } = useTranslation();
   return (
     <StyledSkillsContainer>
       <StyledSkillsContent>
-        <StyledTitle>{t("pages.skills.title")}</StyledTitle>
+        <StyledTitle>
+          {t("pages.skills.title")}
+          <ToolCase />
+        </StyledTitle>
         <StyledIconsContainer>
           {stacks.map((item) => (
             <StyledIconItem key={item.file}>

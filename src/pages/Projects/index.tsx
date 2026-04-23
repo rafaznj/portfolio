@@ -12,6 +12,7 @@ import {
   StyledProjectStackTag,
   StyledTitle,
 } from "./styles";
+import { FolderGit2 } from "lucide-react";
 
 type Projects = {
   name: string;
@@ -30,7 +31,7 @@ export default function Projects() {
   return (
     <StyledProjectsContainer>
       <StyledProjectsContent>
-        <StyledTitle>{t("pages.projects.title")}</StyledTitle>
+        <StyledTitle>{t("pages.projects.title")} <FolderGit2/> </StyledTitle>
         <StyledProjectsGrid>
           {projects.map((project, index) => (
             <StyledProjectCard key={index} href={project.link} target="_blank">

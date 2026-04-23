@@ -14,6 +14,7 @@ import {
   StyledTimelineItem,
   StyledTitle,
 } from "./styles";
+import { CalendarDays } from "lucide-react";
 
 type Experiences = {
   role: string;
@@ -33,7 +34,10 @@ export default function Experience() {
   return (
     <StyledExperienceContainer>
       <StyledExperienceContent>
-        <StyledTitle>{t("pages.experience.title")}</StyledTitle>
+        <StyledTitle>
+          {t("pages.experience.title")}
+          <CalendarDays />
+        </StyledTitle>
         <StyledTimeline>
           {experiences.map((exp, index) => (
             <StyledTimelineItem key={index}>

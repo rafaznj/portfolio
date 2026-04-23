@@ -129,6 +129,15 @@ export const StyledTitle = styled.h2`
   letter-spacing: 0.02rem;
   margin: 0;
   text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  svg {
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+  }
 
   @media (max-width: 480px) {
     font-size: clamp(1.2rem, 6vw, 1.4rem);
