@@ -72,7 +72,6 @@ export const StyledLinkIcon = styled(LuExternalLink)`
     color 0.2s ease,
     transform 0.2s ease;
 
-  
   &::after {
     content: attr(data-tooltip);
     position: absolute;
@@ -88,7 +87,7 @@ export const StyledLinkIcon = styled(LuExternalLink)`
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease;
-  }  
+  }
 
   &:hover {
     color: ${(props) => props.theme.colors.text};

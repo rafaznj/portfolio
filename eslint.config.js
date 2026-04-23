@@ -15,12 +15,12 @@ export default defineConfig([
       tseslint.configs.recommended,
       reactHooks.configs.flat.recommended,
       reactRefresh.configs.vite,
-      prettier
+      prettier,
     ],
     rules: {
       "no-console": "warn",
       "@typescript-eslint/no-unused-vars": "error",
-      'no-duplicate-imports': 'error',
+      "no-duplicate-imports": "error",
     },
     languageOptions: {
       ecmaVersion: 2020,

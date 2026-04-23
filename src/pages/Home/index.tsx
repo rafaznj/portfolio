@@ -24,10 +24,7 @@ export default function Home() {
         <StyledRole>{t("pages.home.function")}</StyledRole>
         <StyledLocation>{t("pages.home.location")}</StyledLocation>
         <StyledActionsContainer>
-          <StyledDownloadCurriculum
-            href="/rafaelsena-curriculum.pdf"
-            download
-          >
+          <StyledDownloadCurriculum href="/rafaelsena-curriculum.pdf" download>
             <StyledDownloadCvText>
               {t("pages.home.curriculum")}
             </StyledDownloadCvText>

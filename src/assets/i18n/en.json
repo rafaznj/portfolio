@@ -14,28 +14,9 @@
         {
           "company": "CEPEDI - Center for Research, Technological Development and Innovation",
           "description": "I work in the development of web systems focused on optimizing internal company processes, contributing to greater operational efficiency.",
-          "period": "feb 2024 - at moment",
+          "period": "feb 2025 - at moment",
           "role": "Full Stack Developer",
-          "stacks": [
-            "TypeScript",
-            "React",
-            "Node.js",
-            "NestJS",
-            "PostgreSQL"
-          ]
-        },
-        {
-          "company": "Federal Institute of Bahia - IFBA Ilhéus Campus",
-          "description": "I developed a web system focused on sustainability, connecting residences interested in selective collection with local cooperatives of recyclable materials.",
-          "period": "jun 2024 - dec 2024",
-          "role": "Academic Project Assistant",
-          "stacks": [
-            "PHP",
-            "JavaScript",
-            "MySQL",
-            "HTML",
-            "CSS"
-          ]
+          "stacks": ["TypeScript", "React", "Node.js", "NestJS", "PostgreSQL"]
         }
       ],
       "title": "my experiences"

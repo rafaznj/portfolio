@@ -7,7 +7,7 @@ import Skills from "./pages/Skills";
 export default function App() {
   return (
     <>
-      <NavBar/>
+      <NavBar />
       <Home />
       <Skills />
       <Projects />

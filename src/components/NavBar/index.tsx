@@ -8,12 +8,12 @@ export function NavBar() {
   const { hidden } = useNavBar();
   return (
     <>
-    <StyledNav $hidden={hidden}>
-      <StyledControls>
-        <LanguageToggleButton />
-        <ToggleThemeButton />
-      </StyledControls>
-    </StyledNav>
+      <StyledNav $hidden={hidden}>
+        <StyledControls>
+          <LanguageToggleButton />
+          <ToggleThemeButton />
+        </StyledControls>
+      </StyledNav>
       <StyledScrollWrapper>
         <ScrollIndicator />
       </StyledScrollWrapper>

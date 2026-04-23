@@ -6,5 +6,5 @@ export default {
   title: "dark",
   colors,
   fonts,
-  borders
+  borders,
 };

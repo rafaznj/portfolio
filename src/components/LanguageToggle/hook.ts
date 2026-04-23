@@ -9,7 +9,7 @@ export default function useLanguageToggle() {
 
   const [language, setLanguage] = usePersistedState<Language>(
     "lang",
-    i18n.language === "pt" ? "pt" : "en"
+    i18n.language === "pt" ? "pt" : "en",
   );
 
   useEffect(() => {

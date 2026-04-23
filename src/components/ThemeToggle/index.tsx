@@ -7,10 +7,7 @@ export default function ToggleThemeButton() {
   const { toggleTheme, isDark } = useThemeContext();
 
   return (
-    <StyledButton
-      onClick={toggleTheme}
-      aria-label="Toggle theme"
-    >
+    <StyledButton onClick={toggleTheme} aria-label="Toggle theme">
       <StyledIcon $visible={!isDark}>
         <MdSunny />
       </StyledIcon>

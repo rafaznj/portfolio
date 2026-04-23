@@ -14,16 +14,9 @@
         {
           "company": "CEPEDI - Centro de Pesquisa, Desenvolvimento Tecnológico e Inovação",
           "description": "Atuo no desenvolvimento de sistemas web voltados à otimização de processos internos da empresa, contribuindo para maior eficiência operacional.",
-          "period": "fev 2024 - no momento",
+          "period": "fev 2025 - no momento",
           "role": "Estagiário em Desenvolvimento Full Stack",
           "stacks": ["TypeScript", "React", "Node.js", "NestJS", "PostgreSQL"]
-        },
-        {
-          "company": "Instituto Federal da Bahia - IFBA Campus Ilhéus",
-          "description": "Desenvolvi um sistema web com foco em sustentabilidade, conectando residências interessadas na coleta seletiva com cooperativas locais de materiais recicláveis.",
-          "period": "jun 2024 - dez 2024",
-          "role": "Bolsista em Projeto Acadêmico",
-          "stacks": ["PHP", "JavaScript", "MySQL", "HTML", "CSS"]
         }
       ],
       "title": "minhas experiências"

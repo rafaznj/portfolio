@@ -19,10 +19,7 @@ export default function Skills() {
         <StyledIconsContainer>
           {stacks.map((item) => (
             <StyledIconItem key={item.file}>
-              <StyledIcon
-                src={`/images/${item.file}`}
-                alt={item.name}
-              />
+              <StyledIcon src={`/images/${item.file}`} alt={item.name} />
               <StyledIconName>{item.name}</StyledIconName>
             </StyledIconItem>
           ))}
