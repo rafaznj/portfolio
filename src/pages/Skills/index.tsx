@@ -9,7 +9,7 @@ import {
   StyledSkillsContent,
   StyledTitle,
 } from "./styles";
-import { ToolCase } from "lucide-react";
+import { CgToolbox } from "react-icons/cg";
 
 export default function Skills() {
   const { t } = useTranslation();
@@ -18,7 +18,7 @@ export default function Skills() {
       <StyledSkillsContent>
         <StyledTitle>
           {t("pages.skills.title")}
-          <ToolCase />
+          <CgToolbox  />
         </StyledTitle>
         <StyledIconsContainer>
           {stacks.map((item) => (
