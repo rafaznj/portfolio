@@ -1,3 +1,4 @@
+import { FaGithub } from "react-icons/fa";
 import { LuExternalLink } from "react-icons/lu";
 import styled from "styled-components";
 
@@ -52,11 +53,33 @@ export const StyledProjectCardHeader = styled.div`
   gap: 0.5rem;
 `;
 
+export const StyledProjectActions = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+`;
+
+export const StyledProjectActionLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+`;
+
 export const StyledProjectName = styled.span`
   font-family: ${(props) => props.theme.fonts.family.title};
   font-size: clamp(1rem, 2vw, 1.3rem);
   font-weight: 700;
-  color: ${(props) => props.theme.colors.textGray};
+  color: ${(props) => props.theme.colors.primaryHover};
   letter-spacing: 0.02em;
 
   @media (max-width: 480px) {
@@ -66,7 +89,7 @@ export const StyledProjectName = styled.span`
 
 export const StyledLinkIcon = styled(LuExternalLink)`
   font-size: 1rem;
-  color: ${(props) => props.theme.colors.textGray};
+  color: ${(props) => props.theme.colors.primaryHover};
   flex-shrink: 0;
   transition:
     color 0.2s ease,
@@ -79,7 +102,7 @@ export const StyledLinkIcon = styled(LuExternalLink)`
     left: 50%;
     transform: translateX(-50%);
     background: ${({ theme }) => theme.colors.background};
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.primary};
     font-size: ${({ theme }) => theme.fonts.size.xs};
     padding: 0.2rem 0.6rem;
     border-radius: 4px;
@@ -90,7 +113,38 @@ export const StyledLinkIcon = styled(LuExternalLink)`
   }
 
   &:hover {
-    color: ${(props) => props.theme.colors.text};
+    color: ${(props) => props.theme.colors.primary};
+    transform: translate(2px, -2px) scale(1.2);
+  }
+`;
+
+export const StyledDocLinkIcon = styled(FaGithub)`
+  font-size: 1rem;
+  color: ${(props) => props.theme.colors.primaryHover};
+  flex-shrink: 0;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.primary};
+    font-size: ${({ theme }) => theme.fonts.size.xs};
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
     transform: translate(2px, -2px) scale(1.2);
   }
 `;
@@ -99,7 +153,7 @@ export const StyledProjectDescription = styled.p`
   font-family: ${(props) => props.theme.fonts.family.body};
   font-size: clamp(0.75rem, 1.2vw, 0.85rem);
   font-weight: 400;
-  color: ${(props) => props.theme.colors.textGray};
+  color: ${(props) => props.theme.colors.primaryHover};
   line-height: 1.7;
   flex: 1;
 
@@ -109,22 +163,11 @@ export const StyledProjectDescription = styled.p`
   }
 `;
 
-export const StyledProjectStacks = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: auto;
-
-  @media (max-width: 480px) {
-    gap: 0.4rem;
-  }
-`;
-
 export const StyledTitle = styled.h2`
   font-family: ${({ theme }) => theme.fonts.family.body};
   font-size: ${({ theme }) => theme.fonts.size.xxl};
   font-weight: ${({ theme }) => theme.fonts.weight.black};
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.primary};
   line-height: ${({ theme }) => theme.fonts.lineHeight.tight};
   letter-spacing: 0.02rem;
   margin: 0;
@@ -144,16 +187,14 @@ export const StyledTitle = styled.h2`
   }
 `;
 
-export const StyledProjectCard = styled.a`
+export const StyledProjectCard = styled.article`
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding: 1.5rem;
   border-radius: ${({ theme }) => theme.borders.radius.md};
-  border: ${({ theme }) => theme.borders.width.base} solid
+  border: ${({ theme }) => theme.borders.width.sm} solid
     ${({ theme }) => theme.borders.colors.gray};
-  text-decoration: none;
-  cursor: pointer;
   transition:
     border-color 0.25s ease,
     transform 0.25s ease;
@@ -182,11 +223,11 @@ export const StyledProjectStackTag = styled.span`
   font-family: ${({ theme }) => theme.fonts.family.body};
   font-size: ${({ theme }) => theme.fonts.size.xs};
   font-weight: ${({ theme }) => theme.fonts.weight.medium};
-  color: ${({ theme }) => theme.colors.textGray};
+  color: ${({ theme }) => theme.colors.primaryHover};
   letter-spacing: 0.06em;
   padding: 0.2rem 0.6rem;
   border-radius: ${({ theme }) => theme.borders.radius.sm};
-  border: ${({ theme }) => theme.borders.width.thin} solid
+  border: ${({ theme }) => theme.borders.width.xs} solid
     ${({ theme }) => theme.borders.colors.gray};
   transition:
     border-color 0.2s ease,
@@ -194,7 +235,7 @@ export const StyledProjectStackTag = styled.span`
 
   &:hover {
     border-color: ${({ theme }) => theme.borders.colors.white};
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.primary};
   }
 
   @media (max-width: 480px) {

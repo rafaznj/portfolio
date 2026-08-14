@@ -4,8 +4,18 @@
       "experience": "experience",
       "home": "home",
       "projects": "projects",
-      "skills": "skills",
-      "scrollIndicator": "scroll to explore more"
+      "scrollIndicator": "scroll to explore more",
+      "skills": "skills"
+    }
+  },
+  "tooltips": {
+    "themeToggle": {
+      "darkMode": "Dark mode",
+      "lightMode": "Light mode"
+    },
+    "languageToggle": {
+      "en": "English",
+      "pt": "Portuguese"
     }
   },
   "pages": {
@@ -13,13 +23,21 @@
       "data": [
         {
           "company": "CEPEDI - Center for Research, Technological Development and Innovation",
-          "description": "I work in the development of web systems focused on optimizing internal company processes, contributing to greater operational efficiency.",
+          "description": "I developed the SUB (Unified Scholarship System), a platform focused on managing the lifecycle of scholarships at CEPEDI, replacing manual processes with a centralized and automated workflow.",
           "period": "feb 2025 - at moment",
-          "role": "Full Stack Developer",
-          "stacks": ["TypeScript", "React", "Node.js", "NestJS", "PostgreSQL"]
+          "role": "Full Stack Development Intern",
+          "stacks": [
+            "TypeScript",
+            "React",
+            "Node.js",
+            "NestJS",
+            "PostgreSQL",
+            "Drizzle ORM",
+            "AWS Cognito"
+          ]
         }
       ],
-      "title": "my experiences"
+      "title": "experience"
     },
     "home": {
       "curriculum": "Curriculum",
@@ -33,14 +51,25 @@
         {
           "description": "",
           "link": "",
-          "name": "",
-          "stacks": [""]
+          "doc": "",
+          "name": ""
+        },
+        {
+          "description": "",
+          "link": "https://ticksy.rafaelsena.dev",
+          "name": "Ticksy"
+        },
+        {
+          "description": "",
+          "link": "https://clone-termo.rafaelsena.dev",
+          "doc": "https://clone-termo.rafaelsena.dev/doc",
+          "name": "Clone Termo"
         }
       ],
-      "title": "my projects"
+      "title": "projects"
     },
     "skills": {
-      "title": "my skills"
+      "title": "skills"
     }
   }
 }

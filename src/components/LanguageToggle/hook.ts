@@ -5,7 +5,7 @@ import usePersistedState from "../../hooks/use-persisted-state";
 type Language = "pt" | "en";
 
 export default function useLanguageToggle() {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   const [language, setLanguage] = usePersistedState<Language>(
     "lang",
@@ -23,5 +23,6 @@ export default function useLanguageToggle() {
   return {
     language,
     toggleLanguage,
+    t,
   };
 }

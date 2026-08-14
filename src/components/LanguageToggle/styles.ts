@@ -1,10 +1,10 @@
 import styled from "styled-components";
+import { ButtonWithTooltip } from "../molecules/ButtonWithTooltip";
 
-export const StyledButton = styled.button`
+export const StyledButton = styled(ButtonWithTooltip)`
   background: transparent;
   cursor: pointer;
-  border: none;
-  color: ${(props) => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.primary};
   display: flex;
   align-items: center;
   justify-content: center;

@@ -4,8 +4,18 @@
       "experience": "experiência",
       "home": "home",
       "projects": "projetos",
-      "skills": "habilidades",
-      "scrollIndicator": "role para explorar mais"
+      "scrollIndicator": "role para explorar mais",
+      "skills": "habilidades"
+    }
+  },
+  "tooltips": {
+    "themeToggle": {
+      "darkMode": "Tema escuro",
+      "lightMode": "Tema claro"
+    },
+    "languageToggle": {
+      "en": "Inglês",
+      "pt": "Português"
     }
   },
   "pages": {
@@ -13,13 +23,21 @@
       "data": [
         {
           "company": "CEPEDI - Centro de Pesquisa, Desenvolvimento Tecnológico e Inovação",
-          "description": "Atuo no desenvolvimento de sistemas web voltados à otimização de processos internos da empresa, contribuindo para maior eficiência operacional.",
+          "description": "Atuei no desenvolvimento do SUB (Sistema Unificado de Bolsas), plataforma voltada à gestão do ciclo de vida de bolsas do CEPEDI, substituindo processos manuais por um fluxo centralizado e automatizado.",
           "period": "fev 2025 - no momento",
           "role": "Estagiário em Desenvolvimento Full Stack",
-          "stacks": ["TypeScript", "React", "Node.js", "NestJS", "PostgreSQL"]
+          "stacks": [
+            "TypeScript",
+            "React",
+            "Node.js",
+            "NestJS",
+            "PostgreSQL",
+            "Drizzle ORM",
+            "AWS Cognito"
+          ]
         }
       ],
-      "title": "minhas experiências"
+      "title": "experiência"
     },
     "home": {
       "curriculum": "Currículo",
@@ -33,14 +51,26 @@
         {
           "description": "",
           "link": "",
-          "name": "",
-          "stacks": [""]
+          "doc": "",
+          "name": ""
+        },
+        {
+          "description": "",
+          "link": "https://ticksy.rafaelsena.dev",
+          "doc": "https://github.com/rafaznj/ticksy",
+          "name": "Ticksy"
+        },
+        {
+          "description": "",
+          "link": "https://clone-termo.rafaelsena.dev",
+          "doc": "https://github.com/rafaznj/clone-termo",
+          "name": "Clone Termo"
         }
       ],
-      "title": "meus projetos"
+      "title": "projetos"
     },
     "skills": {
-      "title": "minhas habilidades"
+      "title": "habilidades"
     }
   }
 }

@@ -19,7 +19,7 @@ export const StyledContainer = styled.div`
 export const StyledLabel = styled.p`
   font-family: ${({ theme }) => theme.fonts.family.body};
   font-size: ${({ theme }) => theme.fonts.size.xs};
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.primary};
   margin: 0;
   cursor: default;
   letter-spacing: 0.1em;
@@ -31,8 +31,8 @@ export const StyledLabel = styled.p`
 export const StyledMouse = styled.div`
   width: 24px;
   height: 38px;
-  border: ${(props) => props.theme.borders.width.base} solid
-    ${(props) => props.theme.colors.text};
+  border: ${(props) => props.theme.borders.width.sm} solid
+    ${(props) => props.theme.colors.primary};
   border-radius: ${(props) => props.theme.borders.radius.md};
   display: flex;
   justify-content: center;
@@ -44,7 +44,7 @@ export const StyledMouse = styled.div`
 export const StyledWheel = styled.div`
   width: 3px;
   height: 10px;
-  background: ${({ theme }) => theme.colors.text};
+  background: ${({ theme }) => theme.colors.primary};
   border-radius: ${(props) => props.theme.borders.radius.sm};
   animation: ${scroll} 1.5s ease-in-out infinite;
 `;

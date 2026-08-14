@@ -1,6 +1,9 @@
 import { useTranslation } from "react-i18next";
 import {
+  StyledDocLinkIcon,
   StyledLinkIcon,
+  StyledProjectActionLink,
+  StyledProjectActions,
   StyledProjectCard,
   StyledProjectCardHeader,
   StyledProjectDescription,
@@ -8,15 +11,14 @@ import {
   StyledProjectsContainer,
   StyledProjectsContent,
   StyledProjectsGrid,
-  StyledProjectStacks,
-  StyledProjectStackTag,
   StyledTitle,
 } from "./styles";
-import { FolderGit2 } from "lucide-react";
+import { LuFolderGit2 } from "react-icons/lu";
 
-type Projects = {
+type Project = {
   name: string;
   description: string;
+  doc: string;
   link: string;
   stacks: string[];
 };
@@ -26,29 +28,31 @@ export default function Projects() {
 
   const projects = t("pages.projects.data", {
     returnObjects: true,
-  }) as Projects[];
+  }) as Project[];
 
   return (
     <StyledProjectsContainer>
       <StyledProjectsContent>
-        <StyledTitle>{t("pages.projects.title")} <FolderGit2/> </StyledTitle>
+        <StyledTitle>
+          {t("pages.projects.title")} <LuFolderGit2 />{" "}
+        </StyledTitle>
         <StyledProjectsGrid>
-          {projects.map((project, index) => (
-            <StyledProjectCard key={index} href={project.link} target="_blank">
+          {projects.map((project) => (
+            <StyledProjectCard key={project.link}>
               <StyledProjectCardHeader>
                 <StyledProjectName>{project.name}</StyledProjectName>
-                <StyledLinkIcon />
+                <StyledProjectActions>
+                  <StyledProjectActionLink href={project.doc} target="_blank">
+                    <StyledDocLinkIcon />
+                  </StyledProjectActionLink>
+                  <StyledProjectActionLink href={project.link} target="_blank">
+                    <StyledLinkIcon />
+                  </StyledProjectActionLink>
+                </StyledProjectActions>
               </StyledProjectCardHeader>
               <StyledProjectDescription>
                 {project.description}
               </StyledProjectDescription>
-              <StyledProjectStacks>
-                {project.stacks.map((stack) => (
-                  <StyledProjectStackTag key={stack}>
-                    {stack}
-                  </StyledProjectStackTag>
-                ))}
-              </StyledProjectStacks>
             </StyledProjectCard>
           ))}
         </StyledProjectsGrid>

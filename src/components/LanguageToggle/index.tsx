@@ -1,19 +1,29 @@
-import { LiaFlagUsaSolid } from "react-icons/lia";
+import { BiWorld } from "react-icons/bi";
+import { GiBrazilFlag } from "react-icons/gi";
+
 import useLanguageToggleButton from "./hook";
 import { StyledButton, StyledIcon } from "./styles";
-import { GiBrazilFlag } from "react-icons/gi";
+
 export default function LanguageToggleButton() {
-  const { language, toggleLanguage } = useLanguageToggleButton();
+  const { language, toggleLanguage, t } = useLanguageToggleButton();
 
   return (
-    <StyledButton onClick={toggleLanguage} aria-label="Language toggle button">
+    <StyledButton
+      variant="default"
+      tooltip={
+        language === "pt"
+          ? t("tooltips.languageToggle.pt")
+          : t("tooltips.languageToggle.en")
+      }
+      onClick={toggleLanguage}
+    >
       {language === "pt" ? (
         <StyledIcon>
           <GiBrazilFlag />
         </StyledIcon>
       ) : (
         <StyledIcon>
-          <LiaFlagUsaSolid />
+          <BiWorld />
         </StyledIcon>
       )}
     </StyledButton>

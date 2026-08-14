@@ -29,7 +29,7 @@ export const StyledName = styled.h1`
   font-size: ${(props) => props.theme.fonts.size.xxxl};
   font-weight: ${(props) => props.theme.fonts.weight.black};
   white-space: nowrap;
-  color: ${(props) => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.primary};
   line-height: ${(props) => props.theme.fonts.lineHeight.tight};
   letter-spacing: 0.01em;
   margin: 0;
@@ -50,14 +50,14 @@ export const StyledRole = styled.p`
   font-family: ${(props) => props.theme.fonts.family.body};
   font-size: ${(props) => props.theme.fonts.size.lg};
   font-weight: ${(props) => props.theme.fonts.weight.regular};
-  color: ${(props) => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.primary};
   margin: 0;
 
   &:before {
     content: "";
     width: 1.25rem;
     height: 1px;
-    background: ${(props) => props.theme.colors.text};
+    background: ${(props) => props.theme.colors.primary};
     flex-shrink: 0;
   }
 
@@ -74,7 +74,7 @@ export const StyledLocation = styled.p`
   font-family: ${(props) => props.theme.fonts.family.body};
   font-size: ${(props) => props.theme.fonts.size.base};
   font-weight: ${(props) => props.theme.fonts.weight.regular};
-  color: ${(props) => props.theme.colors.textGray};
+  color: ${(props) => props.theme.colors.primaryHover};
   margin: 0;
   margin-top: 0.5rem;
 
@@ -99,7 +99,7 @@ export const StyledActionsContainer = styled.div`
 
 export const StyledDownloadIcon = styled(LuDownload)`
   font-size: ${(props) => props.theme.fonts.size.md};
-  color: ${(props) => props.theme.colors.textGray};
+  color: ${(props) => props.theme.colors.primaryHover};
   transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 `;
 
@@ -111,11 +111,11 @@ export const StyledDownloadCurriculum = styled.a`
   font-family: ${({ theme }) => theme.fonts.family.body};
   font-size: ${({ theme }) => theme.fonts.size.base};
   font-weight: ${({ theme }) => theme.fonts.weight.medium};
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.primary};
   background: transparent;
   text-decoration: none;
   border-radius: ${({ theme }) => theme.borders.radius.md};
-  border: ${({ theme }) => theme.borders.width.thin} solid
+  border: ${({ theme }) => theme.borders.width.xs} solid
     ${({ theme }) => theme.borders.colors.gray};
   transition:
     border-color 0.2s ease,
@@ -129,7 +129,7 @@ export const StyledDownloadCurriculum = styled.a`
 
   &:hover ${StyledDownloadIcon} {
     transform: translateY(-3px) scale(1.08);
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.primary};
   }
 
   @media (max-width: 480px) {
@@ -157,7 +157,7 @@ export const StyledIconLink = styled.a`
   height: 28px;
   text-decoration: none;
   border-radius: ${({ theme }) => theme.borders.radius.sm};
-  color: ${({ theme }) => theme.colors.textGray};
+  color: ${({ theme }) => theme.colors.primaryHover};
   font-size: ${(props) => props.theme.fonts.size.xl};
   transition:
     color 0.2s ease,
@@ -165,7 +165,7 @@ export const StyledIconLink = styled.a`
   -webkit-tap-highlight-color: transparent;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.primary};
     transform: scale(1.15);
   }
 
