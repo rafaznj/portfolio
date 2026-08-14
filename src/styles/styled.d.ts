@@ -4,9 +4,9 @@ declare module "styled-components" {
   export interface DefaultTheme {
     title: string;
     colors: {
-      text: string;
       background: string;
-      textGray: string;
+      primary: string;
+      primaryHover: string;
       black: string;
       white: string;
     };
@@ -46,13 +46,43 @@ declare module "styled-components" {
         full: string;
       };
       width: {
-        thin: string;
-        base: string;
+        none: string;
+        xs: string;
+        sm: string;
+        md: string;
+        lg: string;
+        xl: string;
       };
       colors: {
         gray: string;
         white: string;
       };
+    };
+    spacers: {
+      none: string;
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+      xxl: string;
+      "3xl": string;
+      "4xl": string;
+      "5xl": string;
+    };
+    gridBreakpoints: {
+      xs: string;
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+      xxl: string;
+    };
+    containerMaxWidths: {
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+      xxl: string;
     };
   }
 }

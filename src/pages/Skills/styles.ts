@@ -31,7 +31,7 @@ export const StyledTitle = styled.h2`
   font-family: ${(props) => props.theme.fonts.family.body};
   font-size: clamp(1.4rem, 2.5vw, 1.8rem);
   font-weight: 800;
-  color: ${(props) => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.primary};
   line-height: 1.1;
   letter-spacing: 0.02rem;
   margin: 0;
@@ -79,7 +79,7 @@ export const StyledIconName = styled.span`
   transform: translateX(-50%) translateY(6px);
   font-family: ${(props) => props.theme.fonts.family.body};
   font-size: ${(props) => props.theme.fonts.size.xs};
-  color: ${(props) => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.primary};
   white-space: nowrap;
   opacity: 0;
   transition:

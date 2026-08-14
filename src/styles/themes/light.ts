@@ -1,4 +1,5 @@
 import { borders } from "../borders/borders-light";
+import { breakpoints } from "../breakpoints";
 import { colors } from "../colors/colors-light";
 import { fonts } from "../fonts";
 
@@ -7,4 +8,5 @@ export default {
   colors,
   fonts,
   borders,
+  ...breakpoints,
 };

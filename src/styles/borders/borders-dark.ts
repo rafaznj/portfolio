@@ -7,8 +7,12 @@ export const borders = {
     full: "9999px",
   },
   width: {
-    thin: "1px",
-    base: "2px",
+    none: "0",
+    xs: "1px",
+    sm: "2px",
+    md: "4px",
+    lg: "8px",
+    xl: "16px",
   },
   colors: {
     gray: "rgba(255, 255, 255, 0.1)",

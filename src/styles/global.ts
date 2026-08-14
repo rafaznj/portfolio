@@ -9,7 +9,7 @@ export default createGlobalStyle`
 
   html, body {
     background: ${(props) => props.theme.colors.background};
-    color: ${(props) => props.theme.colors.text};
+    color: ${(props) => props.theme.colors.primary};
   }
 
 ::selection {
