@@ -18,16 +18,16 @@ export const StyledNav = styled.nav<{ $hidden: boolean }>`
 export const StyledControls = styled.div`
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 1rem;
 
   @media (max-width: 480px) {
-    gap: 0.15rem;
+    gap: 0.30rem;
   }
 `;
 
 export const StyledScrollWrapper = styled.div`
   position: fixed;
-  bottom: 2rem;
+  bottom: ${({ theme }) => theme.spacers.lg};
   right: 2rem;
 
   @media (max-width: 1024px) {

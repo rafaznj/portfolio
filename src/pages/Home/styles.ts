@@ -1,5 +1,6 @@
 import { LuDownload } from "react-icons/lu";
 import styled from "styled-components";
+import { ButtonWithTooltip } from "../../components/ButtonWithTooltip";
 
 export const StyledHomeContainer = styled.div`
   display: flex;
@@ -146,23 +147,16 @@ export const StyledSocialsContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.25rem;
 `;
 
-export const StyledIconLink = styled.a`
+export const StyledIconLink = styled(ButtonWithTooltip)`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
-  text-decoration: none;
-  border-radius: ${({ theme }) => theme.borders.radius.sm};
-  color: ${({ theme }) => theme.colors.primaryHover};
   font-size: ${(props) => props.theme.fonts.size.xl};
   transition:
     color 0.2s ease,
     transform 0.2s ease;
-  -webkit-tap-highlight-color: transparent;
 
   &:hover {
     color: ${({ theme }) => theme.colors.primary};

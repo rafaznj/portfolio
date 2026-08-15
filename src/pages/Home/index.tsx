@@ -32,23 +32,29 @@ export default function Home() {
           </StyledDownloadCurriculum>
           <StyledSocialsContainer>
             <StyledIconLink
-              href="https://linkedin.com/in/rafaznj"
-              target="_blank"
-              aria-label="LinkedIn"
+              tooltip="LinkedIn"
+              variant="ghost"
+              onClick={() =>
+                window.open("https://linkedin.com/in/rafaznj", "_blank")
+              }
             >
               <FaLinkedin />
             </StyledIconLink>
             <StyledIconLink
-              href="https://github.com/rafaznj"
-              target="_blank"
-              aria-label="GitHub"
+              tooltip="GitHub"
+              variant="ghost"
+              onClick={() =>
+                window.open("https://github.com/rafaznj", "_blank")
+              }
             >
               <FaGithub />
             </StyledIconLink>
             <StyledIconLink
-              href="mailto:rafaelsena.contact@gmail.com"
-              target="_blank"
-              aria-label="Gmail"
+              tooltip="Gmail"
+              variant="ghost"
+              onClick={() =>
+                window.open("mailto:rafaelsena.contact@gmail.com", "_blank")
+              }
             >
               <BiLogoGmail />
             </StyledIconLink>

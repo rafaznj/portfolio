@@ -4,18 +4,11 @@
       "experience": "experiência",
       "home": "home",
       "projects": "projetos",
-      "scrollIndicator": "role para explorar mais",
+      "scrollIndicator": {
+        "down": "descer",
+        "up": "subir"
+      },
       "skills": "habilidades"
-    }
-  },
-  "tooltips": {
-    "themeToggle": {
-      "darkMode": "Tema escuro",
-      "lightMode": "Tema claro"
-    },
-    "languageToggle": {
-      "en": "Inglês",
-      "pt": "Português"
     }
   },
   "pages": {
@@ -50,20 +43,20 @@
       "data": [
         {
           "description": "",
-          "link": "",
           "doc": "",
+          "link": "",
           "name": ""
         },
         {
           "description": "",
-          "link": "https://ticksy.rafaelsena.dev",
           "doc": "https://github.com/rafaznj/ticksy",
+          "link": "https://ticksy.rafaelsena.dev",
           "name": "Ticksy"
         },
         {
           "description": "",
-          "link": "https://clone-termo.rafaelsena.dev",
           "doc": "https://github.com/rafaznj/clone-termo",
+          "link": "https://clone-termo.rafaelsena.dev",
           "name": "Clone Termo"
         }
       ],
@@ -71,6 +64,16 @@
     },
     "skills": {
       "title": "habilidades"
+    }
+  },
+  "tooltips": {
+    "languageToggle": {
+      "en": "Inglês",
+      "pt": "Português"
+    },
+    "themeToggle": {
+      "darkMode": "Tema escuro",
+      "lightMode": "Tema claro"
     }
   }
 }

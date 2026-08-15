@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ButtonWithTooltip } from "../molecules/ButtonWithTooltip";
+import { ButtonWithTooltip } from "../ButtonWithTooltip";
 
 export const StyledButton = styled(ButtonWithTooltip)`
   background: transparent;

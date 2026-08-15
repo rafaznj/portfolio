@@ -1,14 +1,14 @@
 import * as React from "react";
 import { Tooltip } from "radix-ui";
 
-import { ButtonWithIcon, type ButtonProps } from "../../atoms/ButtonWithIcon";
+import { ButtonWithIcon, type ButtonProps } from "../ButtonWithIcon";
 import {
   TooltipContent,
   TooltipPortal,
   TooltipProvider,
   TooltipRoot,
   TooltipTrigger,
-} from "../../atoms/Tooltip";
+} from "../Tooltip";
 
 export interface ButtonWithTooltipProps extends ButtonProps {
   tooltip: React.ReactNode;

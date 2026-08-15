@@ -4,18 +4,11 @@
       "experience": "experience",
       "home": "home",
       "projects": "projects",
-      "scrollIndicator": "scroll to explore more",
+      "scrollIndicator": {
+        "down": " down",
+        "up": " up"
+      },
       "skills": "skills"
-    }
-  },
-  "tooltips": {
-    "themeToggle": {
-      "darkMode": "Dark mode",
-      "lightMode": "Light mode"
-    },
-    "languageToggle": {
-      "en": "English",
-      "pt": "Portuguese"
     }
   },
   "pages": {
@@ -50,8 +43,8 @@
       "data": [
         {
           "description": "",
-          "link": "",
           "doc": "",
+          "link": "",
           "name": ""
         },
         {
@@ -61,8 +54,8 @@
         },
         {
           "description": "",
-          "link": "https://clone-termo.rafaelsena.dev",
           "doc": "https://clone-termo.rafaelsena.dev/doc",
+          "link": "https://clone-termo.rafaelsena.dev",
           "name": "Clone Termo"
         }
       ],
@@ -70,6 +63,16 @@
     },
     "skills": {
       "title": "skills"
+    }
+  },
+  "tooltips": {
+    "languageToggle": {
+      "en": "English",
+      "pt": "Portuguese"
+    },
+    "themeToggle": {
+      "darkMode": "Dark mode",
+      "lightMode": "Light mode"
     }
   }
 }
