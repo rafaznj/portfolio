@@ -1,16 +1,4 @@
 {
-  "components": {
-    "navbar": {
-      "experience": "experience",
-      "home": "home",
-      "projects": "projects",
-      "scrollIndicator": {
-        "down": " down",
-        "up": " up"
-      },
-      "skills": "skills"
-    }
-  },
   "pages": {
     "experience": {
       "data": [
@@ -30,14 +18,14 @@
           ]
         }
       ],
-      "title": "experience"
+      "title": "Experience"
     },
     "home": {
-      "curriculum": "Curriculum",
       "function": "Full Stack Developer",
       "hello": "Hello! i'm",
+      "downloadResume": "Download Resume",
       "location": "Brazil, Bahia",
-      "name": "Rafael Sena"
+      "name": "RAFAEL SENA"
     },
     "projects": {
       "data": [
@@ -59,20 +47,33 @@
           "name": "Clone Termo"
         }
       ],
-      "title": "projects"
+      "title": "Projects"
     },
     "skills": {
-      "title": "skills"
+      "title": "Skills"
     }
   },
   "tooltips": {
     "languageToggle": {
-      "en": "English",
-      "pt": "Portuguese"
+      "en": "english",
+      "pt": "portuguese"
+    },
+    "project": {
+      "doc": "Documentation",
+      "site": "View"
+    },
+    "scrollIndicator": {
+      "down": " down",
+      "up": " up"
+    },
+    "socials": {
+      "email": "Email",
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
     },
     "themeToggle": {
-      "darkMode": "Dark mode",
-      "lightMode": "Light mode"
+      "darkMode": "dark mode",
+      "lightMode": "light mode"
     }
   }
 }

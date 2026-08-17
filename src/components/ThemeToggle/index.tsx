@@ -1,23 +1,27 @@
 import { StyledButton, StyledIcon } from "./styles";
-import { MdSunny } from "react-icons/md";
-import { IoMdMoon } from "react-icons/io";
+
+import { Moon, Sun } from "pixelarticons/react";
 import { useThemeContext } from "../../styles/theme-provider";
 import { useTranslation } from "react-i18next";
 
-export default function ToggleThemeButton() {
+export default function ThemeToggleButton() {
   const { toggleTheme, isDark } = useThemeContext();
   const { t } = useTranslation();
 
   return (
     <StyledButton
       onClick={toggleTheme}
-      tooltip={isDark ? t("tooltips.themeToggle.lightMode") : t("tooltips.themeToggle.darkMode")}
+      tooltip={
+        isDark
+          ? t("tooltips.themeToggle.darkMode")
+          : t("tooltips.themeToggle.lightMode")
+      }
     >
       <StyledIcon $visible={!isDark}>
-        <MdSunny />
+        <Sun />
       </StyledIcon>
       <StyledIcon $visible={isDark}>
-        <IoMdMoon />
+        <Moon />
       </StyledIcon>
     </StyledButton>
   );

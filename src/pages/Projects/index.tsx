@@ -13,7 +13,6 @@ import {
   StyledProjectsGrid,
   StyledTitle,
 } from "./styles";
-import { LuFolderGit2 } from "react-icons/lu";
 
 type Project = {
   name: string;
@@ -33,19 +32,31 @@ export default function Projects() {
   return (
     <StyledProjectsContainer>
       <StyledProjectsContent>
-        <StyledTitle>
-          {t("pages.projects.title")} <LuFolderGit2 />{" "}
-        </StyledTitle>
+        <StyledTitle>{t("pages.projects.title")}</StyledTitle>
         <StyledProjectsGrid>
           {projects.map((project) => (
             <StyledProjectCard key={project.link}>
               <StyledProjectCardHeader>
                 <StyledProjectName>{project.name}</StyledProjectName>
                 <StyledProjectActions>
-                  <StyledProjectActionLink href={project.doc} target="_blank">
+                  <StyledProjectActionLink
+                    tooltip={t("tooltips.project.doc")}
+                    onClick={() =>
+                      project.doc
+                        ? window.open(project.doc, "_blank")
+                        : undefined
+                    }
+                  >
                     <StyledDocLinkIcon />
                   </StyledProjectActionLink>
-                  <StyledProjectActionLink href={project.link} target="_blank">
+                  <StyledProjectActionLink
+                    tooltip={t("tooltips.project.site")}
+                    onClick={() =>
+                      project.link
+                        ? window.open(project.link, "_blank")
+                        : undefined
+                    }
+                  >
                     <StyledLinkIcon />
                   </StyledProjectActionLink>
                 </StyledProjectActions>

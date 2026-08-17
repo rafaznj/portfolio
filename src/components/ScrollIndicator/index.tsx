@@ -1,21 +1,20 @@
-import { ButtonWithTooltip } from "../ButtonWithTooltip";
+import { Mouse } from "pixelarticons/react";
 import { useScrollIndicator } from "./hook";
-import { StyledContainer, StyledMouse, StyledWheel } from "./styles";
+import { StyledContainer, StyledMouseIcon } from "./styles";
 
 export default function ScrollIndicator() {
   const { handleScroll, tooltipText, scrollDirection } = useScrollIndicator();
 
   return (
     <StyledContainer>
-      <ButtonWithTooltip
+      <StyledMouseIcon
         variant="ghost"
         tooltip={tooltipText}
         onClick={handleScroll}
+        $direction={scrollDirection}
       >
-        <StyledMouse>
-          <StyledWheel $direction={scrollDirection} />
-        </StyledMouse>
-      </ButtonWithTooltip>
+        <Mouse />
+      </StyledMouseIcon>
     </StyledContainer>
   );
 }

@@ -14,7 +14,6 @@ import {
   StyledTimelineItem,
   StyledTitle,
 } from "./styles";
-import { LuCalendarDays } from "react-icons/lu";
 
 type Experiences = {
   role: string;
@@ -34,10 +33,7 @@ export default function Experience() {
   return (
     <StyledExperienceContainer>
       <StyledExperienceContent>
-        <StyledTitle>
-          {t("pages.experience.title")}
-          <LuCalendarDays />
-        </StyledTitle>
+        <StyledTitle>{t("pages.experience.title")}</StyledTitle>
         <StyledTimeline>
           {experiences.map((exp, index) => (
             <StyledTimelineItem key={index}>

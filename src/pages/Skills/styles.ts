@@ -4,47 +4,42 @@ export const StyledSkillsContainer = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: 4vh 8vw;
+  padding: ${({ theme }) => theme.spacers["4xl"]}
+    ${({ theme }) => theme.spacers.xl} ${({ theme }) => theme.spacers["4xl"]};
 
   @media (max-width: 768px) {
-    padding: 4vh 6vw;
+    padding: ${({ theme }) => theme.spacers["3xl"]}
+      ${({ theme }) => theme.spacers.xl} ${({ theme }) => theme.spacers["3xl"]};
   }
 
   @media (max-width: 480px) {
-    padding: 3vh 1.5rem;
+    padding: ${({ theme }) => theme.spacers["3xl"]}
+      ${({ theme }) => theme.spacers.md} ${({ theme }) => theme.spacers["3xl"]};
   }
 `;
 
 export const StyledSkillsContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  max-width: 680px;
+  gap: ${({ theme }) => theme.spacers["3xl"]};
+  max-width: 720px;
   width: 100%;
 
   @media (max-width: 480px) {
-    gap: 1.5rem;
+    gap: ${({ theme }) => theme.spacers.xxl};
   }
 `;
 
-export const StyledTitle = styled.h2`
-  font-family: ${(props) => props.theme.fonts.family.body};
-  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-  font-weight: 800;
+export const StyledTitle = styled.h1`
+  font-family: ${(props) => props.theme.fonts.family.title};
+  font-size: ${(props) => props.theme.fonts.size.xxl};
+  font-weight: ${(props) => props.theme.fonts.weight.bold};
   color: ${(props) => props.theme.colors.primary};
-  line-height: 1.1;
-  letter-spacing: 0.02rem;
   margin: 0;
   text-align: left;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-
-  svg {
-    width: 1em;
-    height: 1em;
-    flex-shrink: 0;
-  }
 
   @media (max-width: 480px) {
     font-size: clamp(1.2rem, 6vw, 1.4rem);

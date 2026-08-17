@@ -10,7 +10,7 @@ export const StyledAtomTooltipContent = styled(Tooltip.Content)<{
   border-radius: 0;
   background: transparent;
   padding: 0;
-  font-family: ${(props) => props.theme.fonts.family.title};
+  font-family: ${(props) => props.theme.fonts.family.body};
   font-size: ${(props) => props.theme.fonts.size.xs};
   color: ${(props) => props.theme.colors.primary};
   box-shadow: none;

@@ -1,48 +1,52 @@
-import { FaGithub } from "react-icons/fa";
-import { LuExternalLink } from "react-icons/lu";
+import { ExternalLink } from "pixelarticons/react/ExternalLink";
+import { Github } from "pixelarticons/react/Github";
 import styled from "styled-components";
+import { ButtonWithTooltip } from "../../components/ButtonWithTooltip";
 
 export const StyledProjectsContainer = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: 4vh 8vw;
+  padding: ${({ theme }) => theme.spacers["4xl"]}
+    ${({ theme }) => theme.spacers.xl} ${({ theme }) => theme.spacers["4xl"]};
 
   @media (max-width: 768px) {
-    padding: 4vh 6vw;
+    padding: ${({ theme }) => theme.spacers["3xl"]}
+      ${({ theme }) => theme.spacers.xl} ${({ theme }) => theme.spacers["3xl"]};
   }
 
   @media (max-width: 480px) {
-    padding: 3vh 1.5rem;
+    padding: ${({ theme }) => theme.spacers["3xl"]}
+      ${({ theme }) => theme.spacers.md} ${({ theme }) => theme.spacers["3xl"]};
   }
 `;
 
 export const StyledProjectsContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  max-width: 680px;
+  gap: ${({ theme }) => theme.spacers["3xl"]};
+  max-width: 720px;
   width: 100%;
 
   @media (max-width: 480px) {
-    gap: 1.5rem;
+    gap: ${({ theme }) => theme.spacers.xxl};
   }
 `;
 
 export const StyledProjectsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
+  gap: ${({ theme }) => theme.spacers.xxl};
   width: 100%;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 1rem;
+    gap: ${({ theme }) => theme.spacers.xl};
   }
 
   @media (max-width: 480px) {
     grid-template-columns: 1fr;
-    gap: 0.85rem;
+    gap: ${({ theme }) => theme.spacers.lg};
   }
 `;
 
@@ -50,28 +54,32 @@ export const StyledProjectCardHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.5rem;
+  gap: ${({ theme }) => theme.spacers.md};
 `;
 
 export const StyledProjectActions = styled.div`
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: ${({ theme }) => theme.spacers.lg};
 `;
 
-export const StyledProjectActionLink = styled.a`
+export const StyledProjectActionLink = styled(ButtonWithTooltip)`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
+  width: 2.1rem;
+  height: 2.1rem;
+  padding: ${({ theme }) => theme.spacers.sm};
+  background: ${({ theme }) => theme.colors.background};
   transition:
     color 0.2s ease,
-    transform 0.2s ease;
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
 
   &:hover {
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    background: ${({ theme }) => theme.colors.background};
   }
 `;
 
@@ -87,7 +95,7 @@ export const StyledProjectName = styled.span`
   }
 `;
 
-export const StyledLinkIcon = styled(LuExternalLink)`
+export const StyledLinkIcon = styled(ExternalLink)`
   font-size: 1rem;
   color: ${(props) => props.theme.colors.primaryHover};
   flex-shrink: 0;
@@ -118,7 +126,7 @@ export const StyledLinkIcon = styled(LuExternalLink)`
   }
 `;
 
-export const StyledDocLinkIcon = styled(FaGithub)`
+export const StyledDocLinkIcon = styled(Github)`
   font-size: 1rem;
   color: ${(props) => props.theme.colors.primaryHover};
   flex-shrink: 0;
@@ -163,10 +171,10 @@ export const StyledProjectDescription = styled.p`
   }
 `;
 
-export const StyledTitle = styled.h2`
-  font-family: ${({ theme }) => theme.fonts.family.body};
+export const StyledTitle = styled.h1`
+  font-family: ${({ theme }) => theme.fonts.family.title};
   font-size: ${({ theme }) => theme.fonts.size.xxl};
-  font-weight: ${({ theme }) => theme.fonts.weight.black};
+  font-weight: ${({ theme }) => theme.fonts.weight.bold};
   color: ${({ theme }) => theme.colors.primary};
   line-height: ${({ theme }) => theme.fonts.lineHeight.tight};
   letter-spacing: 0.02rem;
@@ -190,23 +198,26 @@ export const StyledTitle = styled.h2`
 export const StyledProjectCard = styled.article`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 1.5rem;
+  gap: ${({ theme }) => theme.spacers.xl};
+  padding: ${({ theme }) => theme.spacers.xxl};
   border-radius: ${({ theme }) => theme.borders.radius.md};
-  border: ${({ theme }) => theme.borders.width.sm} solid
-    ${({ theme }) => theme.borders.colors.gray};
+  border: ${({ theme }) =>
+    `${theme.borders.width.sm} solid ${theme.borders.colors.gray}`};
+  background: ${({ theme }) => theme.colors.background};
   transition:
     border-color 0.25s ease,
-    transform 0.25s ease;
+    transform 0.25s ease,
+    background 0.25s ease;
   -webkit-tap-highlight-color: transparent;
 
   &:hover {
-    border-color: ${({ theme }) => theme.borders.colors.white};
+    border-color: ${({ theme }) => theme.borders.colors.primary};
+    background: ${({ theme }) => theme.colors.background};
     transform: translateY(-4px);
   }
 
   @media (max-width: 768px) {
-    padding: 1.25rem;
+    padding: ${({ theme }) => theme.spacers.xl};
 
     &:hover {
       transform: none;
@@ -214,33 +225,7 @@ export const StyledProjectCard = styled.article`
   }
 
   @media (max-width: 480px) {
-    padding: 1rem;
-    gap: 0.75rem;
-  }
-`;
-
-export const StyledProjectStackTag = styled.span`
-  font-family: ${({ theme }) => theme.fonts.family.body};
-  font-size: ${({ theme }) => theme.fonts.size.xs};
-  font-weight: ${({ theme }) => theme.fonts.weight.medium};
-  color: ${({ theme }) => theme.colors.primaryHover};
-  letter-spacing: 0.06em;
-  padding: 0.2rem 0.6rem;
-  border-radius: ${({ theme }) => theme.borders.radius.sm};
-  border: ${({ theme }) => theme.borders.width.xs} solid
-    ${({ theme }) => theme.borders.colors.gray};
-  transition:
-    border-color 0.2s ease,
-    color 0.2s ease;
-
-  &:hover {
-    border-color: ${({ theme }) => theme.borders.colors.white};
-    color: ${({ theme }) => theme.colors.primary};
-  }
-
-  @media (max-width: 480px) {
-    font-size: 0.6rem;
-    padding: 0.15rem 0.5rem;
-    letter-spacing: 0.04em;
+    padding: ${({ theme }) => theme.spacers.xl};
+    gap: ${({ theme }) => theme.spacers.lg};
   }
 `;

@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Tooltip } from "radix-ui";
-
-import { ButtonWithIcon, type ButtonProps } from "../ButtonWithIcon";
+import { LinkWithIcon, type LinkWithIconProps } from "../ButtonWithIcon";
 import {
   TooltipContent,
   TooltipPortal,
@@ -10,20 +9,20 @@ import {
   TooltipTrigger,
 } from "../Tooltip";
 
-export interface ButtonWithTooltipProps extends ButtonProps {
+export interface LinkWithTooltipProps extends LinkWithIconProps {
   tooltip: React.ReactNode;
   tooltipContentProps?: React.ComponentPropsWithoutRef<typeof Tooltip.Content>;
   side?: "top" | "right" | "bottom" | "left";
 }
 
-const ButtonWithTooltip = React.forwardRef<
-  HTMLButtonElement,
-  ButtonWithTooltipProps
+const LinkWithTooltip = React.forwardRef<
+  HTMLAnchorElement,
+  LinkWithTooltipProps
 >(
   (
     {
       tooltip,
-      variant: variant,
+      variant,
       $borderRadius,
       left,
       right,
@@ -38,7 +37,7 @@ const ButtonWithTooltip = React.forwardRef<
     <TooltipProvider delayDuration={0}>
       <TooltipRoot>
         <TooltipTrigger asChild>
-          <ButtonWithIcon
+          <LinkWithIcon
             ref={ref}
             variant={variant}
             $borderRadius={$borderRadius}
@@ -48,7 +47,7 @@ const ButtonWithTooltip = React.forwardRef<
             {...props}
           >
             {children}
-          </ButtonWithIcon>
+          </LinkWithIcon>
         </TooltipTrigger>
         <TooltipPortal container={document.body}>
           <TooltipContent
@@ -64,6 +63,6 @@ const ButtonWithTooltip = React.forwardRef<
   ),
 );
 
-ButtonWithTooltip.displayName = "ButtonWithTooltip";
+LinkWithTooltip.displayName = "LinkWithTooltip";
 
-export { ButtonWithTooltip };
+export { LinkWithTooltip };

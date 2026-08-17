@@ -16,6 +16,6 @@ export const borders = {
   },
   colors: {
     gray: "rgba(0, 0, 0, 0.1)",
-    white: "rgba(0, 0, 0, 0.63)",
+    primary: "rgba(0, 0, 0, 0.63)",
   },
 };

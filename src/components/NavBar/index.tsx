@@ -1,4 +1,4 @@
-import ToggleThemeButton from "../ThemeToggle";
+import ThemeToggleButton from "../ThemeToggle";
 import LanguageToggleButton from "../LanguageToggle";
 import { StyledNav, StyledControls, StyledScrollWrapper } from "./styles";
 import ScrollIndicator from "../ScrollIndicator";
@@ -11,7 +11,7 @@ export function NavBar() {
       <StyledNav $hidden={hidden}>
         <StyledControls>
           <LanguageToggleButton />
-          <ToggleThemeButton />
+          <ThemeToggleButton />
         </StyledControls>
       </StyledNav>
       <StyledScrollWrapper>

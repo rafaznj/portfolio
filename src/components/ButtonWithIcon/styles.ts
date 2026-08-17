@@ -12,7 +12,7 @@ export const AtomButtonWithIcon = styled.button<{
   white-space: nowrap;
   border-radius: 0.25rem;
   font-size: ${(props) => props.theme.fonts.size.sm};
-  font-weight: 500;
+  font-weight: ${(props) => props.theme.fonts.weight.medium};
   transition: color 0.2s;
   outline: none;
   cursor: pointer;

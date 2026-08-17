@@ -4,33 +4,36 @@ export const StyledExperienceContainer = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: 4vh 8vw;
+  padding: ${({ theme }) => theme.spacers["4xl"]}
+    ${({ theme }) => theme.spacers.xl} ${({ theme }) => theme.spacers["4xl"]};
 
   @media (max-width: 768px) {
-    padding: 4vh 6vw;
+    padding: ${({ theme }) => theme.spacers["3xl"]}
+      ${({ theme }) => theme.spacers.xl} ${({ theme }) => theme.spacers["4xl"]};
   }
 
   @media (max-width: 480px) {
-    padding: 3vh 1.5rem;
+    padding: ${({ theme }) => theme.spacers["3xl"]}
+      ${({ theme }) => theme.spacers.md} ${({ theme }) => theme.spacers["4xl"]};
   }
 `;
 
 export const StyledExperienceContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  max-width: 680px;
+  gap: ${({ theme }) => theme.spacers["3xl"]};
+  max-width: 720px;
   width: 100%;
 
   @media (max-width: 480px) {
-    gap: 1.5rem;
+    gap: ${({ theme }) => theme.spacers.xxl};
   }
 `;
 
-export const StyledTitle = styled.h2`
-  font-family: ${(props) => props.theme.fonts.family.body};
-  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-  font-weight: 800;
+export const StyledTitle = styled.h1`
+  font-family: ${(props) => props.theme.fonts.family.title};
+  font-size: ${(props) => props.theme.fonts.size.xxl};
+  font-weight: ${(props) => props.theme.fonts.weight.bold};
   color: ${(props) => props.theme.colors.primary};
   line-height: ${({ theme }) => theme.fonts.lineHeight.tight};
   letter-spacing: 0.02rem;
@@ -54,6 +57,7 @@ export const StyledTitle = styled.h2`
 export const StyledTimeline = styled.div`
   display: flex;
   flex-direction: column;
+  gap: ${({ theme }) => theme.spacers.xl};
   max-width: 760px;
   width: 100%;
 `;
@@ -73,12 +77,12 @@ export const StyledCardHeader = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 1rem;
+  gap: ${({ theme }) => theme.spacers.xl};
   flex-wrap: nowrap;
 
   @media (max-width: 480px) {
     flex-direction: column;
-    gap: 0.25rem;
+    gap: ${({ theme }) => theme.spacers.sm};
   }
 `;
 
@@ -147,7 +151,7 @@ export const StyledDescription = styled.p`
 export const StyledStacks = styled.div`
   display: flex;
   flex-wrap: nowrap;
-  gap: 0.5rem;
+  gap: ${({ theme }) => theme.spacers.md};
   margin-top: auto;
 
   @media (max-width: 768px) {
@@ -158,27 +162,28 @@ export const StyledStacks = styled.div`
 export const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  gap: ${({ theme }) => theme.spacers.xl};
+  padding: ${({ theme }) => theme.spacers.xxl};
+  margin-bottom: ${({ theme }) => theme.spacers.md};
   border-radius: ${(props) => props.theme.borders.radius.md};
-  border: ${(props) => props.theme.borders.width.sm} solid
-    ${(props) => props.theme.borders.colors.gray};
-  flex: 1;
-  cursor: pointer;
+  border: ${(props) =>
+    `${props.theme.borders.width.sm} solid ${props.theme.borders.colors.gray}`};
+  background: ${(props) => props.theme.colors.background};
   transition:
     border-color 0.25s ease,
-    transform 0.25s ease;
+    transform 0.25s ease,
+    background 0.25s ease;
   -webkit-tap-highlight-color: transparent;
 
   &:hover {
-    border-color: ${(props) => props.theme.borders.colors.white};
+    border-color: ${(props) => props.theme.borders.colors.primary};
+    background: ${(props) => props.theme.colors.background};
     transform: translateY(-4px);
   }
 
   @media (max-width: 768px) {
-    padding: 1.25rem;
-    margin-bottom: 1rem;
+    padding: ${({ theme }) => theme.spacers.xl};
+    margin-bottom: ${({ theme }) => theme.spacers.sm};
 
     &:hover {
       transform: none;
@@ -186,9 +191,9 @@ export const StyledCard = styled.div`
   }
 
   @media (max-width: 480px) {
-    padding: 1rem;
-    gap: 0.75rem;
-    margin-bottom: 0.85rem;
+    padding: ${({ theme }) => theme.spacers.xl};
+    gap: ${({ theme }) => theme.spacers.lg};
+    margin-bottom: 0;
   }
 `;
 
@@ -209,7 +214,7 @@ export const StyledStackTag = styled.span`
   -webkit-tap-highlight-color: transparent;
 
   &:hover {
-    border-color: ${(props) => props.theme.borders.colors.white};
+    border-color: ${(props) => props.theme.borders.colors.primary};
     color: ${(props) => props.theme.colors.primary};
   }
 

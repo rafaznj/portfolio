@@ -19,9 +19,11 @@ export const StyledControls = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
+  padding-right: 0.9rem;
 
   @media (max-width: 480px) {
-    gap: 0.30rem;
+    padding-right: 0.35rem;
+    gap: 0.3rem;
   }
 `;
 

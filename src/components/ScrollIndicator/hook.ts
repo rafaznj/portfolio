@@ -38,8 +38,8 @@ export function useScrollIndicator() {
   };
 
   const tooltipText = isAtBottom
-    ? t("components.navbar.scrollIndicator.up")
-    : t("components.navbar.scrollIndicator.down");
+    ? t("tooltips.scrollIndicator.up")
+    : t("tooltips.scrollIndicator.down");
 
   return {
     handleScroll,

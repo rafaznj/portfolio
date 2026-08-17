@@ -24,6 +24,7 @@ declare module "styled-components" {
         xl: string;
         xxl: string;
         xxxl: string;
+        display: string;
       };
       weight: {
         regular: number;
@@ -55,7 +56,7 @@ declare module "styled-components" {
       };
       colors: {
         gray: string;
-        white: string;
+        primary: string;
       };
     };
     spacers: {

@@ -1,8 +1,8 @@
-import { BiWorld } from "react-icons/bi";
 import { GiBrazilFlag } from "react-icons/gi";
 
 import useLanguageToggleButton from "./hook";
 import { StyledButton, StyledIcon } from "./styles";
+import { Earth } from "pixelarticons/react";
 
 export default function LanguageToggleButton() {
   const { language, toggleLanguage, t } = useLanguageToggleButton();
@@ -23,7 +23,7 @@ export default function LanguageToggleButton() {
         </StyledIcon>
       ) : (
         <StyledIcon>
-          <BiWorld />
+          <Earth />
         </StyledIcon>
       )}
     </StyledButton>

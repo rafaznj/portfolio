@@ -1,16 +1,4 @@
 {
-  "components": {
-    "navbar": {
-      "experience": "experiência",
-      "home": "home",
-      "projects": "projetos",
-      "scrollIndicator": {
-        "down": "descer",
-        "up": "subir"
-      },
-      "skills": "habilidades"
-    }
-  },
   "pages": {
     "experience": {
       "data": [
@@ -30,14 +18,13 @@
           ]
         }
       ],
-      "title": "experiência"
+      "title": "Experiência"
     },
     "home": {
-      "curriculum": "Currículo",
       "function": "Desenvolvedor Full Stack",
-      "hello": "Olá! eu sou o",
       "location": "Brasil, Bahia",
-      "name": "Rafael Sena"
+      "downloadResume": "Baixar Currículo",
+      "name": "RAFAEL SENA"
     },
     "projects": {
       "data": [
@@ -60,20 +47,33 @@
           "name": "Clone Termo"
         }
       ],
-      "title": "projetos"
+      "title": "Projetos"
     },
     "skills": {
-      "title": "habilidades"
+      "title": "Habilidades"
     }
   },
   "tooltips": {
     "languageToggle": {
-      "en": "Inglês",
-      "pt": "Português"
+      "en": "inglês",
+      "pt": "português"
+    },
+    "project": {
+      "doc": "Documentação",
+      "site": "Visualizar"
+    },
+    "scrollIndicator": {
+      "down": "descer",
+      "up": "subir"
+    },
+    "socials": {
+      "email": "Email",
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
     },
     "themeToggle": {
-      "darkMode": "Tema escuro",
-      "lightMode": "Tema claro"
+      "darkMode": "tema escuro",
+      "lightMode": "tema claro"
     }
   }
 }

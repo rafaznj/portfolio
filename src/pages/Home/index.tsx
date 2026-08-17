@@ -6,58 +6,62 @@ import {
   StyledDownloadIcon,
   StyledHomeContainer,
   StyledHomeContent,
-  StyledIconLink,
   StyledLocation,
   StyledName,
   StyledRole,
+  StyledSocialLink,
   StyledSocialsContainer,
 } from "./styles";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { BiLogoGmail } from "react-icons/bi";
+import { useScrambleText } from "../../hooks/use-scramble-text";
+import { Mail, Github, Linkedin2 } from "pixelarticons/react";
 
 export default function Home() {
   const { t } = useTranslation();
+  const name = t("pages.home.name");
+  const { ref, trigger } = useScrambleText<HTMLHeadingElement>(name, {
+    intervalMs: 6000,
+  });
+
   return (
     <StyledHomeContainer>
       <StyledHomeContent>
-        <StyledName>{t("pages.home.name")}</StyledName>
+        <StyledName ref={ref} onMouseEnter={trigger}>
+          {t("pages.home.name")}
+        </StyledName>
         <StyledRole>{t("pages.home.function")}</StyledRole>
         <StyledLocation>{t("pages.home.location")}</StyledLocation>
         <StyledActionsContainer>
-          <StyledDownloadCurriculum href="/rafaelsena-curriculum.pdf" download>
+          <StyledDownloadCurriculum href="/resume.pdf" target="_blank">
             <StyledDownloadCvText>
-              {t("pages.home.curriculum")}
+              {t("pages.home.downloadResume")}
             </StyledDownloadCvText>
             <StyledDownloadIcon />
           </StyledDownloadCurriculum>
           <StyledSocialsContainer>
-            <StyledIconLink
-              tooltip="LinkedIn"
+            <StyledSocialLink
+              href="https://linkedin.com/in/rafaznj"
+              tooltip={t("tooltips.socials.linkedin")}
               variant="ghost"
-              onClick={() =>
-                window.open("https://linkedin.com/in/rafaznj", "_blank")
-              }
+              side="top"
             >
-              <FaLinkedin />
-            </StyledIconLink>
-            <StyledIconLink
-              tooltip="GitHub"
+              <Linkedin2 width={30} height={30} />
+            </StyledSocialLink>
+            <StyledSocialLink
+              href="https://github.com/rafaznj"
+              tooltip={t("tooltips.socials.github")}
               variant="ghost"
-              onClick={() =>
-                window.open("https://github.com/rafaznj", "_blank")
-              }
+              side="top"
             >
-              <FaGithub />
-            </StyledIconLink>
-            <StyledIconLink
-              tooltip="Gmail"
+              <Github width={30} height={30} />
+            </StyledSocialLink>
+            <StyledSocialLink
+              href="mailto:rafaelsena.contact@gmail.com"
+              tooltip={t("tooltips.socials.email")}
               variant="ghost"
-              onClick={() =>
-                window.open("mailto:rafaelsena.contact@gmail.com", "_blank")
-              }
+              side="top"
             >
-              <BiLogoGmail />
-            </StyledIconLink>
+              <Mail width={30} height={30} />
+            </StyledSocialLink>
           </StyledSocialsContainer>
         </StyledActionsContainer>
       </StyledHomeContent>
