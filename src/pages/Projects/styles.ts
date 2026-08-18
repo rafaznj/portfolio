@@ -50,6 +50,41 @@ export const StyledProjectsGrid = styled.div`
   }
 `;
 
+export const StyledProjectCard = styled.article`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacers.xl};
+  padding: ${({ theme }) => theme.spacers.xxl};
+  border-radius: ${({ theme }) => theme.borders.radius.md};
+  border: ${({ theme }) =>
+    `${theme.borders.width.sm} solid ${theme.borders.colors.gray}`};
+  background: ${({ theme }) => theme.colors.background};
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    background 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover {
+    border-color: ${({ theme }) => theme.borders.colors.primary};
+    background: ${({ theme }) => theme.colors.background};
+    transform: translateY(-4px);
+  }
+
+  @media (max-width: 768px) {
+    padding: ${({ theme }) => theme.spacers.xl};
+
+    &:hover {
+      transform: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: ${({ theme }) => theme.spacers.xl};
+    gap: ${({ theme }) => theme.spacers.lg};
+  }
+`;
+
 export const StyledProjectCardHeader = styled.div`
   display: flex;
   align-items: center;
@@ -93,6 +128,14 @@ export const StyledProjectName = styled.span`
   @media (max-width: 480px) {
     font-size: clamp(0.95rem, 4.5vw, 1.1rem);
   }
+`;
+
+export const StyledProjectImage = styled.img`
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  image-rendering: pixelated;
+  transition: border-color 0.25s ease;
 `;
 
 export const StyledLinkIcon = styled(ExternalLink)`
@@ -192,40 +235,5 @@ export const StyledTitle = styled.h1`
 
   @media (max-width: 480px) {
     font-size: clamp(1.2rem, 6vw, 1.4rem);
-  }
-`;
-
-export const StyledProjectCard = styled.article`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacers.xl};
-  padding: ${({ theme }) => theme.spacers.xxl};
-  border-radius: ${({ theme }) => theme.borders.radius.md};
-  border: ${({ theme }) =>
-    `${theme.borders.width.sm} solid ${theme.borders.colors.gray}`};
-  background: ${({ theme }) => theme.colors.background};
-  transition:
-    border-color 0.25s ease,
-    transform 0.25s ease,
-    background 0.25s ease;
-  -webkit-tap-highlight-color: transparent;
-
-  &:hover {
-    border-color: ${({ theme }) => theme.borders.colors.primary};
-    background: ${({ theme }) => theme.colors.background};
-    transform: translateY(-4px);
-  }
-
-  @media (max-width: 768px) {
-    padding: ${({ theme }) => theme.spacers.xl};
-
-    &:hover {
-      transform: none;
-    }
-  }
-
-  @media (max-width: 480px) {
-    padding: ${({ theme }) => theme.spacers.xl};
-    gap: ${({ theme }) => theme.spacers.lg};
   }
 `;

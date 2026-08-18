@@ -18,9 +18,7 @@ import { Mail, Github, Linkedin2 } from "pixelarticons/react";
 export default function Home() {
   const { t } = useTranslation();
   const name = t("pages.home.name");
-  const { ref, trigger } = useScrambleText<HTMLHeadingElement>(name, {
-    intervalMs: 6000,
-  });
+  const { ref, trigger } = useScrambleText<HTMLHeadingElement>(name);
 
   return (
     <StyledHomeContainer>
@@ -31,7 +29,10 @@ export default function Home() {
         <StyledRole>{t("pages.home.function")}</StyledRole>
         <StyledLocation>{t("pages.home.location")}</StyledLocation>
         <StyledActionsContainer>
-          <StyledDownloadCurriculum href="/resume.pdf" target="_blank">
+          <StyledDownloadCurriculum
+            href="/rafael-sena-resume.pdf"
+            target="_blank"
+          >
             <StyledDownloadCvText>
               {t("pages.home.downloadResume")}
             </StyledDownloadCvText>

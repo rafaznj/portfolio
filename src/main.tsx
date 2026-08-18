@@ -1,9 +1,9 @@
 import "./assets/i18n";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import Global from "./styles/global";
+import Global from "./styled-components/global";
 import App from "./App";
-import { ThemeProvider } from "./styles/theme-provider";
+import { ThemeProvider } from "./styled-components/theme-provider";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

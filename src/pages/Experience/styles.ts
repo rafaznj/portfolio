@@ -150,13 +150,9 @@ export const StyledDescription = styled.p`
 
 export const StyledStacks = styled.div`
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: ${({ theme }) => theme.spacers.md};
   margin-top: auto;
-
-  @media (max-width: 768px) {
-    flex-wrap: wrap;
-  }
 `;
 
 export const StyledCard = styled.div`
@@ -208,6 +204,8 @@ export const StyledStackTag = styled.span`
   border-radius: ${(props) => props.theme.borders.radius.xm};
   border: ${(props) => props.theme.borders.width.xs} solid
     ${(props) => props.theme.borders.colors.gray};
+  white-space: nowrap;
+  flex-shrink: 0;
   transition:
     border-color 0.2s ease,
     color 0.2s ease;

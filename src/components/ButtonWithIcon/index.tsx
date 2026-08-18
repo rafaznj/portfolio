@@ -63,8 +63,6 @@ export interface LinkWithIconProps extends React.AnchorHTMLAttributes<HTMLAnchor
   iconSize?: number;
 }
 
-const PROTOCOLS_WITHOUT_BLANK = ["mailto:", "tel:"];
-
 const LinkWithIcon = React.forwardRef<HTMLAnchorElement, LinkWithIconProps>(
   (
     {
@@ -75,8 +73,6 @@ const LinkWithIcon = React.forwardRef<HTMLAnchorElement, LinkWithIconProps>(
       iconSize = 20,
       children,
       href,
-      target,
-      rel,
       ...props
     },
     ref,
@@ -85,19 +81,12 @@ const LinkWithIcon = React.forwardRef<HTMLAnchorElement, LinkWithIconProps>(
     const LeftIcon = left;
     const RightIcon = right;
 
-    const isProtocolLink = PROTOCOLS_WITHOUT_BLANK.some((protocol) =>
-      href?.startsWith(protocol),
-    );
-
-    const resolvedTarget = isProtocolLink ? target : (target ?? "_blank");
-    const resolvedRel = isProtocolLink ? rel : (rel ?? "noopener noreferrer");
-
     return (
       <AtomButtonWithIcon
         as="a"
         href={href}
-        target={resolvedTarget}
-        rel={resolvedRel}
+        target="_blank"
+        rel="noopener noreferrer"
         $variant={variant}
         $borderRadius={$borderRadius}
         ref={ref}

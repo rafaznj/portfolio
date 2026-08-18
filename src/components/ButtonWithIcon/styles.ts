@@ -26,7 +26,7 @@ export const AtomButtonWithIcon = styled.button<{
       case "default":
         return `
           background-color: ${props.theme.colors.primary};
-          color: ${props.theme.colors.white};
+          color: ${props.theme.colors.primary};
         `;
       case "outline":
         return `
@@ -35,24 +35,24 @@ export const AtomButtonWithIcon = styled.button<{
           color: ${props.theme.colors.primary};
           &:hover {
             border-color: ${props.theme.colors.primaryHover};
-            color: ${props.theme.colors.white};
+            color: ${props.theme.colors.primaryHover};
 
             p {
               transition: color 0.2s;
-              color: ${props.theme.colors.white};
+              color: ${props.theme.colors.primaryHover};
             }
           }
         `;
       case "ghost":
         return `
           background-color: transparent;
-          color: ${props.theme.colors.white};
+          color: ${props.theme.colors.primary};
           &:hover {
-            color: ${props.theme.colors.white};
+            color: ${props.theme.colors.primaryHover};
 
             p {
               transition: color 0.2s;
-              color: ${props.theme.colors.white};
+              color: ${props.theme.colors.primaryHover};
             }
           }
         `;

@@ -14,16 +14,17 @@
             "NestJS",
             "PostgreSQL",
             "Drizzle ORM",
-            "AWS Cognito"
+            "AWS Cognito",
+            "Tanstack"
           ]
         }
       ],
       "title": "Experience"
     },
     "home": {
+      "downloadResume": "Download Resume",
       "function": "Full Stack Developer",
       "hello": "Hello! i'm",
-      "downloadResume": "Download Resume",
       "location": "Brazil, Bahia",
       "name": "RAFAEL SENA"
     },
@@ -32,17 +33,28 @@
         {
           "description": "",
           "doc": "",
+          "image": "",
           "link": "",
           "name": ""
         },
         {
           "description": "",
+          "doc": "",
+          "image": "",
+          "link": "",
+          "name": ""
+        },
+        {
+          "description": "",
+          "doc": "https://github.com/rafaznj/ticksy",
+          "image": "",
           "link": "https://ticksy.rafaelsena.dev",
           "name": "Ticksy"
         },
         {
           "description": "",
-          "doc": "https://clone-termo.rafaelsena.dev/doc",
+          "doc": "https://github.com/rafaznj/clone-termo",
+          "image": "",
           "link": "https://clone-termo.rafaelsena.dev",
           "name": "Clone Termo"
         }

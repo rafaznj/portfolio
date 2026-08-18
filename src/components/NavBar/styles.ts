@@ -5,7 +5,7 @@ export const StyledNav = styled.nav<{ $hidden: boolean }>`
   top: 0;
   right: 0;
   z-index: 100;
-  padding: 1rem 1.5rem;
+  padding: ${(props) => props.theme.spacers.xl} ${(props) => props.theme.spacers.xxl};
   height: 60px;
   transition: transform 0.6s ease;
 
@@ -18,22 +18,22 @@ export const StyledNav = styled.nav<{ $hidden: boolean }>`
 export const StyledControls = styled.div`
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding-right: 0.9rem;
+  gap: ${(props) => props.theme.spacers.xl};
+  padding-right: ${(props) => props.theme.spacers.xl};
 
   @media (max-width: 480px) {
-    padding-right: 0.35rem;
-    gap: 0.3rem;
+    padding-right: ${(props) => props.theme.spacers.sm};
+    gap: ${(props) => props.theme.spacers.sm};
   }
 `;
 
 export const StyledScrollWrapper = styled.div`
   position: fixed;
   bottom: ${({ theme }) => theme.spacers.lg};
-  right: 2rem;
+  right: ${({ theme }) => theme.spacers["3xl"]};
 
   @media (max-width: 1024px) {
-    bottom: 1.25rem;
-    right: 1rem;
+    bottom: ${(props) => props.theme.spacers.xxl};
+    right: ${(props) => props.theme.spacers.xl};
   }
 `;

@@ -6,16 +6,16 @@ export const StyledHomeContainer = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: ${({ theme }) => theme.spacers["4xl"]}
+  padding: calc(80px + ${({ theme }) => theme.spacers["3xl"]})
     ${({ theme }) => theme.spacers.xl} ${({ theme }) => theme.spacers["4xl"]};
 
   @media (max-width: 768px) {
-    padding: ${({ theme }) => theme.spacers["4xl"]}
+    padding: calc(80px + ${({ theme }) => theme.spacers.xxl})
       ${({ theme }) => theme.spacers.xl} ${({ theme }) => theme.spacers["3xl"]};
   }
 
   @media (max-width: 480px) {
-    padding: ${({ theme }) => theme.spacers["3xl"]}
+    padding: calc(80px + ${({ theme }) => theme.spacers.xl})
       ${({ theme }) => theme.spacers.md} ${({ theme }) => theme.spacers["3xl"]};
   }
 `;

@@ -14,16 +14,17 @@
             "NestJS",
             "PostgreSQL",
             "Drizzle ORM",
-            "AWS Cognito"
+            "AWS Cognito",
+            "Tanstack"
           ]
         }
       ],
       "title": "Experiência"
     },
     "home": {
+      "downloadResume": "Baixar Currículo",
       "function": "Desenvolvedor Full Stack",
       "location": "Brasil, Bahia",
-      "downloadResume": "Baixar Currículo",
       "name": "RAFAEL SENA"
     },
     "projects": {
@@ -31,18 +32,28 @@
         {
           "description": "",
           "doc": "",
+          "image": "",
+          "link": "",
+          "name": ""
+        },
+        {
+          "description": "",
+          "doc": "",
+          "image": "",
           "link": "",
           "name": ""
         },
         {
           "description": "",
           "doc": "https://github.com/rafaznj/ticksy",
+          "image": "",
           "link": "https://ticksy.rafaelsena.dev",
           "name": "Ticksy"
         },
         {
           "description": "",
           "doc": "https://github.com/rafaznj/clone-termo",
+          "image": "",
           "link": "https://clone-termo.rafaelsena.dev",
           "name": "Clone Termo"
         }

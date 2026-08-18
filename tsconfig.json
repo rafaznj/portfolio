@@ -1,5 +1,5 @@
 {
-  "files": ["src/styles/styled.d.ts"],
+  "files": ["src/styled-components/styled.d.ts"],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }

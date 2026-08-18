@@ -7,6 +7,7 @@ import {
   StyledProjectCard,
   StyledProjectCardHeader,
   StyledProjectDescription,
+  StyledProjectImage,
   StyledProjectName,
   StyledProjectsContainer,
   StyledProjectsContent,
@@ -16,6 +17,7 @@ import {
 
 type Project = {
   name: string;
+  image: string;
   description: string;
   doc: string;
   link: string;
@@ -34,38 +36,41 @@ export default function Projects() {
       <StyledProjectsContent>
         <StyledTitle>{t("pages.projects.title")}</StyledTitle>
         <StyledProjectsGrid>
-          {projects.map((project) => (
-            <StyledProjectCard key={project.link}>
-              <StyledProjectCardHeader>
-                <StyledProjectName>{project.name}</StyledProjectName>
-                <StyledProjectActions>
-                  <StyledProjectActionLink
-                    tooltip={t("tooltips.project.doc")}
-                    onClick={() =>
-                      project.doc
-                        ? window.open(project.doc, "_blank")
-                        : undefined
-                    }
-                  >
-                    <StyledDocLinkIcon />
-                  </StyledProjectActionLink>
-                  <StyledProjectActionLink
-                    tooltip={t("tooltips.project.site")}
-                    onClick={() =>
-                      project.link
-                        ? window.open(project.link, "_blank")
-                        : undefined
-                    }
-                  >
-                    <StyledLinkIcon />
-                  </StyledProjectActionLink>
-                </StyledProjectActions>
-              </StyledProjectCardHeader>
-              <StyledProjectDescription>
-                {project.description}
-              </StyledProjectDescription>
-            </StyledProjectCard>
-          ))}
+          {projects.map((project) => {
+            return (
+              <StyledProjectCard key={project.link}>
+                <StyledProjectImage src={project.image} />
+                <StyledProjectCardHeader>
+                  <StyledProjectName>{project.name}</StyledProjectName>
+                  <StyledProjectActions>
+                    <StyledProjectActionLink
+                      tooltip={t("tooltips.project.doc")}
+                      onClick={() =>
+                        project.doc
+                          ? window.open(project.doc, "_blank")
+                          : undefined
+                      }
+                    >
+                      <StyledDocLinkIcon />
+                    </StyledProjectActionLink>
+                    <StyledProjectActionLink
+                      tooltip={t("tooltips.project.site")}
+                      onClick={() =>
+                        project.link
+                          ? window.open(project.link, "_blank")
+                          : undefined
+                      }
+                    >
+                      <StyledLinkIcon />
+                    </StyledProjectActionLink>
+                  </StyledProjectActions>
+                </StyledProjectCardHeader>
+                <StyledProjectDescription>
+                  {project.description}
+                </StyledProjectDescription>
+              </StyledProjectCard>
+            );
+          })}
         </StyledProjectsGrid>
       </StyledProjectsContent>
     </StyledProjectsContainer>
