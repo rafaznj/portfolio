@@ -1,0 +1,10 @@
+{
+  "navbar": {
+    "about": "/about",
+    "skills": "/skills",
+    "home": "Back to home",
+    "label": "Main navigation",
+    "projects": "/projects",
+    "role": "Full-Stack Developer"
+  }
+}
