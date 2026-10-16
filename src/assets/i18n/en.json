@@ -51,6 +51,11 @@
     "role": "Full-Stack Developer",
     "skills": "/skills"
   },
+  "notFound": {
+    "backToHome": "Back to home",
+    "description": "This page doesn't exist here. There's still plenty to explore, though.",
+    "title": "Oops, wrong turn!"
+  },
   "projects": {
     "data": {
       "termo-clone": {

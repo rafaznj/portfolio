@@ -51,6 +51,11 @@
     "role": "Desenvolvedor Full-Stack",
     "skills": "/habilidades"
   },
+  "notFound": {
+    "backToHome": "Voltar ao início",
+    "description": "Essa página não existe por aqui. Mas ainda tem muita coisa para explorar.",
+    "title": "Opa, caminho errado!"
+  },
   "projects": {
     "data": {
       "termo-clone": {
