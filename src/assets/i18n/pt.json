@@ -1,4 +1,40 @@
 {
+  "about": {
+    "description": "Sou natural do sul da Bahia, Brasil, e minha conexão com a tecnologia começou ainda na infância, quando jogos no celular e visitas a lan houses despertaram minha curiosidade por computadores e pelo universo digital. Com o tempo, essa curiosidade se transformou na vontade de entender como as coisas funcionam além da tela. \n\nFoi essa motivação que me levou a escolher o curso técnico em Informática, onde comecei a explorar a programação e descobri meu interesse pelo desenvolvimento de software. Desde então, venho construindo minha trajetória na área, buscando transformar ideias em aplicações e compreender os desafios envolvidos na criação de soluções.",
+    "education": {
+      "completed": "Concluído",
+      "data": {
+        "ifba": {
+          "degree": "Bacharelado em Sistemas de Informação",
+          "institution": "Instituto Federal de Educação, Ciência e Tecnologia da Bahia - IFBA",
+          "period": "2026 — presente"
+        }
+      },
+      "inProgress": "Em andamento",
+      "title": "Formação"
+    },
+    "experience": {
+      "current": "Atual",
+      "data": {
+        "cepedi": {
+          "name": "CEPEDI",
+          "positions": {
+            "full-stack-scholarship": {
+              "description": "Desenvolvimento de aplicações para empresas parceiras, utilizando React, TypeScript, Node.js e NestJS.",
+              "period": "Mai. 2026 — presente",
+              "title": "Bolsista em Desenvolvimento Full Stack"
+            },
+            "internship": {
+              "description": "Desenvolvimento do Sistema Unificado de Bolsas (SUB), uma plataforma que centraliza e automatiza a gestão de bolsas. Atuação em autenticação, controle de acesso, formulários com validação, modelagem de dados relacionais e integração com serviços externos, utilizando React, TypeScript, NestJS, Drizzle ORM e PostgreSQL.",
+              "period": "Fev. 2025 — Abr. 2026",
+              "title": "Estagiário em Desenvolvimento Full Stack"
+            }
+          }
+        }
+      },
+      "title": "Experiência"
+    }
+  },
   "hero": {
     "contact": {
       "copyEmail": "E-mail copiado!",

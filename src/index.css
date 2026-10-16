@@ -12,3 +12,52 @@
     @apply bg-white font-sans text-zinc-800 antialiased dark:bg-zinc-950 dark:text-zinc-200;
   }
 }
+
+[data-timeline-item][data-active="true"] > [data-bullet="company"] {
+  @apply bg-zinc-900 ring-zinc-200;
+}
+:where(.dark, .dark *) [data-timeline-item][data-active="true"] > [data-bullet="company"] {
+  @apply bg-zinc-100 ring-zinc-800;
+}
+
+[data-timeline-item][data-active="true"] > header .timeline-company-title {
+  @apply text-zinc-950;
+}
+:where(.dark, .dark *) [data-timeline-item][data-active="true"] > header .timeline-company-title {
+  @apply text-white;
+}
+
+[data-timeline-item][data-active="true"] > header .timeline-company-location {
+  @apply text-zinc-500;
+}
+:where(.dark, .dark *) [data-timeline-item][data-active="true"] > header .timeline-company-location {
+  @apply text-zinc-400;
+}
+
+[data-timeline-item][data-active="true"] > [data-bullet="position"] {
+  @apply bg-zinc-900;
+}
+:where(.dark, .dark *) [data-timeline-item][data-active="true"] > [data-bullet="position"] {
+  @apply bg-zinc-100;
+}
+
+[data-timeline-item][data-active="true"] .timeline-pos-title {
+  @apply text-zinc-900;
+}
+:where(.dark, .dark *) [data-timeline-item][data-active="true"] .timeline-pos-title {
+  @apply text-zinc-100;
+}
+
+[data-timeline-item][data-active="true"] .timeline-pos-period {
+  @apply text-zinc-500;
+}
+:where(.dark, .dark *) [data-timeline-item][data-active="true"] .timeline-pos-period {
+  @apply text-zinc-400;
+}
+
+[data-timeline-item][data-active="true"] .timeline-pos-desc {
+  @apply text-zinc-600;
+}
+:where(.dark, .dark *) [data-timeline-item][data-active="true"] .timeline-pos-desc {
+  @apply text-zinc-400;
+}

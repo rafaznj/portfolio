@@ -1,4 +1,40 @@
 {
+  "about": {
+    "description": "I am originally from southern Bahia, Brazil, and my connection with technology began in childhood, when mobile games and visits to internet cafés sparked my curiosity about computers and the digital world. Over time, that curiosity grew into a desire to understand how things work beyond the screen. \n\nThis interest led me to pursue a technical degree in IT, where I began exploring programming and discovered my passion for software development. Since then, I have continued to build my path in the field, striving to turn ideas into applications and understand the challenges involved in creating solutions.",
+    "education": {
+      "completed": "Completed",
+      "data": {
+        "ifba": {
+          "degree": "Bachelor's degree in Information Systems",
+          "institution": "Federal Institute of Education, Science and Technology of Bahia - IFBA",
+          "period": "2026 — present"
+        }
+      },
+      "inProgress": "In progress",
+      "title": "Education"
+    },
+    "experience": {
+      "current": "Current",
+      "data": {
+        "cepedi": {
+          "name": "CEPEDI",
+          "positions": {
+            "full-stack-scholarship": {
+              "description": "Developing applications for partner companies using React, TypeScript, Node.js, and NestJS.",
+              "period": "May 2026 — present",
+              "title": "Full Stack Development Scholarship"
+            },
+            "internship": {
+              "description": "Developed the Unified Scholarship System (SUB), a platform that centralizes and automates scholarship management. Worked on authentication, access control, validated forms, relational data modeling, and external service integrations using React, TypeScript, NestJS, Drizzle ORM, and PostgreSQL.",
+              "period": "Feb 2025 — Apr 2026",
+              "title": "Full Stack Development Intern"
+            }
+          }
+        }
+      },
+      "title": "Experience"
+    }
+  },
   "hero": {
     "contact": {
       "copyEmail": "Email copied!",
