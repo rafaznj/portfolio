@@ -1,13 +1,6 @@
 import { useTheme } from "next-themes";
 import { LuMoon, LuSun } from "react-icons/lu";
-
-const icon =
-  "col-start-1 row-start-1 size-[1.1rem] transition-all will-change-transform motion-reduce:transition-none";
-
-const enter =
-  "scale-100 opacity-100 blur-0 duration-500 delay-100 ease-[cubic-bezier(0.34,1.56,0.64,1)]";
-
-const exit = "scale-50 opacity-0 blur-[2px] duration-300 delay-0 ease-in";
+import { icon, exit, enter } from "../../constants";
 
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
