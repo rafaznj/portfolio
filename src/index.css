@@ -2,8 +2,13 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --font-sans: "Karla", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
 @layer base {
   body {
-    @apply bg-white font-mono text-zinc-800 antialiased dark:bg-zinc-950 dark:text-zinc-200;
+    @apply bg-white font-sans text-zinc-800 antialiased dark:bg-zinc-950 dark:text-zinc-200;
   }
 }

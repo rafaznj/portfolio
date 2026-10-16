@@ -1,10 +1,32 @@
 {
+  "hero": {
+    "contact": {
+      "copyEmail": "E-mail copiado!",
+      "cv": "Baixar CV"
+    },
+    "hobbies": "Fora do computador, gosto de jogar futebol, conversar com os amigos e ler",
+    "intro": "Desenvolvedor full-stack com experiência no desenvolvimento de aplicações web, APIs REST e arquitetura de software. Gosto de estudar, aprimorar minhas habilidades técnicas e aprender tecnologias que despertam o meu interesse."
+  },
   "navbar": {
     "about": "/sobre",
-    "skills": "/habilidades",
     "home": "Voltar para a página inicial",
     "label": "Navegação principal",
     "projects": "/projetos",
-    "role": "Desenvolvedor Full-Stack"
+    "role": "Desenvolvedor Full-Stack",
+    "skills": "/habilidades"
+  },
+  "projects": {
+    "data": {
+      "termo-clone": {
+        "description": "Um clone completo do Termo, o Wordle brasileiro.",
+        "title": "Termo Clone"
+      },
+      "ticksy": {
+        "description": "Sistema de help desk para criar, atribuir e acompanhar tickets de suporte, com dashboard de métricas e notificações.",
+        "title": "Ticksy"
+      }
+    },
+    "visitRepository": "Visitar repositório",
+    "visitWebsite": "Visitar site"
   }
 }

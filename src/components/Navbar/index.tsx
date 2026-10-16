@@ -3,10 +3,20 @@ import { useTranslation } from "react-i18next";
 import { LuChevronLeft } from "react-icons/lu";
 import { LanguageToggle } from "../LanguageToggle";
 import { ThemeToggle } from "../ThemeToggle";
-import { links, NAME, ring } from "../../constants";
+import { name, navLinks, ring } from "../../constants";
+import { useScramble } from "use-scramble";
 
 export function Navbar() {
   const { t } = useTranslation();
+  const { ref, replay } = useScramble({
+    text: name,
+    speed: 0.3,
+    scramble: 10,
+    playOnMount: false,
+    overdrive: false,
+    range: [33, 126],
+  });
+
   const pathname = useRouterState({
     select: (state) => state.location.pathname,
   });
@@ -14,7 +24,7 @@ export function Navbar() {
   const isHome = path === "/";
 
   return (
-    <header className="mx-auto w-full max-w-4xl px-6 py-8 max-sm:pt-4">
+    <header className="mx-auto w-full max-w-4xl px-6 pb-8 pt-16 font-mono max-sm:pt-8">
       <nav className="flex flex-wrap items-center justify-between gap-x-12 gap-y-6 max-md:flex-col">
         <div className="relative flex items-center gap-3 max-md:justify-center">
           {!isHome && (
@@ -27,7 +37,7 @@ export function Navbar() {
           )}
 
           <div className="flex flex-col gap-1 whitespace-nowrap text-left">
-            <span>{NAME}</span>
+            <span ref={ref} onMouseEnter={replay} />
             <span className="text-zinc-500 dark:text-zinc-400">
               {t("navbar.role")}
             </span>
@@ -36,12 +46,12 @@ export function Navbar() {
 
         <div className="flex items-center gap-8 max-md:flex-col max-md:gap-5">
           <ul className="flex flex-wrap items-center justify-center gap-4">
-            {links.map(({ to, key }) => {
+            {navLinks.map(({ to, key }) => {
               return (
                 <li key={to}>
                   <Link
                     to={to}
-                    className={`block rounded px-2 py-px aria-[current=page]:ring-1 aria-[current=page]:ring-zinc-900 dark:aria-[current=page]:ring-zinc-100 ${ring}`}
+                    className={`block rounded border border-transparent px-2 py-px aria-[current=page]:border-zinc-900 dark:aria-[current=page]:border-zinc-100 ${ring}`}
                   >
                     {t(`navbar.${key}`)}
                   </Link>

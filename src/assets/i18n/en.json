@@ -1,10 +1,32 @@
 {
+  "hero": {
+    "contact": {
+      "copyEmail": "Email copied!",
+      "cv": "Download CV"
+    },
+    "hobbies": "Away from the computer, I like playing football, hanging out with friends and reading",
+    "intro": "Full-stack developer with experience in web applications, REST APIs, and software architecture. I like studying, sharpening my technical skills and learning technologies that catch my interest."
+  },
   "navbar": {
     "about": "/about",
-    "skills": "/skills",
     "home": "Back to home",
     "label": "Main navigation",
     "projects": "/projects",
-    "role": "Full-Stack Developer"
+    "role": "Full-Stack Developer",
+    "skills": "/skills"
+  },
+  "projects": {
+    "data": {
+      "termo-clone": {
+        "description": "A complete clone of Termo, the Brazilian Wordle.",
+        "title": "Termo Clone"
+      },
+      "ticksy": {
+        "description": "Help desk system to create, assign and track support tickets, with metrics dashboard and notifications.",
+        "title": "Ticksy"
+      }
+    },
+    "visitRepository": "Visit repository",
+    "visitWebsite": "Visit website"
   }
 }

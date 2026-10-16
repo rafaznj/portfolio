@@ -7,7 +7,7 @@ export const Route = createRootRoute({
   component: () => (
     <>
       <Navbar />
-      <main className="mx-auto w-full max-w-4xl px-6 pb-16">
+      <main className="mx-auto mt-8 w-full max-w-4xl px-6 pb-16">
         <Suspense fallback={null}>
           <Outlet />
         </Suspense>
