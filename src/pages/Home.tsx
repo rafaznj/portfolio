@@ -4,8 +4,8 @@ import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { LuFileText } from "react-icons/lu";
 import { focus, iconButton } from "../constants";
 import { CopyEmail } from "../components/CopyEmail";
-import cvPT from "../../public/rafael-sena-CV-PT.pdf";
-import cvEN from "../../public/rafael-sena-CV-EN.pdf";
+import cvPT from "/rafael-sena-CV-PT.pdf";
+import cvEN from "/rafael-sena-CV-EN.pdf";
 
 export function HomePage() {
   const { t, i18n } = useTranslation();

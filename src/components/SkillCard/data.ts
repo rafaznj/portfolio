@@ -28,7 +28,7 @@ export const skillSections = [
       { name: "React", image: react },
       { name: "JavaScript", image: javascript },
       { name: "TypeScript", image: typescript },
-      { name: "Tailwindcss", image: tailwindcss },
+      { name: "Tailwind CSS", image: tailwindcss },
       { name: "Styled Components", image: styledComponents },
       { name: "TanStack", image: tanstack },
     ],
