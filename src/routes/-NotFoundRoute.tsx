@@ -21,9 +21,7 @@ export function NotFoundRouteComponent() {
         />
       </div>
 
-      <h1 className="mb-3 text-2xl font-bold tracking-tight sm:text-3xl">
-        {t("notFound.title")}
-      </h1>
+      <h1 className="mb-3 text-2xl font-bold tracking-tight sm:text-3xl">{t("notFound.title")}</h1>
 
       <p className="mb-8 max-w-sm text-justify text-sm leading-relaxed text-muted-foreground sm:text-base">
         {t("notFound.description")}

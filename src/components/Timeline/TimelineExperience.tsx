@@ -1,10 +1,4 @@
-import {
-  useEffect,
-  useRef,
-  useState,
-  useCallback,
-  type ReactNode,
-} from "react";
+import { useEffect, useRef, useState, useCallback, type ReactNode } from "react";
 
 const FADE = "1.5rem";
 
@@ -26,12 +20,10 @@ function buildPath(bullets: { x: number; y: number; type: string }[]): string {
       if (prev.type === "company" && b.type === "position") {
         const midY = prev.y + (b.y - prev.y) * 0.5;
         parts.push(`C ${prev.x} ${midY}, ${b.x} ${midY}, ${b.x} ${b.y}`);
-      }
-      else if (prev.type === "position" && b.type === "company") {
+      } else if (prev.type === "position" && b.type === "company") {
         const midY = prev.y + (b.y - prev.y) * 0.5;
         parts.push(`C ${prev.x} ${midY}, ${b.x} ${midY}, ${b.x} ${b.y}`);
-      }
-      else {
+      } else {
         parts.push(`L ${b.x} ${b.y}`);
       }
     }
@@ -40,12 +32,7 @@ function buildPath(bullets: { x: number; y: number; type: string }[]): string {
   return parts.join(" ");
 }
 
-function findLengthAtY(
-  track: SVGPathElement,
-  targetY: number,
-  low: number,
-  high: number,
-): number {
+function findLengthAtY(track: SVGPathElement, targetY: number, low: number, high: number): number {
   for (let iter = 0; iter < 16; iter++) {
     const mid = (low + high) / 2;
     const pt = track.getPointAtLength(mid);
@@ -108,8 +95,7 @@ export function TimelineExperience({ children }: { children: ReactNode }) {
     let currentFilledLength = pathLength;
     if (lengths.length >= 2) {
       const startLength = lengths[1];
-      const progress =
-        maxScroll > 0 ? Math.min(Math.max(scrollTop / maxScroll, 0), 1) : 1;
+      const progress = maxScroll > 0 ? Math.min(Math.max(scrollTop / maxScroll, 0), 1) : 1;
       currentFilledLength = startLength + progress * (pathLength - startLength);
     }
 
@@ -122,9 +108,7 @@ export function TimelineExperience({ children }: { children: ReactNode }) {
       if (!item) return;
 
       const isActive =
-        index <= 1 ||
-        (lengths[index] !== undefined &&
-          currentFilledLength >= lengths[index] - 4);
+        index <= 1 || (lengths[index] !== undefined && currentFilledLength >= lengths[index] - 4);
 
       const wasActive = item.getAttribute("data-active") === "true";
       if (isActive !== wasActive) {
@@ -186,12 +170,7 @@ export function TimelineExperience({ children }: { children: ReactNode }) {
       if (i === bullets.length - 1) {
         lengths.push(totalLen);
       } else {
-        const len = findLengthAtY(
-          track,
-          bullets[i].y,
-          lengths[i - 1],
-          totalLen,
-        );
+        const len = findLengthAtY(track, bullets[i].y, lengths[i - 1], totalLen);
         lengths.push(len);
       }
     }

@@ -17,11 +17,7 @@ export function AboutPage() {
         {t("about.description")}
       </p>
 
-      <Section
-        title={t("about.experience.title")}
-        icon={LuBriefcase}
-        className="min-h-56"
-      >
+      <Section title={t("about.experience.title")} icon={LuBriefcase} className="min-h-56">
         <TimelineExperience>
           {experience.map(({ id, location, positions }, index) => (
             <TimelineCompany
@@ -34,15 +30,9 @@ export function AboutPage() {
               {positions.map(({ id: positionId, current }) => (
                 <TimelinePosition
                   key={positionId}
-                  title={t(
-                    `about.experience.data.${id}.positions.${positionId}.title`,
-                  )}
-                  description={t(
-                    `about.experience.data.${id}.positions.${positionId}.description`,
-                  )}
-                  period={t(
-                    `about.experience.data.${id}.positions.${positionId}.period`,
-                  )}
+                  title={t(`about.experience.data.${id}.positions.${positionId}.title`)}
+                  description={t(`about.experience.data.${id}.positions.${positionId}.description`)}
+                  period={t(`about.experience.data.${id}.positions.${positionId}.period`)}
                   current={current}
                 />
               ))}
@@ -51,11 +41,7 @@ export function AboutPage() {
         </TimelineExperience>
       </Section>
 
-      <Section
-        title={t("about.education.title")}
-        icon={LuGraduationCap}
-        className="shrink-0"
-      >
+      <Section title={t("about.education.title")} icon={LuGraduationCap} className="shrink-0">
         <EducationList>
           {education.map(({ id }) => (
             <EducationItem

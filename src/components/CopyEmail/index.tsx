@@ -37,9 +37,7 @@ export function CopyEmail() {
       </button>
       <span
         role="status"
-        className={
-          copied ? "text-sm text-zinc-500 dark:text-zinc-400" : "sr-only"
-        }
+        className={copied ? "text-sm text-zinc-500 dark:text-zinc-400" : "sr-only"}
       >
         {copied ? t("hero.contact.copyEmail") : ""}
       </span>

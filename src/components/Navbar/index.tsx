@@ -38,9 +38,7 @@ export function Navbar() {
 
           <div className="flex flex-col gap-1 whitespace-nowrap text-left">
             <span ref={ref} onMouseEnter={replay} />
-            <span className="text-zinc-500 dark:text-zinc-400">
-              {t("navbar.role")}
-            </span>
+            <span className="text-zinc-500 dark:text-zinc-400">{t("navbar.role")}</span>
           </div>
         </div>
 

@@ -28,9 +28,7 @@ export function ProjectCard({
   const { resolvedTheme } = useTheme();
 
   const src =
-    images && resolvedTheme
-      ? images[resolvedTheme === "dark" ? "dark" : "light"]
-      : undefined;
+    images && resolvedTheme ? images[resolvedTheme === "dark" ? "dark" : "light"] : undefined;
 
   return (
     <article className="flex flex-col gap-5 rounded border border-zinc-200 p-5 transition-colors hover:border-zinc-900 sm:flex-row sm:gap-6 sm:p-6 dark:border-zinc-800 dark:hover:border-zinc-100">

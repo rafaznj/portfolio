@@ -20,9 +20,7 @@ export function TimelineCompany({
     <li
       data-timeline-item
       data-active={current ? "true" : "false"}
-      className={`relative shrink-0 snap-start scroll-mt-3 pl-7 ${
-        isLast ? "pb-4" : "pb-8"
-      }`}
+      className={`relative shrink-0 snap-start scroll-mt-3 pl-7 ${isLast ? "pb-4" : "pb-8"}`}
     >
       <span
         data-bullet="company"

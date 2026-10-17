@@ -7,9 +7,7 @@ export function useClickSound() {
       const target = event.target as HTMLElement | null;
       if (!target) return;
 
-      const interactive = target.closest<HTMLElement>(
-        'a, button, [role="button"]',
-      );
+      const interactive = target.closest<HTMLElement>('a, button, [role="button"]');
 
       if (
         interactive &&

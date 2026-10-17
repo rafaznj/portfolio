@@ -4,8 +4,7 @@ export const icon =
 export const enter =
   "scale-100 opacity-100 blur-0 duration-500 delay-100 ease-[cubic-bezier(0.34,1.56,0.64,1)]";
 
-export const exit =
-  "scale-50 opacity-0 blur-[2px] duration-300 delay-0 ease-in";
+export const exit = "scale-50 opacity-0 blur-[2px] duration-300 delay-0 ease-in";
 
 export const name = "Rafael Sena";
 

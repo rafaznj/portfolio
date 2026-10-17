@@ -33,13 +33,13 @@ export const projects = [
 export const stackDotFallback = "bg-zinc-400 dark:bg-zinc-500";
 
 export const stackDots: Record<string, string> = {
-  "React": "bg-sky-500",
-  "TypeScript": "bg-blue-600",
-  "NestJS": "bg-red-600",
-  "PostgreSQL": "bg-indigo-500",
-  "Tailwindcss": "bg-teal-500",
+  React: "bg-sky-500",
+  TypeScript: "bg-blue-600",
+  NestJS: "bg-red-600",
+  PostgreSQL: "bg-indigo-500",
+  Tailwindcss: "bg-teal-500",
   "TanStack Router": "bg-amber-500",
   "Drizzle ORM": "bg-lime-400",
-  "JavaScript": "bg-yellow-500",
+  JavaScript: "bg-yellow-500",
   "Node.js": "bg-green-600",
 };
