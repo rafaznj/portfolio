@@ -30,7 +30,7 @@ export function Section({
             aria-hidden="true"
             className="size-4 shrink-0 text-zinc-500 dark:text-zinc-400"
           />
-          <span>{title}</span>
+          <span className="font-mono">{title}</span>
         </h2>
         <div
           aria-hidden="true"

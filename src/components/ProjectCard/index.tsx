@@ -51,7 +51,7 @@ export function ProjectCard({
 
       <div className="flex min-w-0 flex-1 flex-col gap-5">
         <div className="flex flex-col gap-3">
-          <h2 className="text-2xl font-semibold tracking-tight text-zinc-950 md:text-3xl dark:text-white">
+          <h2 className="text-2xl font-mono font-semibold tracking-tight text-zinc-950 md:text-2xl dark:text-white">
             {title}
           </h2>
           <p className="max-w-prose text-pretty leading-relaxed text-zinc-600 dark:text-zinc-400">
