@@ -69,5 +69,23 @@
     },
     "visitRepository": "Visit repository",
     "visitWebsite": "Visit website"
+  },
+  "skills": {
+    "frontend": {
+      "title": "Front-end",
+      "description": "I like turning ideas into interfaces that are clear, fast and a pleasure to use. Every project is a chance to sharpen my eye and learn something new."
+    },
+    "backend": {
+      "title": "Back-end",
+      "description": "I build the foundation that makes everything work behind the screens: organized, secure systems ready to grow. I keep evolving with every challenge, aiming for ever more solid solutions."
+    },
+    "database": {
+      "title": "Databases",
+      "description": "I care about how information is stored, organized and accessed, so it can always be trusted. I'm always exploring new ways to structure and query data."
+    },
+    "tools": {
+      "title": "Tools",
+      "description": "I value an organized workflow, from code to delivery, and I'm always after practices that make it smoother. I experiment, adjust and learn with every cycle."
+    }
   }
 }

@@ -69,5 +69,23 @@
     },
     "visitRepository": "Visitar repositório",
     "visitWebsite": "Visitar site"
+  },
+  "skills": {
+    "frontend": {
+      "title": "Front-end",
+      "description": "Gosto de transformar ideias em interfaces claras, rápidas e agradáveis de usar. Cada projeto é uma chance de refinar o olhar e aprender algo novo."
+    },
+    "backend": {
+      "title": "Back-end",
+      "description": "Construo a base que faz tudo funcionar por trás das telas: sistemas organizados, seguros e prontos para crescer. Sigo evoluindo a cada desafio, em busca de soluções cada vez mais sólidas."
+    },
+    "database": {
+      "title": "Banco de Dados",
+      "description": "Cuido de como a informação é guardada, organizada e acessada, para que ela seja sempre confiável. Estou sempre explorando novas formas de estruturar e consultar dados."
+    },
+    "tools": {
+      "title": "Ferramentas",
+      "description": "Valorizo um fluxo de trabalho organizado, do código à entrega, e estou sempre atrás de práticas que o deixem mais fluido. Experimento, ajusto e aprendo a cada ciclo."
+    }
   }
 }
