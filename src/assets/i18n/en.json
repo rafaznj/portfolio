@@ -17,7 +17,7 @@
       "current": "Current",
       "data": {
         "cepedi": {
-          "name": "CEPEDI",
+          "name": "CEPEDI – Center for Research, Technological Development and Innovation",
           "positions": {
             "full-stack-scholarship": {
               "description": "Developing applications for partner companies using React, TypeScript, Node.js, and NestJS.",
@@ -41,14 +41,14 @@
       "cv": "Download CV"
     },
     "hobbies": "Away from the computer, I like playing football, hanging out with friends and reading",
-    "intro": "Full-stack developer with experience in web applications, REST APIs, and software architecture. I like studying, sharpening my technical skills and learning technologies that catch my interest."
+    "intro": "Full Stack developer with experience in web applications, REST APIs, and software architecture. I like studying, sharpening my technical skills and learning technologies that catch my interest."
   },
   "navbar": {
     "about": "/about",
     "home": "Back to home",
     "label": "Main navigation",
     "projects": "/projects",
-    "role": "Full-Stack Developer",
+    "role": "Full Stack Developer",
     "skills": "/skills"
   },
   "notFound": {

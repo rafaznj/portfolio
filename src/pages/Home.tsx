@@ -4,9 +4,12 @@ import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { LuFileText } from "react-icons/lu";
 import { focus, iconButton } from "../constants";
 import { CopyEmail } from "../components/CopyEmail";
+import cvPT from "../../public/rafael-sena-CV-PT.pdf";
+import cvEN from "../../public/rafael-sena-CV-EN.pdf";
 
 export function HomePage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const cv = i18n.resolvedLanguage === "pt" ? cvPT : cvEN;
 
   return (
     <div className="mt-20 flex flex-col gap-8 text-justify font-sans text-lg leading-relaxed">
@@ -44,8 +47,8 @@ export function HomePage() {
           <CopyEmail />
 
           <a
-            href={""}
-            download="cv-rafael-sena.pdf"
+            href={cv}
+            download="Rafael-Sena-CV.pdf"
             className={`inline-flex items-center gap-3 rounded px-4 py-2 ring-1 ring-zinc-900 transition-transform active:scale-95 dark:ring-zinc-100 ${focus}`}
           >
             <LuFileText aria-hidden="true" className="size-5" />

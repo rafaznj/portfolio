@@ -17,7 +17,7 @@
       "current": "Atual",
       "data": {
         "cepedi": {
-          "name": "CEPEDI",
+          "name": "CEPEDI – Centro de Pesquisa, Desenvolvimento Tecnológico e Inovação",
           "positions": {
             "full-stack-scholarship": {
               "description": "Desenvolvimento de aplicações para empresas parceiras, utilizando React, TypeScript, Node.js e NestJS.",
@@ -41,14 +41,14 @@
       "cv": "Baixar CV"
     },
     "hobbies": "Fora do computador, gosto de jogar futebol, conversar com os amigos e ler",
-    "intro": "Desenvolvedor full-stack com experiência no desenvolvimento de aplicações web, APIs REST e arquitetura de software. Gosto de estudar, aprimorar minhas habilidades técnicas e aprender tecnologias que despertam o meu interesse."
+    "intro": "Desenvolvedor Full Stack com experiência no desenvolvimento de aplicações web, APIs REST e arquitetura de software. Gosto de estudar, aprimorar minhas habilidades técnicas e aprender tecnologias que despertam o meu interesse."
   },
   "navbar": {
     "about": "/sobre",
     "home": "Voltar para a página inicial",
     "label": "Navegação principal",
     "projects": "/projetos",
-    "role": "Desenvolvedor Full-Stack",
+    "role": "Desenvolvedor Full Stack",
     "skills": "/habilidades"
   },
   "notFound": {
