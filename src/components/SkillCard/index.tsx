@@ -34,7 +34,7 @@ export function SkillCard({
         {description}
       </p>
       <div className="mt-auto border-t border-zinc-200 pt-3 dark:border-zinc-800">
-        <ul className="grid w-full grid-cols-3 gap-x-2 gap-y-2.5 sm:gap-x-3">
+        <ul className="grid w-full grid-cols-3 gap-x-2 gap-y-2.5 sm:gap-x-3 cursor-pointer">
           {skills.map(({ name, image, invertOnDark }) => (
             <li
               key={name}
