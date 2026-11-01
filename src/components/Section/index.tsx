@@ -12,7 +12,7 @@ export function Section({ title, icon: Icon, className = "", children }: Section
   const headingId = useId();
 
   return (
-    <section aria-labelledby={headingId} className={`flex flex-col gap-8 ${className}`}>
+    <section aria-labelledby={headingId} className={`flex flex-col gap-4 sm:gap-5 ${className}`}>
       <div className="flex shrink-0 items-center gap-4">
         <h2
           id={headingId}

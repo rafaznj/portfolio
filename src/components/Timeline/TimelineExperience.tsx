@@ -205,7 +205,7 @@ export function TimelineExperience({ children }: { children: ReactNode }) {
           WebkitMaskImage: mask,
         }}
         className="
-          relative flex max-h-60 flex-col
+          relative flex max-h-36 flex-col
           snap-y snap-proximity scroll-py-3
           overflow-y-auto overscroll-contain
           scroll-smooth px-2

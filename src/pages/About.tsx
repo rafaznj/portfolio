@@ -12,12 +12,12 @@ export function AboutPage() {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col gap-8 text-justify font-sans text-lg leading-relaxed">
+    <div className="-mb-8 flex flex-col gap-4 text-justify font-sans text-lg leading-relaxed sm:-mb-12">
       <p className="shrink-0 text-justify text-base leading-relaxed whitespace-pre-line">
         {t("about.description")}
       </p>
 
-      <Section title={t("about.experience.title")} icon={LuBriefcase} className="min-h-56">
+      <Section title={t("about.experience.title")} icon={LuBriefcase}>
         <TimelineExperience>
           {experience.map(({ id, location, positions }, index) => (
             <TimelineCompany

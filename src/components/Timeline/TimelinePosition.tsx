@@ -52,7 +52,7 @@ export function TimelinePosition({
       </div>
 
       {description && (
-        <p className="timeline-pos-desc mt-2 text-sm leading-6 text-zinc-400/90 transition-colors duration-200 dark:text-zinc-600">
+        <p className="timeline-pos-desc mt-2 text-sm text-zinc-400/90 transition-colors duration-200 dark:text-zinc-600 leading-relaxed whitespace-pre-line">
           {description}
         </p>
       )}
