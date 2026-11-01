@@ -7,7 +7,7 @@
         "ifba": {
           "degree": "Bacharelado em Sistemas de Informação",
           "institution": "Instituto Federal de Educação, Ciência e Tecnologia da Bahia - IFBA",
-          "period": "2026 — presente"
+          "period": "2026 — Presente"
         }
       },
       "inProgress": "Em andamento",
@@ -19,14 +19,9 @@
         "cepedi": {
           "name": "CEPEDI – Centro de Pesquisa, Desenvolvimento Tecnológico e Inovação",
           "positions": {
-            "full-stack-scholarship": {
-              "description": "Desenvolvimento de aplicações para empresas parceiras, utilizando React, TypeScript, Node.js e NestJS.",
-              "period": "Mai. 2026 — presente",
-              "title": "Bolsista em Desenvolvimento Full Stack"
-            },
             "internship": {
-              "description": "Desenvolvimento do Sistema Unificado de Bolsas (SUB), uma plataforma que centraliza e automatiza a gestão de bolsas. Atuação em autenticação, controle de acesso, formulários com validação, modelagem de dados relacionais e integração com serviços externos, utilizando React, TypeScript, NestJS, Drizzle ORM e PostgreSQL.",
-              "period": "Fev. 2025 — Abr. 2026",
+              "description": "Desenvolvo e mantenho sistemas web que apoiam operações reais de negócio, desde plataformas com milhares de usuários até ERPs que estruturam processos produtivos e operacionais na indústria.",
+              "period": "Fev. 2025 — Presente",
               "title": "Estagiário em Desenvolvimento Full Stack"
             }
           }

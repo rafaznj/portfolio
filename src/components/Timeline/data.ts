@@ -4,12 +4,8 @@ export const experience = [
     location: "Brasil",
     positions: [
       {
-        id: "full-stack-scholarship",
-        current: true,
-      },
-      {
         id: "internship",
-        current: false,
+        current: true,
       },
     ],
   },

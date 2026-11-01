@@ -7,7 +7,7 @@
         "ifba": {
           "degree": "Bachelor's degree in Information Systems",
           "institution": "Federal Institute of Education, Science and Technology of Bahia - IFBA",
-          "period": "2026 — present"
+          "period": "2026 — Present"
         }
       },
       "inProgress": "In progress",
@@ -19,14 +19,9 @@
         "cepedi": {
           "name": "CEPEDI – Center for Research, Technological Development and Innovation",
           "positions": {
-            "full-stack-scholarship": {
-              "description": "Developing applications for partner companies using React, TypeScript, Node.js, and NestJS.",
-              "period": "May 2026 — present",
-              "title": "Full Stack Development Scholarship"
-            },
             "internship": {
-              "description": "Developed the Unified Scholarship System (SUB), a platform that centralizes and automates scholarship management. Worked on authentication, access control, validated forms, relational data modeling, and external service integrations using React, TypeScript, NestJS, Drizzle ORM, and PostgreSQL.",
-              "period": "Feb 2025 — Apr 2026",
+              "description": "I develop and maintain web systems that support real business operations, from platforms serving thousands of users to ERPs that structure production and operational workflows in manufacturing environments.",
+              "period": "Feb 2025 — Present",
               "title": "Full Stack Development Intern"
             }
           }
