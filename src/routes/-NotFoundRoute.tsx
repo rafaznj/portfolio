@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { LuArrowLeft } from "react-icons/lu";
+import avatar from "../assets/images/avatar.png";
 
 export function NotFoundRouteComponent() {
   const { t } = useTranslation();
@@ -16,7 +17,7 @@ export function NotFoundRouteComponent() {
         </span>
 
         <img
-          src="src/assets/images/character.png"
+          src={avatar}
           className="absolute left-1/2 top-1/2 h-36 w-36 -translate-x-1/2 -translate-y-1/2 object-contain sm:h-44 sm:w-44"
         />
       </div>
@@ -29,7 +30,7 @@ export function NotFoundRouteComponent() {
 
       <Link
         to="/"
-        className="inline-flex items-center gap-2 rounded-md bg-foreground px-4 py-2.5 text-sm font-medium text-background transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+        className="inline-flex items-center gap-2 border rounded bg-foreground px-4 py-2.5 text-sm font-medium text-background transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
       >
         <LuArrowLeft size={16} aria-hidden="true" />
         {t("notFound.backToHome")}
