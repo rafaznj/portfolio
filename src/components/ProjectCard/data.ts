@@ -1,11 +1,15 @@
+import termoCloneLogo from "../../assets/images/projects/termo-clone-logo.svg";
 import termoCloneDark from "../../assets/images/projects/dark-theme/termo-clone.gif";
 import termoCloneLight from "../../assets/images/projects/light-theme/termo-clone.gif";
+
+import ticksyLogo from "../../assets/images/projects/ticksy-logo.svg";
 import ticksyDark from "../../assets/images/projects/dark-theme/ticksy.gif";
 import ticksyLight from "../../assets/images/projects/light-theme/ticksy.gif";
 
 export const projects = [
   {
     id: "ticksy",
+    logo: ticksyLogo,
     lightImage: ticksyLight,
     darkImage: ticksyDark,
     stack: [
@@ -22,6 +26,7 @@ export const projects = [
   },
   {
     id: "termo-clone",
+    logo: termoCloneLogo,
     lightImage: termoCloneLight,
     darkImage: termoCloneDark,
     stack: ["React", "JavaScript", "Tailwind CSS"],

@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { LuArrowLeft } from "react-icons/lu";
-import avatar from "../assets/images/avatar.png";
+import avatar from "../assets/images/avatar.svg";
 
 export function NotFoundRouteComponent() {
   const { t } = useTranslation();

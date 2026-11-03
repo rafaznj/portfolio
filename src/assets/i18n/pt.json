@@ -52,14 +52,23 @@
     "title": "Opa, caminho errado!"
   },
   "projects": {
+    "viewProject": "Ver projeto",
+    "close": "Fechar",
+    "stack": "Stack",
+    "about": "Sobre",
+    "functions": "Funções",
     "data": {
       "termo-clone": {
         "description": "Um clone completo do Termo, o Wordle brasileiro.",
-        "title": "Termo Clone"
+        "title": "Termo Clone",
+        "about": "O Termo é um jogo que atingiu grande popularidade e relevância. Era comum abrir o jogo e compartilhar o resultado no grupo de amigos, comparando quem tinha gastado menos tentativas naquele dia.\n\nFoi dessa familiaridade com o jogo que nasceu a vontade de construir a lógica por trás dele, como a validação das palavras, o cálculo do feedback letra a letra, e os modos Dueto e Quarteto, onde vários tabuleiros são resolvidos ao mesmo tempo com o mesmo teclado. Uma forma de transformar esse hábito diário em um projeto técnico completo.",
+        "functions": "Oferece três modos de jogo: Solo, Dueto e Quarteto. Nos modos com múltiplos tabuleiros, o jogador precisa descobrir duas ou quatro palavras simultaneamente, utilizando os mesmos palpites e o mesmo teclado. Cada tentativa é avaliada individualmente em todos os tabuleiros, com um sistema de feedback letra a letra que considera inclusive a ocorrência de letras repetidas nas palavras.\n\nA experiência conta ainda com uma interface interativa que permite alternar entre os temas claro e escuro, trocar o idioma entre português e inglês e controlar os efeitos sonoros. Durante a partida, o jogador pode consultar as regras em um guia visual com exemplos de cada tipo de feedback. Ao finalizar, uma tela de resultado apresenta as palavras de cada tabuleiro e indica o desempenho individual, permitindo diferentes resultados em uma mesma partida."
       },
       "ticksy": {
         "description": "Sistema de help desk para criar, atribuir e acompanhar tickets de suporte, com dashboard de métricas e notificações.",
-        "title": "Ticksy"
+        "title": "Ticksy",
+        "about": "O Ticksy começou como um projeto universitário, mas o levei além como forma de explorar uma arquitetura full-stack em um cenário realista. Queria entender como um fluxo de suporte se comporta sob condições reais — roteamento, gestão de papéis, notificações e tudo mais.",
+        "functions": "Gerencia todo o ciclo de vida dos chamados de suporte, desde a abertura até a atribuição e resolução. O sistema oferece experiências específicas para cada perfil de usuário: funcionários podem registrar solicitações e acompanhar seu andamento, a assistência técnica gerencia os chamados atribuídos a ela e os administradores controlam usuários, distribuem tickets e acompanham as métricas da operação. As listagens contam com recursos de paginação e ações que respeitam as permissões de cada perfil.\n\nO dashboard apresenta indicadores de chamados por status e atividades recentes, com gráficos adicionais para a administração acompanhar a distribuição dos tickets. Para manter todos informados, o sistema oferece notificações individuais em tempo real sobre novos chamados, atribuições e mudanças de status, com controle de leitura por usuário. A aplicação também permite editar informações do perfil e personalizar a experiência alternando entre temas claro e escuro e idiomas português e inglês."
       }
     },
     "visitRepository": "Visitar repositório",

@@ -52,14 +52,23 @@
     "title": "Oops, wrong turn!"
   },
   "projects": {
+    "viewProject": "View project",
+    "close": "Close",
+    "stack": "Stack",
+    "about": "About",
+    "functions": "Functions",
     "data": {
       "termo-clone": {
         "description": "A complete clone of Termo, the Brazilian Wordle.",
-        "title": "Termo Clone"
+        "title": "Termo Clone",
+        "about": "Termo became a hugely popular game with a strong daily routine around it. It was common to open the game and share the result with a group of friends, comparing who solved it in fewer guesses that day.\n\nThat familiarity with the game is what sparked the desire to build the logic behind it, word validation, the letter-by-letter feedback calculation, and the Duet and Quartet modes, where several boards are solved at the same time using the same keyboard. A way to turn that daily habit into a complete technical project.",
+        "functions": "Features three game modes: Solo, Duet, and Quartet. In multiplayer-board modes, players must discover two or four words simultaneously using the same guesses and virtual keyboard. Each attempt is evaluated independently across all boards, with a letter-by-letter feedback system that also accounts for repeated letters in the target words.\n\nThe experience also includes an interactive interface with light and dark themes, Portuguese and English language switching, and sound controls. Players can access a visual guide explaining the rules and demonstrating each type of letter feedback at any point during the game. Once a game ends, a results screen reveals the target words and displays the outcome for each board, allowing players to achieve different results within the same round."
       },
       "ticksy": {
         "description": "Help desk system to create, assign and track support tickets, with metrics dashboard and notifications.",
-        "title": "Ticksy"
+        "title": "Ticksy",
+        "about": "Ticksy started as a university project, but I took it further as a way to explore a full-stack architecture in a realistic scenario. I wanted to understand how a support workflow actually behaves under real conditions — routing, role management, notifications and all.",
+        "functions": "Manages the entire support ticket lifecycle, from submission to assignment and resolution. The system provides role-specific experiences: employees can submit requests and track their progress, technical assistance teams handle their assigned tickets, and administrators manage users, distribute tickets, and monitor operational metrics. Ticket listings include pagination and actions tailored to each user's permissions.\n\nThe dashboard provides ticket status indicators and recent activity, with additional charts that allow administrators to monitor ticket distribution. To keep everyone informed, the system delivers individual real-time notifications about new tickets, assignments, and status changes, with per-user read tracking. The application also allows users to edit their profile information and personalize their experience by switching between light and dark themes and Portuguese and English."
       }
     },
     "visitRepository": "Visit repository",
