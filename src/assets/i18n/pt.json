@@ -52,6 +52,8 @@
     "title": "Opa, caminho errado!"
   },
   "projects": {
+    "title": "Cada projeto representa uma ideia que ganhou forma, um desafio que virou oportunidade e mais um passo na minha evolução criativa.",
+    "cta": "Explore abaixo alguns dos trabalhos que refletem essa jornada.",
     "viewProject": "Ver projeto",
     "close": "Fechar",
     "stack": "Stack",
@@ -67,7 +69,7 @@
       "ticksy": {
         "description": "Sistema de help desk para criar, atribuir e acompanhar tickets de suporte, com dashboard de métricas e notificações.",
         "title": "Ticksy",
-        "about": "O Ticksy começou como um projeto universitário, mas o levei além como forma de explorar uma arquitetura full-stack em um cenário realista. Queria entender como um fluxo de suporte se comporta sob condições reais — roteamento, gestão de papéis, notificações e tudo mais.",
+        "about": "O Ticksy surgiu como um projeto pessoal, motivado pelo meu interesse em desenvolver um sistema de gerenciamento de suporte realista. Minha intenção era ir além das operações básicas de CRUD e explorar como uma aplicação full-stack funciona na prática, integrando gerenciamento de chamados, controle de acesso baseado em papéis, notificações e fluxos de trabalho estruturados.",
         "functions": "Gerencia todo o ciclo de vida dos chamados de suporte, desde a abertura até a atribuição e resolução. O sistema oferece experiências específicas para cada perfil de usuário: funcionários podem registrar solicitações e acompanhar seu andamento, a assistência técnica gerencia os chamados atribuídos a ela e os administradores controlam usuários, distribuem tickets e acompanham as métricas da operação. As listagens contam com recursos de paginação e ações que respeitam as permissões de cada perfil.\n\nO dashboard apresenta indicadores de chamados por status e atividades recentes, com gráficos adicionais para a administração acompanhar a distribuição dos tickets. Para manter todos informados, o sistema oferece notificações individuais em tempo real sobre novos chamados, atribuições e mudanças de status, com controle de leitura por usuário. A aplicação também permite editar informações do perfil e personalizar a experiência alternando entre temas claro e escuro e idiomas português e inglês."
       }
     },

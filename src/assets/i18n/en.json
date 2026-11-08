@@ -52,6 +52,8 @@
     "title": "Oops, wrong turn!"
   },
   "projects": {
+    "title": "Each project represents an idea brought to life, a challenge turned into an opportunity, and another step in my creative journey.",
+    "cta": "Explore below some of the work that reflects this journey.",
     "viewProject": "View project",
     "close": "Close",
     "stack": "Stack",
@@ -67,7 +69,7 @@
       "ticksy": {
         "description": "Help desk system to create, assign and track support tickets, with metrics dashboard and notifications.",
         "title": "Ticksy",
-        "about": "Ticksy started as a university project, but I took it further as a way to explore a full-stack architecture in a realistic scenario. I wanted to understand how a support workflow actually behaves under real conditions — routing, role management, notifications and all.",
+        "about": "Ticksy started as a personal project driven by my interest in building a realistic support management system. I wanted to go beyond basic CRUD operations and explore how a full-stack application works in practice, bringing together ticket management, role-based access control, notifications and structured workflows.",
         "functions": "Manages the entire support ticket lifecycle, from submission to assignment and resolution. The system provides role-specific experiences: employees can submit requests and track their progress, technical assistance teams handle their assigned tickets, and administrators manage users, distribute tickets, and monitor operational metrics. Ticket listings include pagination and actions tailored to each user's permissions.\n\nThe dashboard provides ticket status indicators and recent activity, with additional charts that allow administrators to monitor ticket distribution. To keep everyone informed, the system delivers individual real-time notifications about new tickets, assignments, and status changes, with per-user read tracking. The application also allows users to edit their profile information and personalize their experience by switching between light and dark themes and Portuguese and English."
       }
     },

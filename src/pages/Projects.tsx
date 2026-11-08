@@ -7,6 +7,13 @@ export function ProjectsPage() {
 
   return (
     <div className="-mb-8 flex flex-col gap-6 sm:-mb-12">
+      <p className="text-justify text-md font-medium">
+        {t("projects.title")}{" "}
+        <span className="underline underline-offset-4 decoration-zinc-400 decoration-dotted dark:decoration-zinc-600">
+          {t("projects.cta")}
+        </span>
+      </p>
+
       <ul className="grid gap-4 overflow-y-auto overscroll-contain sm:grid-cols-2 sm:max-h-[calc(100dvh-20rem)] sm:pb-10 sm:pr-2 sm:mask-[linear-gradient(to_bottom,#000_calc(100%-2.5rem),transparent)] sm:[scrollbar-color:var(--color-zinc-400)_transparent] sm:scrollbar-thin dark:sm:[scrollbar-color:var(--color-zinc-600)_transparent]">
         {projects.map(({ id, logo, lightImage, darkImage, stack, demoUrl, repoUrl }) => (
           <li key={id} className="h-full">
