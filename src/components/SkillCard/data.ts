@@ -18,7 +18,8 @@ import drizzleOrm from "../../assets/images/stacks/drizzle-orm.svg";
 import git from "../../assets/images/stacks/git.svg";
 import github from "../../assets/images/stacks/github.svg";
 import docker from "../../assets/images/stacks/docker.svg";
-import azure_devops from "../../assets/images/stacks/azure-devops.svg";
+import azure from "../../assets/images/stacks/azure.svg";
+import figma from "../../assets/images/stacks/figma.svg";
 
 export const skillSections = [
   {
@@ -58,7 +59,8 @@ export const skillSections = [
       { name: "Git", image: git },
       { name: "GitHub", image: github, invertOnDark: true },
       { name: "Docker", image: docker },
-      { name: "Azure DevOps", image: azure_devops },
+      { name: "Azure", image: azure },
+      { name: "Figma", image: figma },
     ],
   },
 ] as const;

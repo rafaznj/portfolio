@@ -14,7 +14,7 @@ export function ProjectsPage() {
         </span>
       </p>
 
-      <ul className="grid gap-4 overflow-y-auto overscroll-contain sm:grid-cols-2 sm:max-h-[calc(100dvh-20rem)] sm:pb-10 sm:pr-2 sm:mask-[linear-gradient(to_bottom,#000_calc(100%-2.5rem),transparent)] sm:[scrollbar-color:var(--color-zinc-400)_transparent] sm:scrollbar-thin dark:sm:[scrollbar-color:var(--color-zinc-600)_transparent]">
+      <ul className="mt-4 grid gap-4 overflow-y-auto overscroll-contain sm:grid-cols-2 sm:max-h-[calc(100dvh-20rem)] sm:pb-10 sm:pr-2 sm:[scrollbar-color:var(--color-zinc-400)_transparent] sm:scrollbar-thin dark:sm:[scrollbar-color:var(--color-zinc-600)_transparent]">
         {projects.map(({ id, logo, lightImage, darkImage, stack, demoUrl, repoUrl }) => (
           <li key={id} className="h-full">
             <ProjectCard
