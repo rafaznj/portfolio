@@ -9,9 +9,12 @@ import tanstack from "../../assets/images/stacks/tanstack.svg";
 
 import nestjs from "../../assets/images/stacks/nestjs.svg";
 import nodejs from "../../assets/images/stacks/nodejs.svg";
+import express from "../../assets/images/stacks/express.svg";
+import jest from "../../assets/images/stacks/jest.svg";
 import aws from "../../assets/images/stacks/aws.svg";
 
 import postgresql from "../../assets/images/stacks/postgresql.svg";
+import mysql from "../../assets/images/stacks/mysql.svg";
 import sqlserver from "../../assets/images/stacks/sql-server.svg";
 import drizzleOrm from "../../assets/images/stacks/drizzle-orm.svg";
 
@@ -19,6 +22,7 @@ import git from "../../assets/images/stacks/git.svg";
 import github from "../../assets/images/stacks/github.svg";
 import docker from "../../assets/images/stacks/docker.svg";
 import azure from "../../assets/images/stacks/azure.svg";
+import sonarqube from "../../assets/images/stacks/sonarqube.svg";
 import figma from "../../assets/images/stacks/figma.svg";
 
 export const skillSections = [
@@ -39,7 +43,13 @@ export const skillSections = [
     icon: LuServer,
     skills: [
       { name: "Node.js", image: nodejs },
+      {
+        name: "Express.js",
+        image: express,
+        invertOnDark: true,
+      },
       { name: "NestJS", image: nestjs },
+      { name: "Jest", image: jest },
       { name: "AWS", image: aws },
     ],
   },
@@ -48,6 +58,7 @@ export const skillSections = [
     icon: LuDatabase,
     skills: [
       { name: "PostgreSQL", image: postgresql },
+      { name: "MySQL", image: mysql },
       { name: "SQL Server", image: sqlserver },
       { name: "Drizzle ORM", image: drizzleOrm },
     ],
@@ -60,6 +71,7 @@ export const skillSections = [
       { name: "GitHub", image: github, invertOnDark: true },
       { name: "Docker", image: docker },
       { name: "Azure", image: azure },
+      { name: "SonarQube", image: sonarqube },
       { name: "Figma", image: figma },
     ],
   },
